@@ -8,18 +8,29 @@ public class player_movement : MonoBehaviour
    
     public float speed = 5f;
     public Rigidbody2D rb;
+    public Camera cam;
     private Vector2 movement;
+    private Vector2 mousePosition;
     // Update is called once per frame
     void Update()
     {
-
+        // Get movement of wasd keys
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        // convert from mouse coordinates to a world coordinate using the camera
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
     {
+        //update player position
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        // Get vector that points from player to mouse position
+        Vector2 lookDir = mousePosition - rb.position;
+        // Get angle of vector
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        //update player rotation
+        rb.rotation = angle;
     }
 }
