@@ -20,6 +20,30 @@ public class player_movement : MonoBehaviour
 
         anim.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal")); // using raw to change animation immediately
         anim.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+        if(Input.GetAxisRaw("Horizontal") == -1){
+            anim.SetBool("LeftDir", true);
+            anim.SetBool("RightDir", false);
+            anim.SetBool("DownDir", false);
+            anim.SetBool("UpDir", false);
+        }
+        else if(Input.GetAxisRaw("Horizontal") == 1){
+            anim.SetBool("RightDir", true);
+            anim.SetBool("LeftDir", false);
+            anim.SetBool("DownDir", false);
+            anim.SetBool("UpDir", false);
+        }
+        else if(Input.GetAxisRaw("Vertical") == 1){
+            anim.SetBool("UpDir", true);
+            anim.SetBool("DownDir", false);
+            anim.SetBool("LeftDir", false);
+            anim.SetBool("RightDir", false);
+        }
+        else if(Input.GetAxisRaw("Vertical") == -1){
+            anim.SetBool("DownDir", true);
+            anim.SetBool("UpDir", false);
+            anim.SetBool("LeftDir", false);
+            anim.SetBool("RightDir", false);
+        }
         anim.SetFloat("Magnitude", movement.magnitude);
 
         //mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
