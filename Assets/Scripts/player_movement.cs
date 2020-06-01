@@ -24,8 +24,17 @@ public class player_movement : MonoBehaviour
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         anim.SetFloat("Mouse", angle);
         anim.SetFloat("Magnitude", movement.magnitude);
-
-        //mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
         transform.position = transform.position + movement * Time.deltaTime;
+
+        if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
+            StartCoroutine(BasicAttack());
+        }
     }
+
+    IEnumerator BasicAttack(){
+        anim.SetBool("BasicAttack", true);
+        yield return new WaitForSeconds(0.6f);
+        anim.SetBool("BasicAttack", false);
+    }
+
 }
