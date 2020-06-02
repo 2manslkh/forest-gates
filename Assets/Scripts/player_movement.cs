@@ -35,8 +35,8 @@ public class player_movement : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
             StartCoroutine(BasicAttack());
         }
-        if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
-            fireballScript.ShootFireball();
+        if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("FireballAttack")){
+            StartCoroutine(FireballAttack());
         }
     }
 
@@ -44,6 +44,12 @@ public class player_movement : MonoBehaviour
         anim.SetBool("BasicAttack", true);
         yield return new WaitForSeconds(0.6f);
         anim.SetBool("BasicAttack", false);
+    }
+    IEnumerator FireballAttack(){
+        anim.SetBool("FireballAttack", true);
+        fireballScript.ShootFireball();
+        yield return new WaitForSeconds(0.4f);
+        anim.SetBool("FireballAttack", false);
     }
 
 }
