@@ -12,7 +12,13 @@ public class player_movement : MonoBehaviour
     public Animator anim;
     private Vector2 movement;
     private Vector2 mousePosition;
+    private Fireball fireballScript;
     // Update is called once per frame
+
+    void Start()
+    {
+        fireballScript = GetComponent<Fireball>();
+    }
     void Update()
     {
         // Get movement of wasd keys
@@ -28,6 +34,9 @@ public class player_movement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
             StartCoroutine(BasicAttack());
+        }
+        if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
+            fireballScript.ShootFireball();
         }
     }
 
