@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player_movement : MonoBehaviour, BasicAttackInterface
+public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
    
@@ -34,8 +34,17 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
             currentFacingDirection = (int) facingDirection.LEFT;
         }
     }
+
+    private bool isAttacking;
+    public Transform attackPosition;
+    public LayerMask enemyLayer;
+    public float attackRadius;
+    private int damage;
+
     void Update()
     {
+        isAttacking = anim.GetBool("BasicAttack");
+
         // Get input of WASD keys
         movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -49,16 +58,26 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         anim.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
-            StartCoroutine(animateBasicAttack(anim));
+        if (Input.GetMouseButtonDown(0) && !isAttacking){
+            anim.SetBool("BasicAttack", true);
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, enemyLayer);
+            for (int i = 0; i < enemiesToDamage.Length; i++)
+            {
+                damage = gameObject.GetComponent<PlayerStats>().damage.GetValue();
+                enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
+                if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
+                    enemiesToDamage[i].GetComponent<Animator>().SetBool("isHit", true);
+                }
+            }
         }
     }
 
-    // Basic Attack Animation Routine
-    public IEnumerator animateBasicAttack(Animator anim){
-        anim.SetBool("BasicAttack", true);
-        yield return new WaitForSeconds(0.6f);
+    void resetBasicAttack(){
         anim.SetBool("BasicAttack", false);
     }
 
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPosition.position, attackRadius);
+    }
 }

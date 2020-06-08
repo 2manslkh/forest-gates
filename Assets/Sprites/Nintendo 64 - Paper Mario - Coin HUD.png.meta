@@ -1,0 +1,935 @@
+fileFormatVersion: 2
+guid: da5244867ab702242acee1beb5293241
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1437435758012924750
+    second: Nintendo 64 - Paper Mario - Coin HUD_0
+  - first:
+      213: 817743126115463871
+    second: Nintendo 64 - Paper Mario - Coin HUD_1
+  - first:
+      213: -1408245911293477071
+    second: Nintendo 64 - Paper Mario - Coin HUD_2
+  - first:
+      213: 2847919087554599283
+    second: Nintendo 64 - Paper Mario - Coin HUD_3
+  - first:
+      213: -595292387809107979
+    second: Nintendo 64 - Paper Mario - Coin HUD_4
+  - first:
+      213: 2712854878859098201
+    second: Nintendo 64 - Paper Mario - Coin HUD_5
+  - first:
+      213: -7552477429782024547
+    second: Nintendo 64 - Paper Mario - Coin HUD_6
+  - first:
+      213: 6122767793680625864
+    second: Nintendo 64 - Paper Mario - Coin HUD_7
+  - first:
+      213: -761808574505428195
+    second: Nintendo 64 - Paper Mario - Coin HUD_8
+  - first:
+      213: 1407480629315914800
+    second: Nintendo 64 - Paper Mario - Coin HUD_9
+  - first:
+      213: 7868048337770282495
+    second: Nintendo 64 - Paper Mario - Coin HUD_10
+  - first:
+      213: -3977998721133521904
+    second: Nintendo 64 - Paper Mario - Coin HUD_11
+  - first:
+      213: 2957678855774763130
+    second: Nintendo 64 - Paper Mario - Coin HUD_12
+  - first:
+      213: 3318871928813399108
+    second: Nintendo 64 - Paper Mario - Coin HUD_13
+  - first:
+      213: 8642690686789716615
+    second: Nintendo 64 - Paper Mario - Coin HUD_14
+  - first:
+      213: 5458953844040934221
+    second: Nintendo 64 - Paper Mario - Coin HUD_15
+  - first:
+      213: 8818122977015094644
+    second: Nintendo 64 - Paper Mario - Coin HUD_16
+  - first:
+      213: -5767136906022381599
+    second: Nintendo 64 - Paper Mario - Coin HUD_17
+  - first:
+      213: 1368729198946010683
+    second: Nintendo 64 - Paper Mario - Coin HUD_18
+  - first:
+      213: 832180319339389552
+    second: Nintendo 64 - Paper Mario - Coin HUD_19
+  - first:
+      213: 8959923492883687136
+    second: Nintendo 64 - Paper Mario - Coin HUD_20
+  - first:
+      213: 4157698776028941064
+    second: Nintendo 64 - Paper Mario - Coin HUD_21
+  - first:
+      213: -7614257706225639078
+    second: Nintendo 64 - Paper Mario - Coin HUD_22
+  - first:
+      213: -6914286058424791693
+    second: Nintendo 64 - Paper Mario - Coin HUD_23
+  - first:
+      213: 2509462602767413585
+    second: Nintendo 64 - Paper Mario - Coin HUD_24
+  - first:
+      213: -6129683448158771500
+    second: Nintendo 64 - Paper Mario - Coin HUD_25
+  - first:
+      213: 3387096330874561104
+    second: Nintendo 64 - Paper Mario - Coin HUD_26
+  - first:
+      213: -7099856506103573843
+    second: Nintendo 64 - Paper Mario - Coin HUD_27
+  - first:
+      213: 379094262717522120
+    second: Nintendo 64 - Paper Mario - Coin HUD_28
+  - first:
+      213: 1116710415896136895
+    second: Nintendo 64 - Paper Mario - Coin HUD_29
+  - first:
+      213: -2794683318575899113
+    second: Nintendo 64 - Paper Mario - Coin HUD_30
+  - first:
+      213: -1442404614941474707
+    second: Nintendo 64 - Paper Mario - Coin HUD_31
+  - first:
+      213: -2630578519786304431
+    second: Nintendo 64 - Paper Mario - Coin HUD_32
+  - first:
+      213: 1489521108737059423
+    second: Nintendo 64 - Paper Mario - Coin HUD_33
+  - first:
+      213: -7448328009691486765
+    second: Nintendo 64 - Paper Mario - Coin HUD_34
+  - first:
+      213: 3776977654668928872
+    second: Nintendo 64 - Paper Mario - Coin HUD_35
+  - first:
+      213: 6620850212197379179
+    second: Nintendo 64 - Paper Mario - Coin HUD_36
+  - first:
+      213: -1094530376941792071
+    second: Nintendo 64 - Paper Mario - Coin HUD_37
+  - first:
+      213: -8120043016877983911
+    second: Nintendo 64 - Paper Mario - Coin HUD_38
+  - first:
+      213: -5466737125679182086
+    second: Nintendo 64 - Paper Mario - Coin HUD_39
+  - first:
+      213: 8430891496349097021
+    second: Nintendo 64 - Paper Mario - Coin HUD_40
+  - first:
+      213: -2784152536586966988
+    second: Nintendo 64 - Paper Mario - Coin HUD_41
+  - first:
+      213: 2240051565037061995
+    second: Nintendo 64 - Paper Mario - Coin HUD_42
+  - first:
+      213: 7044205770528123194
+    second: Nintendo 64 - Paper Mario - Coin HUD_43
+  - first:
+      213: -305747985833873020
+    second: Nintendo 64 - Paper Mario - Coin HUD_44
+  - first:
+      213: -1653984882005961995
+    second: Nintendo 64 - Paper Mario - Coin HUD_45
+  - first:
+      213: -1671195780605886512
+    second: Nintendo 64 - Paper Mario - Coin HUD_46
+  - first:
+      213: 1187589178330099969
+    second: Nintendo 64 - Paper Mario - Coin HUD_47
+  - first:
+      213: -7447924916623101166
+    second: Nintendo 64 - Paper Mario - Coin HUD_48
+  - first:
+      213: -7033601709273990823
+    second: Nintendo 64 - Paper Mario - Coin HUD_49
+  - first:
+      213: 1188589881899306441
+    second: Nintendo 64 - Paper Mario - Coin HUD_50
+  - first:
+      213: 5907177377447207720
+    second: Nintendo 64 - Paper Mario - Coin HUD_51
+  - first:
+      213: -3718875270917448983
+    second: Nintendo 64 - Paper Mario - Coin HUD_52
+  - first:
+      213: 6242183358880540385
+    second: Nintendo 64 - Paper Mario - Coin HUD_53
+  - first:
+      213: -5411417361414558185
+    second: Nintendo 64 - Paper Mario - Coin HUD_54
+  - first:
+      213: 7713489251533361325
+    second: Nintendo 64 - Paper Mario - Coin HUD_55
+  - first:
+      213: -197002584456139240
+    second: Nintendo 64 - Paper Mario - Coin HUD_56
+  - first:
+      213: 5947164838216047907
+    second: Nintendo 64 - Paper Mario - Coin HUD_57
+  - first:
+      213: 619142415529682899
+    second: Nintendo 64 - Paper Mario - Coin HUD_58
+  - first:
+      213: -4761359670879000261
+    second: Nintendo 64 - Paper Mario - Coin HUD_59
+  - first:
+      213: 5688838112843124686
+    second: Nintendo 64 - Paper Mario - Coin HUD_60
+  - first:
+      213: -5125590079833139709
+    second: Nintendo 64 - Paper Mario - Coin HUD_61
+  - first:
+      213: -8094295918721569090
+    second: Nintendo 64 - Paper Mario - Coin HUD_62
+  - first:
+      213: 7814948884362274210
+    second: Nintendo 64 - Paper Mario - Coin HUD_63
+  - first:
+      213: 7040190153590549778
+    second: Nintendo 64 - Paper Mario - Coin HUD_64
+  - first:
+      213: 2685901422249326147
+    second: Nintendo 64 - Paper Mario - Coin HUD_65
+  - first:
+      213: -4503830620094215342
+    second: Nintendo 64 - Paper Mario - Coin HUD_66
+  - first:
+      213: -6115577918714854048
+    second: Nintendo 64 - Paper Mario - Coin HUD_67
+  - first:
+      213: -6381775130093652632
+    second: Nintendo 64 - Paper Mario - Coin HUD_68
+  - first:
+      213: 4609067847833693764
+    second: Nintendo 64 - Paper Mario - Coin HUD_69
+  - first:
+      213: -642746820003783611
+    second: Nintendo 64 - Paper Mario - Coin HUD_70
+  - first:
+      213: -6032075572634346245
+    second: Nintendo 64 - Paper Mario - Coin HUD_71
+  - first:
+      213: 7250834685716842410
+    second: Nintendo 64 - Paper Mario - Coin HUD_72
+  - first:
+      213: 7480120705121496809
+    second: Nintendo 64 - Paper Mario - Coin HUD_73
+  - first:
+      213: -289353553518247768
+    second: Nintendo 64 - Paper Mario - Coin HUD_74
+  - first:
+      213: -4245233833105567926
+    second: Nintendo 64 - Paper Mario - Coin HUD_75
+  - first:
+      213: 4317273281282816402
+    second: Nintendo 64 - Paper Mario - Coin HUD_76
+  - first:
+      213: -6511414460225186788
+    second: Nintendo 64 - Paper Mario - Coin HUD_77
+  - first:
+      213: -2616499463138362819
+    second: Nintendo 64 - Paper Mario - Coin HUD_78
+  - first:
+      213: 2309055417153582546
+    second: Nintendo 64 - Paper Mario - Coin HUD_79
+  - first:
+      213: -8546413194304580786
+    second: Nintendo 64 - Paper Mario - Coin HUD_80
+  - first:
+      213: -1274389127785204680
+    second: Nintendo 64 - Paper Mario - Coin HUD_81
+  - first:
+      213: 573987562828448913
+    second: Nintendo 64 - Paper Mario - Coin HUD_82
+  - first:
+      213: -6667010607345256677
+    second: Nintendo 64 - Paper Mario - Coin HUD_83
+  - first:
+      213: 4377842653216830148
+    second: Nintendo 64 - Paper Mario - Coin HUD_84
+  - first:
+      213: -7769606208765202898
+    second: Nintendo 64 - Paper Mario - Coin HUD_85
+  - first:
+      213: -1030818520592538852
+    second: Nintendo 64 - Paper Mario - Coin HUD_86
+  - first:
+      213: -354029119133295571
+    second: Nintendo 64 - Paper Mario - Coin HUD_87
+  - first:
+      213: 2189669125878637339
+    second: Nintendo 64 - Paper Mario - Coin HUD_88
+  - first:
+      213: 653304297860139340
+    second: Nintendo 64 - Paper Mario - Coin HUD_89
+  - first:
+      213: -1966558355797083285
+    second: Nintendo 64 - Paper Mario - Coin HUD_90
+  - first:
+      213: -4381410041894827883
+    second: Nintendo 64 - Paper Mario - Coin HUD_91
+  - first:
+      213: -5947538575988606831
+    second: Nintendo 64 - Paper Mario - Coin HUD_92
+  - first:
+      213: -4197471754414827461
+    second: Nintendo 64 - Paper Mario - Coin HUD_93
+  - first:
+      213: 6657869206949481742
+    second: Nintendo 64 - Paper Mario - Coin HUD_94
+  - first:
+      213: -146844175691562023
+    second: Nintendo 64 - Paper Mario - Coin HUD_95
+  - first:
+      213: 5570452123212569447
+    second: Nintendo 64 - Paper Mario - Coin HUD_96
+  - first:
+      213: -7263903240599083470
+    second: Nintendo 64 - Paper Mario - Coin HUD_97
+  - first:
+      213: -955503814044234443
+    second: Nintendo 64 - Paper Mario - Coin HUD_98
+  - first:
+      213: -3208711183984478044
+    second: Nintendo 64 - Paper Mario - Coin HUD_99
+  - first:
+      213: 8303121017440179969
+    second: Nintendo 64 - Paper Mario - Coin HUD_100
+  - first:
+      213: -4534483673679492115
+    second: Nintendo 64 - Paper Mario - Coin HUD_101
+  - first:
+      213: 4364386709026643539
+    second: Nintendo 64 - Paper Mario - Coin HUD_102
+  - first:
+      213: 4597112735347465815
+    second: Nintendo 64 - Paper Mario - Coin HUD_103
+  - first:
+      213: 4326263403303903511
+    second: Nintendo 64 - Paper Mario - Coin HUD_104
+  - first:
+      213: -2169888737975098680
+    second: Nintendo 64 - Paper Mario - Coin HUD_105
+  - first:
+      213: 878747741987178845
+    second: Nintendo 64 - Paper Mario - Coin HUD_106
+  - first:
+      213: -2677301145136489581
+    second: Nintendo 64 - Paper Mario - Coin HUD_107
+  - first:
+      213: -3741740935599182610
+    second: Nintendo 64 - Paper Mario - Coin HUD_108
+  - first:
+      213: 4818873531255997891
+    second: Nintendo 64 - Paper Mario - Coin HUD_109
+  - first:
+      213: -3927179197834314693
+    second: Nintendo 64 - Paper Mario - Coin HUD_110
+  - first:
+      213: 2436091013455641650
+    second: Nintendo 64 - Paper Mario - Coin HUD_111
+  - first:
+      213: -1703678300936544357
+    second: Nintendo 64 - Paper Mario - Coin HUD_112
+  - first:
+      213: 5258920832521580408
+    second: Nintendo 64 - Paper Mario - Coin HUD_113
+  - first:
+      213: -6284711476450114759
+    second: Nintendo 64 - Paper Mario - Coin HUD_114
+  - first:
+      213: -8791097288195279229
+    second: Nintendo 64 - Paper Mario - Coin HUD_115
+  - first:
+      213: 9055665055508221781
+    second: Nintendo 64 - Paper Mario - Coin HUD_116
+  - first:
+      213: 5319641473104331831
+    second: Nintendo 64 - Paper Mario - Coin HUD_117
+  - first:
+      213: 6789826847794042212
+    second: Nintendo 64 - Paper Mario - Coin HUD_118
+  - first:
+      213: -978021163091099215
+    second: Nintendo 64 - Paper Mario - Coin HUD_119
+  - first:
+      213: 1383200892252940707
+    second: Nintendo 64 - Paper Mario - Coin HUD_120
+  - first:
+      213: -8326595231292449071
+    second: Nintendo 64 - Paper Mario - Coin HUD_121
+  - first:
+      213: -2308976314984880967
+    second: Nintendo 64 - Paper Mario - Coin HUD_122
+  - first:
+      213: 7613975011280578935
+    second: Nintendo 64 - Paper Mario - Coin HUD_123
+  - first:
+      213: -6220064785627300401
+    second: Nintendo 64 - Paper Mario - Coin HUD_124
+  - first:
+      213: 8093782266232552344
+    second: Nintendo 64 - Paper Mario - Coin HUD_125
+  - first:
+      213: -6298329819511028592
+    second: Nintendo 64 - Paper Mario - Coin HUD_126
+  - first:
+      213: -4679318352553324719
+    second: Nintendo 64 - Paper Mario - Coin HUD_127
+  - first:
+      213: 5485801906618957216
+    second: Nintendo 64 - Paper Mario - Coin HUD_128
+  - first:
+      213: 7919874237299885520
+    second: Nintendo 64 - Paper Mario - Coin HUD_129
+  - first:
+      213: -5915103879896035051
+    second: Nintendo 64 - Paper Mario - Coin HUD_130
+  - first:
+      213: -2471500333208365934
+    second: Nintendo 64 - Paper Mario - Coin HUD_131
+  - first:
+      213: 4465741475392010320
+    second: Nintendo 64 - Paper Mario - Coin HUD_132
+  - first:
+      213: 757811599006074501
+    second: Nintendo 64 - Paper Mario - Coin HUD_133
+  - first:
+      213: -3611924548993940494
+    second: Nintendo 64 - Paper Mario - Coin HUD_134
+  - first:
+      213: 1363434150065705913
+    second: Nintendo 64 - Paper Mario - Coin HUD_135
+  - first:
+      213: 7968664960980178721
+    second: Nintendo 64 - Paper Mario - Coin HUD_136
+  - first:
+      213: 5279757630675544052
+    second: Nintendo 64 - Paper Mario - Coin HUD_137
+  - first:
+      213: 9202688957108662935
+    second: Nintendo 64 - Paper Mario - Coin HUD_138
+  - first:
+      213: -1499146882616856409
+    second: Nintendo 64 - Paper Mario - Coin HUD_139
+  - first:
+      213: -5720471385175854743
+    second: Nintendo 64 - Paper Mario - Coin HUD_140
+  - first:
+      213: 2862193569645151020
+    second: Nintendo 64 - Paper Mario - Coin HUD_141
+  - first:
+      213: 7358174203736864949
+    second: Nintendo 64 - Paper Mario - Coin HUD_142
+  - first:
+      213: -956359475042102201
+    second: Nintendo 64 - Paper Mario - Coin HUD_143
+  - first:
+      213: -1918333869181005703
+    second: Nintendo 64 - Paper Mario - Coin HUD_144
+  - first:
+      213: 6351582191980196148
+    second: Nintendo 64 - Paper Mario - Coin HUD_145
+  - first:
+      213: -9172845818267803166
+    second: Nintendo 64 - Paper Mario - Coin HUD_146
+  - first:
+      213: -6179243943839303728
+    second: Nintendo 64 - Paper Mario - Coin HUD_147
+  - first:
+      213: -6298503813451907801
+    second: Nintendo 64 - Paper Mario - Coin HUD_148
+  - first:
+      213: -6310070004029599596
+    second: Nintendo 64 - Paper Mario - Coin HUD_149
+  - first:
+      213: -7578272566075242061
+    second: Nintendo 64 - Paper Mario - Coin HUD_150
+  - first:
+      213: 6679047821278867091
+    second: Nintendo 64 - Paper Mario - Coin HUD_151
+  - first:
+      213: -7977417293279358001
+    second: Nintendo 64 - Paper Mario - Coin HUD_152
+  - first:
+      213: 1839170583728998646
+    second: Nintendo 64 - Paper Mario - Coin HUD_153
+  - first:
+      213: -2219459617154043485
+    second: Nintendo 64 - Paper Mario - Coin HUD_154
+  - first:
+      213: -5119184504844092330
+    second: Nintendo 64 - Paper Mario - Coin HUD_155
+  - first:
+      213: -841115351403429544
+    second: Nintendo 64 - Paper Mario - Coin HUD_156
+  - first:
+      213: -8870183117748503993
+    second: Nintendo 64 - Paper Mario - Coin HUD_157
+  - first:
+      213: 8060392093915868040
+    second: Nintendo 64 - Paper Mario - Coin HUD_158
+  - first:
+      213: -6888175033219687388
+    second: Nintendo 64 - Paper Mario - Coin HUD_159
+  - first:
+      213: -6297506869195148926
+    second: Nintendo 64 - Paper Mario - Coin HUD_160
+  - first:
+      213: 8325792508340700193
+    second: Nintendo 64 - Paper Mario - Coin HUD_161
+  - first:
+      213: -46853717937230201
+    second: Nintendo 64 - Paper Mario - Coin HUD_162
+  - first:
+      213: -8540983151428761441
+    second: Nintendo 64 - Paper Mario - Coin HUD_163
+  - first:
+      213: -3113435222566422470
+    second: Nintendo 64 - Paper Mario - Coin HUD_164
+  - first:
+      213: -4787006164400607653
+    second: Nintendo 64 - Paper Mario - Coin HUD_165
+  - first:
+      213: -608476738778338174
+    second: Nintendo 64 - Paper Mario - Coin HUD_166
+  - first:
+      213: -5139456527768746198
+    second: Nintendo 64 - Paper Mario - Coin HUD_167
+  - first:
+      213: 7296579999533014870
+    second: Nintendo 64 - Paper Mario - Coin HUD_168
+  - first:
+      213: 2016415134371651498
+    second: Nintendo 64 - Paper Mario - Coin HUD_169
+  - first:
+      213: -9040972342176094917
+    second: Nintendo 64 - Paper Mario - Coin HUD_170
+  - first:
+      213: -4066047826527378984
+    second: Nintendo 64 - Paper Mario - Coin HUD_171
+  - first:
+      213: 5927020887863777543
+    second: Nintendo 64 - Paper Mario - Coin HUD_172
+  - first:
+      213: -29758828196912660
+    second: Nintendo 64 - Paper Mario - Coin HUD_173
+  - first:
+      213: 2140459560971923356
+    second: Nintendo 64 - Paper Mario - Coin HUD_174
+  - first:
+      213: 6061503873689836202
+    second: Nintendo 64 - Paper Mario - Coin HUD_175
+  - first:
+      213: 2196329309857901330
+    second: Nintendo 64 - Paper Mario - Coin HUD_176
+  - first:
+      213: 1600550025348222323
+    second: Nintendo 64 - Paper Mario - Coin HUD_177
+  - first:
+      213: 2743292174891540280
+    second: Nintendo 64 - Paper Mario - Coin HUD_178
+  - first:
+      213: -1224461788525552223
+    second: Nintendo 64 - Paper Mario - Coin HUD_179
+  - first:
+      213: -4708611303223139377
+    second: Nintendo 64 - Paper Mario - Coin HUD_180
+  - first:
+      213: 2514864491114756701
+    second: Nintendo 64 - Paper Mario - Coin HUD_181
+  - first:
+      213: -7657541016162390434
+    second: Nintendo 64 - Paper Mario - Coin HUD_182
+  - first:
+      213: -7358410681902173824
+    second: Nintendo 64 - Paper Mario - Coin HUD_183
+  - first:
+      213: -1282182115801090450
+    second: Nintendo 64 - Paper Mario - Coin HUD_184
+  - first:
+      213: -893747081672687549
+    second: Nintendo 64 - Paper Mario - Coin HUD_185
+  - first:
+      213: -6148531801882639966
+    second: Nintendo 64 - Paper Mario - Coin HUD_186
+  - first:
+      213: -4876090508643146002
+    second: Nintendo 64 - Paper Mario - Coin HUD_187
+  - first:
+      213: 3996012284420947454
+    second: Nintendo 64 - Paper Mario - Coin HUD_188
+  - first:
+      213: -3370370179626293340
+    second: Nintendo 64 - Paper Mario - Coin HUD_189
+  - first:
+      213: 4083358142267043517
+    second: Nintendo 64 - Paper Mario - Coin HUD_190
+  - first:
+      213: -2031340987049526986
+    second: Nintendo 64 - Paper Mario - Coin HUD_191
+  - first:
+      213: 7604562006814513782
+    second: Nintendo 64 - Paper Mario - Coin HUD_192
+  - first:
+      213: 3277006834499611805
+    second: Nintendo 64 - Paper Mario - Coin HUD_193
+  - first:
+      213: -3753349037079975631
+    second: Nintendo 64 - Paper Mario - Coin HUD_194
+  - first:
+      213: 3070034761762743417
+    second: Nintendo 64 - Paper Mario - Coin HUD_195
+  - first:
+      213: 6143622842363708054
+    second: Nintendo 64 - Paper Mario - Coin HUD_196
+  - first:
+      213: -7769688451484086333
+    second: Nintendo 64 - Paper Mario - Coin HUD_197
+  - first:
+      213: 343811613830921172
+    second: Nintendo 64 - Paper Mario - Coin HUD_198
+  - first:
+      213: 7853832205087150868
+    second: Nintendo 64 - Paper Mario - Coin HUD_199
+  - first:
+      213: 5690553741484183314
+    second: Nintendo 64 - Paper Mario - Coin HUD_200
+  - first:
+      213: -6654359965885876638
+    second: Nintendo 64 - Paper Mario - Coin HUD_201
+  - first:
+      213: 2450236530173209619
+    second: Nintendo 64 - Paper Mario - Coin HUD_202
+  - first:
+      213: 5077704761038893406
+    second: Nintendo 64 - Paper Mario - Coin HUD_203
+  - first:
+      213: 5723049020278484960
+    second: Nintendo 64 - Paper Mario - Coin HUD_204
+  - first:
+      213: 3446306401103573274
+    second: Nintendo 64 - Paper Mario - Coin HUD_205
+  - first:
+      213: 3616284446036322356
+    second: Nintendo 64 - Paper Mario - Coin HUD_206
+  - first:
+      213: 5231509142481614623
+    second: Nintendo 64 - Paper Mario - Coin HUD_207
+  - first:
+      213: 4620778775881888302
+    second: Nintendo 64 - Paper Mario - Coin HUD_208
+  - first:
+      213: 4450929344594981888
+    second: Nintendo 64 - Paper Mario - Coin HUD_209
+  - first:
+      213: 9137954124857743719
+    second: Nintendo 64 - Paper Mario - Coin HUD_210
+  - first:
+      213: 4226859319316254865
+    second: Nintendo 64 - Paper Mario - Coin HUD_211
+  - first:
+      213: -3150151258776290738
+    second: Nintendo 64 - Paper Mario - Coin HUD_212
+  - first:
+      213: -6664448449093792114
+    second: Nintendo 64 - Paper Mario - Coin HUD_213
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e430ecfb43cc2f310800000000000000
+      internalID: 1437435758012924750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb231a56a05395b00800000000000000
+      internalID: 817743126115463871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fb4fc0ec7e47ce0800000000000000
+      internalID: -1408245911293477071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3791fba3257d58720800000000000000
+      internalID: 2847919087554599283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_4
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffd42f2ab81db7f0800000000000000
+      internalID: -595292387809107979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_5
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958f495932ff5a520800000000000000
+      internalID: 2712854878859098201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9eefa7dac5303790800000000000000
+      internalID: -7552477429782024547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_7
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c039885ed078f450800000000000000
+      internalID: 6122767793680625864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Paper Mario - Coin HUD_8
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 175
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bd1c143238d65f0800000000000000
+      internalID: -761808574505428195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
