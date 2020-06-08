@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player_movement : MonoBehaviour
+public class player_movement : MonoBehaviour, BasicAttackInterface
 {
     // Start is called before the first frame update
    
@@ -10,37 +10,56 @@ public class player_movement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
     public Animator anim;
-    private Vector2 movement;
+    private Vector3 movement;
     private Vector2 mousePosition;
     private Fireball fireballScript;
     // Update is called once per frame
 
-    void Start()
-    {
-        fireballScript = GetComponent<Fireball>();
+    public enum facingDirection{ //WIP
+        UP=1,
+        RIGHT=2,
+        DOWN=3,
+        LEFT=4
+    } 
+
+    public int currentFacingDirection;
+
+    void updateDirection(float angle){ //WIP
+        if(0 <= angle && angle < 90){
+            currentFacingDirection = (int) facingDirection.UP;
+        } else if(90 <= angle && angle < 180){
+            currentFacingDirection = (int) facingDirection.RIGHT;
+        } else if(180 <= angle && angle < 270){
+            currentFacingDirection = (int) facingDirection.DOWN;
+        } else if(270 <= angle && angle < 180){
+            currentFacingDirection = (int) facingDirection.LEFT;
+        }
     }
     void Update()
     {
-        // Get movement of wasd keys
-        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f);
+        // Get input of WASD keys
+        movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        // Get mouse position
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
         // Get vector that points from player to mouse position
         Vector2 lookDir = mousePosition - rb.position;
-        // Get angle of vector
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        anim.SetFloat("Mouse", angle);
+
+        anim.SetFloat("Mouse X", lookDir.x);
+        anim.SetFloat("Mouse Y", lookDir.y);
         anim.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
 
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
-            StartCoroutine(BasicAttack());
+            StartCoroutine(animateBasicAttack(anim));
         }
         if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("FireballAttack")){
             StartCoroutine(FireballAttack());
         }
     }
 
-    IEnumerator BasicAttack(){
+    // Basic Attack Animation Routine
+    public IEnumerator animateBasicAttack(Animator anim){
         anim.SetBool("BasicAttack", true);
         yield return new WaitForSeconds(0.6f);
         anim.SetBool("BasicAttack", false);

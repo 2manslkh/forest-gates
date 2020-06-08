@@ -120,7 +120,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 2425231104332475997}
     m_Threshold: -270
-    m_Position: {x: -270, y: -270}
+    m_Position: {x: -1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
@@ -128,7 +128,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 4627060633931347855}
     m_Threshold: -180
-    m_Position: {x: -180, y: -180}
+    m_Position: {x: 0, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
@@ -136,7 +136,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 5924801434525608289}
     m_Threshold: -90
-    m_Position: {x: -90, y: -90}
+    m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
@@ -144,18 +144,18 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -7152294700688902114}
     m_Threshold: 0
-    m_Position: {x: 0.5, y: 0}
+    m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
-  m_BlendParameter: Mouse
-  m_BlendParameterY: Vertical
+  m_BlendParameter: Mouse X
+  m_BlendParameterY: Mouse Y
   m_MinThreshold: -270
   m_MaxThreshold: 0
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
-  m_BlendType: 0
+  m_BlendType: 2
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -182,8 +182,14 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: Mouse
+    m_Controller: {fileID: 0}
+  - m_Name: Mouse X
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Mouse Y
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -254,7 +260,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizontal
     m_Mirror: 0
-  m_BlendParameter: Mouse
+  m_BlendParameter: Mouse Y
   m_BlendParameterY: Vertical
   m_MinThreshold: -270
   m_MaxThreshold: 0
