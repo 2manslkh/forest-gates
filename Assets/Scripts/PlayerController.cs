@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, enemyLayer);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                damage = gameObject.GetComponent<PlayerStats>().damage.GetValue();
+                damage = gameObject.GetComponent<PlayerStats>().damage.GetValue(); // Calculate damage with equipement modifiers
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
                     enemiesToDamage[i].GetComponent<Animator>().SetBool("isHit", true);
