@@ -89,6 +89,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Moving", false);
         anim.SetBool("Attacking", true);
         rb.velocity = Vector2.zero;
+        // StartCoroutine("Attack")
     }
 
     void ChangeDirection()
