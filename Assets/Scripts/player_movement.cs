@@ -10,6 +10,7 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     public Rigidbody2D rb;
     public Camera cam;
     public Animator anim;
+    public Animator weapon_anim;
     private Vector3 movement;
     private Vector2 mousePosition;
     private Fireball fireballScript;
@@ -37,6 +38,7 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     }
     void Update()
     {
+        // Time.timeScale = 0.05f;
         // Get input of WASD keys
         movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
@@ -48,6 +50,9 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         anim.SetFloat("Mouse X", lookDir.x);
         anim.SetFloat("Mouse Y", lookDir.y);
         anim.SetFloat("Magnitude", movement.magnitude);
+        weapon_anim.SetFloat("Mouse X", lookDir.x);
+        weapon_anim.SetFloat("Mouse Y", lookDir.y);
+        weapon_anim.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
 
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
