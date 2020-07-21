@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Room
-  - Pose
+  - Ground
+  - Walls
+  - Obstacles
+  - UICamera
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Room
+  - PostProcess
   - 
   - 
   - 
@@ -40,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 3734926495
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3295107733
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3322136669
     locked: 0
