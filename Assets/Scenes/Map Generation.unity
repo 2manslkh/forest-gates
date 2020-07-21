@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &26826979
 Transform:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &71571471
 Transform:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &100323893
 Transform:
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &256395692
 Transform:
@@ -430,18 +430,19 @@ MonoBehaviour:
   - {fileID: 2385776143238289730, guid: 938afd60f363a41d89208d26b23a7b2e, type: 3}
   - {fileID: 914410430796848197, guid: b74eaadee2db7445b9105fc468c3e5f3, type: 3}
   generatedRooms: []
+  extraRoomsPos: []
   moveAmount: 10
   startTimneBtwRoom: 0.25
   minX: 5
   maxX: 35
   minY: 5
   maxY: 35
-  maxRoomNumber: 16
+  maxRoomNumber: 12
   currentRoomNumber: 0
   stopGeneration: 0
   room:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
 --- !u!4 &401850223
 Transform:
   m_ObjectHideFlags: 0
@@ -487,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &408474029
 Transform:
@@ -514,6 +515,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -529,6 +531,37 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -732,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &749237489
 Transform:
@@ -793,7 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!1 &939400032
 GameObject:
@@ -840,7 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!1 &1151238686
 GameObject:
@@ -1172,7 +1205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1400493625
 Transform:
@@ -1219,7 +1252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1586566503
 Transform:
@@ -1266,7 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1617859002
 Transform:
@@ -1313,7 +1346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1683630688
 Transform:
@@ -1360,7 +1393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1729390780
 Transform:
@@ -1421,7 +1454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!1 &1792054772
 GameObject:
@@ -1454,7 +1487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}
 --- !u!4 &1792054774
 Transform:
@@ -1515,5 +1548,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   levelGen: {fileID: 401850222}

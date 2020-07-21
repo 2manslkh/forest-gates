@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 2645544741996953425}
   - component: {fileID: 3698587038136069185}
   - component: {fileID: -5847093015548307105}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Room LR
   m_TagString: Room
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

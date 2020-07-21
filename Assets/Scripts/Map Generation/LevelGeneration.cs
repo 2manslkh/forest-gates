@@ -7,6 +7,7 @@ public class LevelGeneration : MonoBehaviour
     public Transform[] startingPositions;
     public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB
     public List<GameObject> generatedRooms;
+    public List<Vector3> extraRoomsPos;
 
     private int direction;
     public float moveAmount;
@@ -27,7 +28,6 @@ public class LevelGeneration : MonoBehaviour
     private int downCounter;
     private int upCounter;
 
-    private bool checkSides = true;
     private string prevDir = "";
 
     private void Start()
@@ -40,7 +40,15 @@ public class LevelGeneration : MonoBehaviour
 
     private void Update()
     {
-        if (timeBtwRoom <= 0 && stopGeneration == false)
+        if (maxRoomNumber == currentRoomNumber)
+        {
+            stopGeneration = true;
+        }
+        else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
+        {
+            FillUp();
+        }
+        else if (timeBtwRoom <= 0 && stopGeneration == false)
         {
             Move();
             timeBtwRoom = startTimneBtwRoom;
@@ -57,30 +65,21 @@ public class LevelGeneration : MonoBehaviour
         {
             downCounter = 0;
             upCounter = 0;
-            if (transform.position.x < maxX)
+            if (transform.position.x <= maxX)
             {
-                //Vector2 newPos = new Vector2(transform.position.x + moveAmount, transform.position.y);
-                //transform.position = newPos;
-                navigate(prevDir);
+                transform.position = new Vector3(transform.position.x + moveAmount, transform.position.y, 0);
+                Navigate(prevDir, direction);
 
                 int rand = Random.Range(0, rooms.Length);
-                Instantiate(rooms[rand], transform.position, Quaternion.identity);
-                
-
-                //direction = Random.Range(1, 7);
-                //if (direction == 3)
-                //{
-                //    direction = 5;
-                //}
-                //else if (direction == 4)
-                //{
-                //    direction = 6;
-                //}
+                if (stopGeneration == false)
+                {
+                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                }
             }
             else
             {
-                int rand = Random.Range(5, 7);
-                direction = rand;
+                transform.position = new Vector3(transform.position.x + moveAmount, transform.position.y, 0);
+                Navigate(prevDir, direction);
             }
             prevDir = "Right";
         }
@@ -89,30 +88,21 @@ public class LevelGeneration : MonoBehaviour
         {
             downCounter = 0;
             upCounter = 0;
-            if (transform.position.x > minX)
+            if (transform.position.x >= minX)
             {
-                //Vector2 newPos = new Vector2(transform.position.x - moveAmount, transform.position.y);
-                //transform.position = newPos;
-                navigate(prevDir);
+                transform.position = new Vector3(transform.position.x - moveAmount, transform.position.y, 0);
+                Navigate(prevDir, direction);
 
                 int rand = Random.Range(0, rooms.Length);
-                Instantiate(rooms[rand], transform.position, Quaternion.identity);
-                
-
-                //direction = Random.Range(1, 7);
-                //if (direction == 1)
-                //{
-                //    direction = 5;
-                //}
-                //else if (direction == 2)
-                //{
-                //    direction = 6;
-                //}
+                if (stopGeneration == false)
+                {
+                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                }
             }
             else
             {
-                int rand = Random.Range(5, 7);
-                direction = rand;
+                transform.position = new Vector3(transform.position.x - moveAmount, transform.position.y, 0);
+                Navigate(prevDir, direction);
             }
             prevDir = "Left";
         }
@@ -120,13 +110,13 @@ public class LevelGeneration : MonoBehaviour
         else if (direction == 5) // Move DOWN !
         {
             downCounter++;
-            if (transform.position.y > minY)
+            if (transform.position.y >= minY)
             {
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
                 // Check if the room doesn't have bottom opening
                 if (roomDetection.GetComponent<RoomType>().type != 1 && roomDetection.GetComponent<RoomType>().type != 3)
                 {
-                    if (downCounter >= 2)
+                    if (prevDir == "Down")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
                         Instantiate(rooms[3], transform.position, Quaternion.identity);
@@ -141,29 +131,19 @@ public class LevelGeneration : MonoBehaviour
                         {
                             randBottomRoom = Random.Range(1, 4);
                         }
-                        //if (randBottomRoom == 2)
-                        //{
-                        //    randBottomRoom = 1;
-                        //}
                         Instantiate(rooms[randBottomRoom], transform.position, Quaternion.identity);
                         
                     }
                 }
-
-                //Vector2 newPos = new Vector2(transform.position.x, transform.position.y - moveAmount);
-                //transform.position = newPos;
-                navigate(prevDir);
+                transform.position = new Vector3(transform.position.x, transform.position.y - moveAmount, 0);
+                Navigate(prevDir, direction);
 
                 // Ensure room always has top opening
                 int rand = Random.Range(2, 4);
-                Instantiate(rooms[rand], transform.position, Quaternion.identity);
-
-                // Ensure room does not spawn on top of another room
-                //direction = Random.Range(1, 7);
-                //while (direction == 6)
-                //{
-                //    direction = Random.Range(1, 7);
-                //}
+                if (stopGeneration == false)
+                {
+                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                }
             }
             prevDir = "Down";
         }
@@ -171,13 +151,13 @@ public class LevelGeneration : MonoBehaviour
         else if (direction == 6) // Move UP !
         {
             upCounter++;
-            if (transform.position.y < maxY)
+            if (transform.position.y <= maxY)
             {
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
                 // Check if the room doesn't have top opening
                 if (roomDetection.GetComponent<RoomType>().type != 2 && roomDetection.GetComponent<RoomType>().type != 3)
                 {
-                    if (upCounter >= 2)
+                    if (prevDir == "UP")//upCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
                         Instantiate(rooms[3], transform.position, Quaternion.identity);
@@ -186,21 +166,13 @@ public class LevelGeneration : MonoBehaviour
                     else
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-
-                        // int randTopRoom = Random.Range(1, 4);
-                        // if (randTopRoom == 2)
-                        // {
-                        //     randTopRoom = 3;
-                        // }
                         int randTopRoom = Random.Range(2, 4);
                         Instantiate(rooms[randTopRoom], transform.position, Quaternion.identity);
                         
                     }
                 }
-
-                //Vector2 newPos = new Vector2(transform.position.x, transform.position.y + moveAmount);
-                //transform.position = newPos;
-                navigate(prevDir);
+                transform.position = new Vector3(transform.position.x, transform.position.y + moveAmount, 0);
+                Navigate(prevDir, direction);
 
                 // Ensure room always has bottom opening
                 int rand = Random.Range(1, 4);
@@ -208,14 +180,11 @@ public class LevelGeneration : MonoBehaviour
                 {
                     rand = Random.Range(1, 4);
                 }
-                Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                if (stopGeneration == false)
+                {
+                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                }
 
-                // Ensure room does not spawn on top of another room
-                //direction = Random.Range(1, 7);
-                //while (direction == 5)
-                //{
-                //    direction = Random.Range(1, 7);
-                //}
             }
             prevDir = "Up";
         }
@@ -227,18 +196,7 @@ public class LevelGeneration : MonoBehaviour
         }
     }
 
-
-
-    private void checkBoundary()
-    {
-        Vector2 originalPos = transform.position;
-        if (originalPos.x < minX || originalPos.x > maxX || originalPos.y < minY || originalPos.y > maxY)
-        {
-            checkSides = false;
-        }
-    }
-
-    private void navigate(string prevDir)
+    private void Navigate(string prevDir, int curDir)
     {
         List<Vector2> availDir = new List<Vector2>();
         Vector2 originalPos = transform.position;
@@ -257,63 +215,26 @@ public class LevelGeneration : MonoBehaviour
             int rand = Random.Range(0, 4);
             if (rand == 0)
             {
-                navigate("Up");
+                Navigate("Up", curDir);
             }
 
             else if (rand == 1)
             {
-                navigate("Down");
+                Navigate("Down", curDir);
             }
 
             else if (rand == 2)
             {
-                navigate("Right");
+                Navigate("Right", curDir);
             }
 
             else if (rand == 3)
             {
-                navigate("Left");
-            }
-
-        }
-        else if (prevDir == "Up")
-        {
-            if (downDetection == null && downPos.y >= minY)
-            {
-                availDir.Add(downPos);
-            }
-            if (rightDetection == null && rightPos.x <= maxX)
-            {
-                availDir.Add(rightPos);
-            }
-            if (leftDetection == null && leftPos.x >= minX)
-            {
-                availDir.Add(leftPos);
-            }
-            if (availDir.Count == 0)
-            {
-                stopGeneration = true;
-            }
-            else
-            {
-                int index = Random.Range(0, availDir.Count);
-                transform.position = availDir[index];
-                if (availDir[index] == downPos)
-                {
-                    direction = 5;
-                }
-                else if (availDir[index] == rightPos)
-                {
-                    direction = 1;
-                }
-                else if (availDir[index] == leftPos)
-                {
-                    direction = 3;
-                }
+                Navigate("Left", curDir);
             }
         }
 
-        else if (prevDir == "Down")
+        else if (direction == 6)//(prevDir == "Up")
         {
             if (upDetection == null && upPos.y <= maxY)
             {
@@ -329,12 +250,54 @@ public class LevelGeneration : MonoBehaviour
             }
             if (availDir.Count == 0)
             {
+                Debug.Log("Previous Direction :" + prevDir);
+                Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
             {
                 int index = Random.Range(0, availDir.Count);
-                transform.position = availDir[index];
+                //transform.position = availDir[index];
+                if (availDir[index] == upPos)
+                {
+                    direction = 6;
+                }
+                else if (availDir[index] == rightPos)
+                {
+                    direction = 1;
+                }
+                else if (availDir[index] == leftPos)
+                {
+                    direction = 3;
+                }
+            }
+        }
+
+        else if (direction == 5) //(prevDir == "Down")
+        {
+            if (downDetection == null && downPos.y >= minY)
+            {
+                availDir.Add(downPos);
+            }
+            if (rightDetection == null && rightPos.x <= maxX)
+            {
+                availDir.Add(rightPos);
+            }
+            if (leftDetection == null && leftPos.x >= minX)
+            {
+                availDir.Add(leftPos);
+            }
+            Debug.Log("AvailDir Count : " + availDir.Count);
+            if (availDir.Count == 0)
+            {
+                Debug.Log("Previous Direction :" + prevDir);
+                Debug.Log("Stop position :" + transform.position);
+                stopGeneration = true;
+            }
+            else
+            {
+                int index = Random.Range(0, availDir.Count);
+                //transform.position = availDir[index];
                 if (availDir[index] == rightPos)
                 {
                     direction = 1;
@@ -343,34 +306,38 @@ public class LevelGeneration : MonoBehaviour
                 {
                     direction = 3;
                 }
-                else if (availDir[index] == upPos)
+                else if (availDir[index] == downPos)
                 {
-                    direction = 6;
+                    direction = 5;
                 }
             }
         }
 
-        else if (prevDir == "Left")
+        else if (direction == 3 || direction == 4) //(prevDir == "Left")
         {
-            if (upDetection == null && upPos.y < maxY)
+            if (upDetection == null && upPos.y <= maxY)
             {
                 availDir.Add(upPos);
             }
-            if (downDetection == null && downPos.y > minY)
+            if (downDetection == null && downPos.y >= minY)
             {
                 availDir.Add(downPos);
             }
-            if (leftDetection == null && leftPos.x > minX)
+            if (leftDetection == null && leftPos.x >= minX)
             {
                 availDir.Add(leftPos);
             }
+            Debug.Log("AvailDir Count : " + availDir.Count);
             if (availDir.Count == 0)
             {
+                Debug.Log("Previous Direction :" + prevDir);
+                Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
-            } else
+            }
+            else
             {
                 int index = Random.Range(0, availDir.Count);
-                transform.position = availDir[index];
+                //transform.position = availDir[index];
                 if (availDir[index] == downPos)
                 {
                     direction = 5;
@@ -386,7 +353,7 @@ public class LevelGeneration : MonoBehaviour
             }
         }
 
-        else if (prevDir == "Right")
+        else if (direction == 1 || direction == 2) //(prevDir == "Right")
         {
             if (upDetection == null && upPos.y <= maxY)
             {
@@ -400,14 +367,17 @@ public class LevelGeneration : MonoBehaviour
             {
                 availDir.Add(rightPos);
             }
+            Debug.Log("AvailDir Count : " + availDir.Count);
             if (availDir.Count == 0)
             {
+                Debug.Log("Previous Direction :" + prevDir);
+                Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
             {
                 int index = Random.Range(0, availDir.Count);
-                transform.position = availDir[index];
+                //transform.position = availDir[index];
                 if (availDir[index] == downPos)
                 {
                     direction = 5;
@@ -422,10 +392,18 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
         }
-        else if (upDetection != null && downDetection != null && leftDetection != null && rightDetection != null)
+        Debug.Log(" Current Direction : " + direction);
+    }
+
+    private void FillUp()
+    {
+        int unspawnedRoomNumber = maxRoomNumber - currentRoomNumber;
+        for (int i = 0; i < unspawnedRoomNumber; i++)
         {
-            stopGeneration = true;
+            int idx= Random.Range(0, extraRoomsPos.Count);
+            Vector3 roomPos = extraRoomsPos[idx];
+            Instantiate(rooms[3], roomPos, Quaternion.identity);
+            extraRoomsPos.Remove(roomPos);
         }
-        
     }
 }
