@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Storyline/KingAgathGetsHarp.unity
+    guid: 6e321df1741dd4935be6ca492ebc1a72
+  - enabled: 1
+    path: Assets/Scenes/Storyline/Scene2.unity
+    guid: 4c973fedbe9744620b4b6b5214e1f25f
   m_configObjects: {}

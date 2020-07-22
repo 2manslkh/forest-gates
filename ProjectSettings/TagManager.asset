@@ -8,6 +8,7 @@ TagManager:
   - Walls
   - Obstacles
   - UICamera
+  - DialogueContinueButton
   layers:
   - Default
   - TransparentFX
