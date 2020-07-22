@@ -42,8 +42,22 @@ public class SpawnRoom : MonoBehaviour
                 Collider2D nearbyRoom = Physics2D.OverlapCircle(posList[i], 1, whatIsRoom);
                 if (nearbyRoom != null)
                 {
-                    levelGen.extraRoomsPos.Add(transform.position);
-                    break;
+                    if (posList[i] == posUp && nearbyRoom.GetComponent<RoomType>().type != 0 && nearbyRoom.GetComponent<RoomType>().type != 2)
+                    {
+                        levelGen.extraRoomsPos.Add(transform.position);
+                        break;
+                    }
+                    else if (posList[i] == posDown && nearbyRoom.GetComponent<RoomType>().type != 0 && nearbyRoom.GetComponent<RoomType>().type != 1)
+                    {
+                        levelGen.extraRoomsPos.Add(transform.position);
+                        break;
+                    }
+                    else if (posList[i] == posLeft || posList[i] == posRight)
+                    {
+                        levelGen.extraRoomsPos.Add(transform.position);
+                        break;
+                    }
+
                 }
             }
             
