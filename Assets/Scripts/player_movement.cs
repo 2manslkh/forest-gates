@@ -55,7 +55,7 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         weapon_anim.SetFloat("Magnitude", movement.magnitude);
         transform.position = transform.position + movement * Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("BasicAttack")){
+        if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
             StartCoroutine(animateBasicAttack(anim));
         }
         if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("FireballAttack")){
@@ -66,12 +66,14 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     // Basic Attack Animation Routine
     public IEnumerator animateBasicAttack(Animator anim){
         anim.SetBool("BasicAttack", true);
-        yield return new WaitForSeconds(0.6f);
+        weapon_anim.SetBool("BasicAttack", true);
+        yield return new WaitForSeconds(0.68f);
         anim.SetBool("BasicAttack", false);
+        weapon_anim.SetBool("BasicAttack", false);
     }
     IEnumerator FireballAttack(){
         anim.SetBool("FireballAttack", true);
-        fireballScript.ShootFireball();
+        // fireballScript.ShootFireball();
         yield return new WaitForSeconds(0.4f);
         anim.SetBool("FireballAttack", false);
     }

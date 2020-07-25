@@ -21,8 +21,8 @@ public class player_attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeBtwAttack <= 0){
-            // if()
-        }
+        // if (timeBtwAttack <= 0){
+        //     // if()
+        // }
     }
 }
