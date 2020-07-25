@@ -40,20 +40,23 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     {
         // Time.timeScale = 0.05f;
         // Get input of WASD keys
-        movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        // Get mouse position
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        // Get vector that points from player to mouse position
-        Vector2 lookDir = mousePosition - rb.position;
+            // Get mouse position
+            mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+            // Get vector that points from player to mouse position
+            Vector2 lookDir = mousePosition - rb.position;
 
-        anim.SetFloat("Mouse X", lookDir.x);
-        anim.SetFloat("Mouse Y", lookDir.y);
-        anim.SetFloat("Magnitude", movement.magnitude);
-        weapon_anim.SetFloat("Mouse X", lookDir.x);
-        weapon_anim.SetFloat("Mouse Y", lookDir.y);
-        weapon_anim.SetFloat("Magnitude", movement.magnitude);
-        transform.position = transform.position + movement * Time.deltaTime;
+            anim.SetFloat("Mouse X", lookDir.x);
+            anim.SetFloat("Mouse Y", lookDir.y);
+            anim.SetFloat("Magnitude", movement.magnitude);
+            weapon_anim.SetFloat("Mouse X", lookDir.x);
+            weapon_anim.SetFloat("Mouse Y", lookDir.y);
+            weapon_anim.SetFloat("Magnitude", movement.magnitude);
+            transform.position = transform.position + movement * Time.deltaTime;
+        }
 
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
             StartCoroutine(animateBasicAttack(anim));
@@ -67,7 +70,7 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     public IEnumerator animateBasicAttack(Animator anim){
         anim.SetBool("BasicAttack", true);
         weapon_anim.SetBool("BasicAttack", true);
-        yield return new WaitForSeconds(0.68f);
+        yield return new WaitForSeconds(0.5f);
         anim.SetBool("BasicAttack", false);
         weapon_anim.SetBool("BasicAttack", false);
     }
