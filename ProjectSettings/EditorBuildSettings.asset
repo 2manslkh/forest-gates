@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/Map Generation.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/Forest.unity
+    guid: e1984f4f955bb4466ae4058dee01a32f
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/Castle.unity
+    guid: 909b4bfb52f0044cca57108e87963404
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/Lake.unity
+    guid: 1e17a04c991fb492d8facbe7316f9c39
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/EndScene.unity
+    guid: 4cdc7ba5b757f4e16966caa2f2ce5b3a
+  - enabled: 1
+    path: Assets/Scenes/Map Generation/Village.unity
+    guid: 6bcb89671cb4d4a81b04ba4c43f5b683
   m_configObjects: {}

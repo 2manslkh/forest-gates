@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelGeneration : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB
     public List<GameObject> generatedRooms;
     public List<Vector3> extraRoomsPos;
+    public GameObject levelExit;
+    private SceneTransition sceneTransition;
+    public GameObject player;
 
     private int direction;
     public float moveAmount;
@@ -22,6 +26,7 @@ public class LevelGeneration : MonoBehaviour
     public int maxRoomNumber;
     public int currentRoomNumber;
     public bool stopGeneration = false;
+    public bool exitSpawned = false;
 
     public LayerMask room;
 
@@ -35,6 +40,7 @@ public class LevelGeneration : MonoBehaviour
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].position;
         Instantiate(rooms[3], transform.position, Quaternion.identity);
+        Instantiate(player, transform.position, Quaternion.identity);
         direction = Random.Range(1, 7);
     }
 
@@ -43,6 +49,10 @@ public class LevelGeneration : MonoBehaviour
         if (maxRoomNumber == currentRoomNumber)
         {
             stopGeneration = true;
+            if (exitSpawned == false)
+            {
+                SpawnSceneTransition();
+            }
         }
         else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
         {
@@ -405,5 +415,35 @@ public class LevelGeneration : MonoBehaviour
             Instantiate(rooms[3], roomPos, Quaternion.identity);
             extraRoomsPos.Remove(roomPos);
         }
+    }
+
+    private void SpawnSceneTransition()
+    {
+        Vector2 lastRoomPos = generatedRooms[generatedRooms.Count-1].transform.position;
+        Instantiate(levelExit, lastRoomPos, Quaternion.identity);
+        exitSpawned = true;
+
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("Current Scene Name : " + currentSceneName);
+
+        sceneTransition = GameObject.FindWithTag("Level Exit").GetComponent<SceneTransition>();
+
+        if (currentSceneName == "Village")
+        {
+            sceneTransition.sceneToLoad = "Forest";
+        }
+        else if (currentSceneName == "Forest")
+        {
+            sceneTransition.sceneToLoad = "Lake";
+        }
+        else if (currentSceneName == "Lake")
+        {
+            sceneTransition.sceneToLoad = "Castle";
+        }
+        else if (currentSceneName == "Castle")
+        {
+            sceneTransition.sceneToLoad = "EndScene";
+        }
+
     }
 }

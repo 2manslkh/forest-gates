@@ -10,6 +10,7 @@ TagManager:
   - UICamera
   - Pose
   - Room
+  - Level Exit
   layers:
   - Default
   - TransparentFX
