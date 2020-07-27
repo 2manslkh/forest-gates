@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8359158013239477309}
   - component: {fileID: 4350033070975573240}
   - component: {fileID: 3261759878477414122}
-  - component: {fileID: 4338385712869004595}
+  - component: {fileID: 4223858049617544133}
   m_Layer: 0
   m_Name: lake_top
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &4338385712869004595
+--- !u!60 &4223858049617544133
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25, y: 0.25}
+    - - {x: 0.14309502, y: 0.13499047}
+      - {x: 0.00041542947, y: 0.15624209}
+      - {x: -0.08026078, y: 0.089184865}
+      - {x: -0.25, y: 0.107662275}
       - {x: -0.25, y: -0.25}
       - {x: 0.25, y: -0.25}
-      - {x: 0.25, y: 0.25}
+      - {x: 0.25, y: 0.12361388}
