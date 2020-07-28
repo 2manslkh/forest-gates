@@ -13,11 +13,11 @@ public enum EnemyState
 public class Enemy : MonoBehaviour
 {
     GameObject player;
-    public EnemyState currState = EnemyState.Wander;
+    public EnemyState currentState = EnemyState.Wander;
     public Transform target;
     Rigidbody2D rb;
     public float detectionRange = 5f;
-    public float attackRange = 0.8f;
+    public float attackRange = 1.0f;
     public float moveSpeed = 2f;
     public Animator anim;
     private Vector2 moveDirection;
@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (currState)
+        switch (currentState)
         {
             case (EnemyState.Wander):
                 Wander();
@@ -52,17 +52,17 @@ public class Enemy : MonoBehaviour
                 break;
         }
 
-        if(IsPlayerInRange(attackRange) && currState != EnemyState.Die)
+        if(IsPlayerInRange(attackRange) && currentState != EnemyState.Die)
         {
-            currState = EnemyState.Attack;
+            currentState = EnemyState.Attack;
         }
-        else if(IsPlayerInRange(detectionRange) && currState != EnemyState.Die)
+        else if(IsPlayerInRange(detectionRange) && currentState != EnemyState.Die)
         {
-            currState = EnemyState.Follow;
+            currentState = EnemyState.Follow;
         }
-        else if(!IsPlayerInRange(detectionRange)&& currState != EnemyState.Die)
+        else if(!IsPlayerInRange(detectionRange)&& currentState != EnemyState.Die)
         {
-            currState = EnemyState.Wander;
+            currentState = EnemyState.Wander;
         }
     }
 
@@ -81,7 +81,10 @@ public class Enemy : MonoBehaviour
     void Follow()
     {
         anim.SetBool("Moving", true);
-        transform.position += (player.transform.position - transform.position).normalized * moveSpeed * Time.deltaTime;
+        // transform.position += (player.transform.position - transform.position).normalized * moveSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        print(transform.position);
+        print(target.position);
     }
 
     void Attack()
