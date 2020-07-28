@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PatrolBehaviour : StateMachineBehaviour
 {
-     private PatrolSpots patrol;
+    private PatrolSpots patrol;
     public float speed;
     private int randomSpot;
+    private Transform playerPos;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -19,7 +20,10 @@ public class PatrolBehaviour : StateMachineBehaviour
     {
         if (Vector2.Distance(animator.transform.position, patrol.patrolPoints[randomSpot].position) > 0.2f)
         {
+            Vector2 difference = patrol.patrolPoints[randomSpot].position - animator.transform.position;
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, patrol.patrolPoints[randomSpot].position, speed * Time.deltaTime);
+            animator.SetFloat("Horizontal", difference.x);
+            animator.SetFloat("Vertical", difference.y);
 
         }
         else
@@ -27,8 +31,11 @@ public class PatrolBehaviour : StateMachineBehaviour
             randomSpot = Random.Range(0, patrol.patrolPoints.Length);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.P)) {
             animator.SetBool("isPatrolling", false);
+        }
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            animator.SetBool("isFollowing", true);
         }
 
     }

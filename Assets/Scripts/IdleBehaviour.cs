@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleBehaviour : StateMachineBehaviour
 {
-    public GameObject effect;
+    // public GameObject effect;
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
   
@@ -15,10 +15,13 @@ public class IdleBehaviour : StateMachineBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetBool("isFollowing", true);
         }
+        if (Input.GetKeyDown(KeyCode.P)) {
+            animator.SetBool("isPatrolling", true);
+        }
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        Instantiate(effect, animator.transform.position, Quaternion.identity);
+        // Instantiate(effect, animator.transform.position, Quaternion.identity);
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

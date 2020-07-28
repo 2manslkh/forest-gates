@@ -2,43 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowBehaviour : StateMachineBehaviour
+public class AttackBehaviour : StateMachineBehaviour
 {
-    private AudioSource source;
     private Transform playerPos;
-    public float speed;
 
-    // Start
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        // source = animator.GetComponent<AudioSource>();
-        // source.Play();
-
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+  
 	}
 
-    // Update
+
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
-        Vector2 difference = playerPos.position - animator.transform.position;
-        animator.SetFloat("Horizontal", difference.x);
-        animator.SetFloat("Vertical", difference.y);
-
         if (Input.GetKeyDown(KeyCode.Space)) {
-            animator.SetBool("isFollowing", false);
+            animator.SetBool("isFollowing", true);
         }
-
         if (Input.GetKeyDown(KeyCode.P)) {
             animator.SetBool("isPatrolling", true);
         }
-        
-        if (difference.magnitude < 3.0f) {
-            animator.SetBool("isAttacking", true);
-        }
 	}
 
-    //Stops
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
