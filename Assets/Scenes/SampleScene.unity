@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 1022445461}
   - component: {fileID: 1022445460}
   - component: {fileID: 1022445463}
+  - component: {fileID: 1022445464}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Player
@@ -562,13 +563,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1022445461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -660,6 +661,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17766213, y: 0.38875684}
   m_EdgeRadius: 0
+--- !u!114 &1022445464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022445459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8225e293e69ab44799cfb80fa847ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &1193266495
 GameObject:
   m_ObjectHideFlags: 0

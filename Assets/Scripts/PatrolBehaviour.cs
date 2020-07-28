@@ -13,14 +13,15 @@ public class PatrolBehaviour : StateMachineBehaviour
     {
         patrol = GameObject.FindGameObjectWithTag("PatrolSpots").GetComponent<PatrolSpots>();
         randomSpot = Random.Range(0, patrol.patrolPoints.Length);
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Vector2 difference = patrol.patrolPoints[randomSpot].position - animator.transform.position;
         if (Vector2.Distance(animator.transform.position, patrol.patrolPoints[randomSpot].position) > 0.2f)
         {
-            Vector2 difference = patrol.patrolPoints[randomSpot].position - animator.transform.position;
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, patrol.patrolPoints[randomSpot].position, speed * Time.deltaTime);
             animator.SetFloat("Horizontal", difference.x);
             animator.SetFloat("Vertical", difference.y);
@@ -36,6 +37,10 @@ public class PatrolBehaviour : StateMachineBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetBool("isFollowing", true);
+        }
+
+        if (difference.magnitude < 2.0f) {
+            animator.SetBool("isAttacking", true);
         }
 
     }

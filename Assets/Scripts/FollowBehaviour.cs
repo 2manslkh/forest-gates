@@ -31,7 +31,7 @@ public class FollowBehaviour : StateMachineBehaviour
             animator.SetBool("isPatrolling", true);
         }
         
-        if (difference.magnitude < 3.0f) {
+        if (difference.magnitude < 1.5f) {
             animator.SetBool("isAttacking", true);
         }
 	}
