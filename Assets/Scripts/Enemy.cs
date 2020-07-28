@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     private Vector2 moveDirection;
     private int moveDir;
     private bool canChangeDir;
+    public bool isHit;
 
     // Start is called before the first frame update
     void Start()
