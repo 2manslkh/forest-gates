@@ -9,6 +9,9 @@ TagManager:
   - Obstacles
   - UICamera
   - DialogueContinueButton
+  - Pose
+  - Room
+  - Level Exit
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - 
   - 
   - PostProcess
-  - 
+  - Room
   - 
   - 
   - 
