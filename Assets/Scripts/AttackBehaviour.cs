@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackBehaviour : StateMachineBehaviour
 {
     private Transform playerPos;
+    public float attackDistance;
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
@@ -13,8 +14,11 @@ public class AttackBehaviour : StateMachineBehaviour
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         Vector2 difference = playerPos.position - animator.transform.position;
-        animator.SetFloat("Horizontal", difference.x);
-        animator.SetFloat("Vertical", difference.y);
+        if(animator.GetCurrentAnimatorStateInfo(0).length < animator.GetCurrentAnimatorStateInfo(0).normalizedTime && animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            animator.SetFloat("Horizontal", difference.x);
+            animator.SetFloat("Vertical", difference.y);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetBool("isFollowing", true);
@@ -22,7 +26,7 @@ public class AttackBehaviour : StateMachineBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             animator.SetBool("isPatrolling", true);
         }
-        if (difference.magnitude > 1.5f) {
+        if (difference.magnitude > attackDistance) {
             animator.SetBool("isAttacking", false);
         }
 	}
@@ -39,4 +43,5 @@ public class AttackBehaviour : StateMachineBehaviour
 	//override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	//
 	//}
-}
+  }
+    

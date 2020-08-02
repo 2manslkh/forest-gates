@@ -7,6 +7,7 @@ public class FollowBehaviour : StateMachineBehaviour
     private AudioSource source;
     private Transform playerPos;
     public float speed;
+    public float attackDistance;
 
     // Start
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -31,7 +32,7 @@ public class FollowBehaviour : StateMachineBehaviour
             animator.SetBool("isPatrolling", true);
         }
         
-        if (difference.magnitude < 1.5f) {
+        if (difference.magnitude < attackDistance) {
             animator.SetBool("isAttacking", true);
         }
 	}

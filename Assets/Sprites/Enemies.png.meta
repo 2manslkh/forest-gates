@@ -295,31 +295,31 @@ TextureImporter:
     second: Enemies_96
   - first:
       213: -3795149127210610995
-    second: Enemies_97
+    second: Zombie_walk_down1
   - first:
       213: 3998031152197799805
-    second: Enemies_98
+    second: Zombie_walk_down2
   - first:
       213: -5392914322310365440
-    second: Enemies_99
+    second: Zombie_walk_down3
   - first:
       213: -5716800537163901602
-    second: Enemies_100
+    second: Zombie_walk_left1
   - first:
       213: 3758680154995228956
-    second: Enemies_101
+    second: Zombie_walk_left2
   - first:
       213: 5096798637288347760
-    second: Enemies_102
+    second: Zombie_walk_left3
   - first:
       213: -3908582556919349228
-    second: Enemies_103
+    second: Zombie_walk_up1
   - first:
       213: -7340435992496341900
-    second: Enemies_104
+    second: Zombie_walk_up2
   - first:
       213: -6215373132702329084
-    second: Enemies_105
+    second: Zombie_walk_up3
   - first:
       213: 281971560821966503
     second: Enemies_106
@@ -340,55 +340,55 @@ TextureImporter:
     second: Enemies_111
   - first:
       213: -327514432990638087
-    second: Enemies_112
+    second: Zombie_die
   - first:
       213: -846593386734640808
     second: Enemies_113
   - first:
       213: 3005459295459972260
-    second: Enemies_114
+    second: Zombie_attack_down1
   - first:
       213: -2687233724321928115
-    second: Enemies_115
+    second: Zombie_attack_down2
   - first:
       213: 3963637521249654660
-    second: Enemies_116
+    second: Zombie_attack_left1
   - first:
       213: 8393362849812203762
-    second: Enemies_117
+    second: Zombie_attack_left2
   - first:
       213: -5912028405313391129
-    second: Enemies_118
+    second: Zombie_attack_up1
   - first:
       213: -318846305294400523
-    second: Enemies_119
+    second: Zombie_attack_up2
   - first:
       213: 6940734687792239648
-    second: Enemies_120
+    second: Ogre_walk_down1
   - first:
       213: -8243208416857005183
-    second: Enemies_121
+    second: Ogre_walk_down2
   - first:
       213: 3239750355448910219
-    second: Enemies_122
+    second: Ogre_walk_down3
   - first:
       213: 5197189315874054843
-    second: Enemies_123
+    second: Ogre_walk_left1
   - first:
       213: -3677388578715449969
-    second: Enemies_124
+    second: Ogre_walk_left2
   - first:
       213: 3701666406343386126
-    second: Enemies_125
+    second: Ogre_walk_left3
   - first:
       213: 3660494594444218831
-    second: Enemies_126
+    second: Ogre_walk_up1
   - first:
       213: 7027872553957238786
-    second: Enemies_127
+    second: Ogre_walk_up2
   - first:
       213: -137540584029387419
-    second: Enemies_128
+    second: Ogre_walk_up3
   - first:
       213: -6154621009441377342
     second: Enemies_129
@@ -412,7 +412,7 @@ TextureImporter:
     second: Enemies_135
   - first:
       213: -562681637999226928
-    second: Enemies_136
+    second: Ogre_die
   - first:
       213: -766859008075336968
     second: Enemies_137
@@ -442,46 +442,46 @@ TextureImporter:
     second: Enemies_145
   - first:
       213: 319421418165413305
-    second: Enemies_146
+    second: Ogre_attack_down1
   - first:
       213: -3683129233222908608
-    second: Enemies_147
+    second: Ogre_attack_down2
   - first:
       213: -8009513197434778597
-    second: Enemies_148
+    second: Ogre_attack_left1
   - first:
       213: 326652799362314358
-    second: Enemies_149
+    second: Ogre_attack_left2
   - first:
       213: 6123328514323656516
-    second: Enemies_150
+    second: Ogre_attack_up1
   - first:
       213: -1392251652115161788
-    second: Enemies_151
+    second: Ogre_attack_up2
   - first:
       213: -6209669611497975365
     second: Enemies_152
   - first:
       213: 354213150648333148
-    second: Enemies_153
+    second: Ogre_dash_down1
   - first:
       213: -4452606747806102095
-    second: Enemies_154
+    second: Ogre_dash_down2
   - first:
       213: 4926687446771336793
-    second: Enemies_155
+    second: Ogre_dash_left1
   - first:
       213: 5035920677686273104
-    second: Enemies_156
+    second: Ogre_dash_left2
   - first:
       213: -8621851157264753674
-    second: Enemies_157
+    second: Ogre_dash_left3
   - first:
       213: -6287907087565448776
-    second: Enemies_158
+    second: Ogre_dash_up1
   - first:
       213: -6125822361543737226
-    second: Enemies_159
+    second: Ogre_dash_up2
   - first:
       213: 2305618141317633844
     second: Enemies_160
@@ -959,6 +959,9 @@ TextureImporter:
   - first:
       213: -5615647706442305919
     second: Enemies_318
+  - first:
+      213: -3728355714346135033
+    second: Enemies_319
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -3081,7 +3084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_97
+      name: Zombie_walk_down1
       rect:
         serializedVersion: 2
         x: 568
@@ -3102,7 +3105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_98
+      name: Zombie_walk_down2
       rect:
         serializedVersion: 2
         x: 604
@@ -3123,7 +3126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_99
+      name: Zombie_walk_down3
       rect:
         serializedVersion: 2
         x: 642
@@ -3144,7 +3147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_100
+      name: Zombie_walk_left1
       rect:
         serializedVersion: 2
         x: 681
@@ -3165,7 +3168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_101
+      name: Zombie_walk_left2
       rect:
         serializedVersion: 2
         x: 708
@@ -3186,7 +3189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_102
+      name: Zombie_walk_left3
       rect:
         serializedVersion: 2
         x: 739
@@ -3207,7 +3210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_103
+      name: Zombie_walk_up1
       rect:
         serializedVersion: 2
         x: 772
@@ -3228,7 +3231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_104
+      name: Zombie_walk_up2
       rect:
         serializedVersion: 2
         x: 800
@@ -3249,7 +3252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_105
+      name: Zombie_walk_up3
       rect:
         serializedVersion: 2
         x: 828
@@ -3396,7 +3399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_112
+      name: Zombie_die
       rect:
         serializedVersion: 2
         x: 565
@@ -3438,7 +3441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_114
+      name: Zombie_attack_down1
       rect:
         serializedVersion: 2
         x: 564
@@ -3459,7 +3462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_115
+      name: Zombie_attack_down2
       rect:
         serializedVersion: 2
         x: 594
@@ -3480,7 +3483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_116
+      name: Zombie_attack_left1
       rect:
         serializedVersion: 2
         x: 628
@@ -3501,7 +3504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_117
+      name: Zombie_attack_left2
       rect:
         serializedVersion: 2
         x: 648
@@ -3522,7 +3525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_118
+      name: Zombie_attack_up1
       rect:
         serializedVersion: 2
         x: 695
@@ -3543,7 +3546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_119
+      name: Zombie_attack_up2
       rect:
         serializedVersion: 2
         x: 723
@@ -3564,7 +3567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_120
+      name: Ogre_walk_down1
       rect:
         serializedVersion: 2
         x: 10
@@ -3585,7 +3588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_121
+      name: Ogre_walk_down2
       rect:
         serializedVersion: 2
         x: 61
@@ -3606,7 +3609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_122
+      name: Ogre_walk_down3
       rect:
         serializedVersion: 2
         x: 106
@@ -3627,7 +3630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_123
+      name: Ogre_walk_left1
       rect:
         serializedVersion: 2
         x: 164
@@ -3648,7 +3651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_124
+      name: Ogre_walk_left2
       rect:
         serializedVersion: 2
         x: 214
@@ -3669,7 +3672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_125
+      name: Ogre_walk_left3
       rect:
         serializedVersion: 2
         x: 264
@@ -3690,11 +3693,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_126
+      name: Ogre_walk_up1
       rect:
         serializedVersion: 2
         x: 315
-        y: 913
+        y: 914
         width: 42
         height: 53
       alignment: 0
@@ -3711,7 +3714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_127
+      name: Ogre_walk_up2
       rect:
         serializedVersion: 2
         x: 367
@@ -3732,7 +3735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_128
+      name: Ogre_walk_up3
       rect:
         serializedVersion: 2
         x: 409
@@ -3900,7 +3903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_136
+      name: Ogre_die
       rect:
         serializedVersion: 2
         x: 10
@@ -4110,7 +4113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_146
+      name: Ogre_attack_down1
       rect:
         serializedVersion: 2
         x: 8
@@ -4131,7 +4134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_147
+      name: Ogre_attack_down2
       rect:
         serializedVersion: 2
         x: 54
@@ -4152,7 +4155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_148
+      name: Ogre_attack_left1
       rect:
         serializedVersion: 2
         x: 122
@@ -4173,7 +4176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_149
+      name: Ogre_attack_left2
       rect:
         serializedVersion: 2
         x: 196
@@ -4194,7 +4197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_150
+      name: Ogre_attack_up1
       rect:
         serializedVersion: 2
         x: 283
@@ -4215,7 +4218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_151
+      name: Ogre_attack_up2
       rect:
         serializedVersion: 2
         x: 324
@@ -4257,7 +4260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_153
+      name: Ogre_dash_down1
       rect:
         serializedVersion: 2
         x: 11
@@ -4278,7 +4281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_154
+      name: Ogre_dash_down2
       rect:
         serializedVersion: 2
         x: 56
@@ -4299,7 +4302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_155
+      name: Ogre_dash_left1
       rect:
         serializedVersion: 2
         x: 105
@@ -4320,7 +4323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_156
+      name: Ogre_dash_left2
       rect:
         serializedVersion: 2
         x: 158
@@ -4341,7 +4344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_157
+      name: Ogre_dash_left3
       rect:
         serializedVersion: 2
         x: 218
@@ -4362,7 +4365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_158
+      name: Ogre_dash_up1
       rect:
         serializedVersion: 2
         x: 286
@@ -4383,7 +4386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_159
+      name: Ogre_dash_up2
       rect:
         serializedVersion: 2
         x: 331
@@ -7717,6 +7720,48 @@ TextureImporter:
       bones: []
       spriteID: 0c8ad375c562746e0800000000000000
       internalID: -1853470543597164352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies_318
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1566
+        width: 7
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ee4c9f9263112b0800000000000000
+      internalID: -5615647706442305919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemies_319
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 1001
+        width: 71
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702d9124b38324cc0800000000000000
+      internalID: -3728355714346135033
       vertices: []
       indices: 
       edges: []
