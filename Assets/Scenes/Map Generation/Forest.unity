@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1248,6 +1248,7 @@ GameObject:
   - component: {fileID: 1313505046}
   - component: {fileID: 1313505045}
   - component: {fileID: 1313505044}
+  - component: {fileID: 1313505048}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1319,8 +1320,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 58
+  orthographic: 0
   orthographic size: 22.120525
   m_Depth: -1
   m_CullingMask:
@@ -1351,6 +1352,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313505048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313505043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197cda7ebaa82467593465a5cfa4258a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentRoom: {fileID: 0}
+  MovementSpeedOnRoomChange: 30
+  targetaspect: 1
+  fov: 53
 --- !u!1 &1394113984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127098244}
   - component: {fileID: 2127098243}
+  - component: {fileID: 2127098245}
   m_Layer: 0
   m_Name: Level Generation
   m_TagString: Untagged
@@ -1514,10 +1532,11 @@ MonoBehaviour:
   - {fileID: 449935532}
   - {fileID: 921575860}
   rooms:
-  - {fileID: 2645544741996953426, guid: 6977cdb2b5fae452f8481d283a6dce11, type: 3}
-  - {fileID: 1343886117431746819, guid: 79e9c2a31017d4d7cbb6f55dda070519, type: 3}
-  - {fileID: 2385776143238289730, guid: 938afd60f363a41d89208d26b23a7b2e, type: 3}
-  - {fileID: 914410430796848197, guid: b74eaadee2db7445b9105fc468c3e5f3, type: 3}
+  - {fileID: 3470804582300482370, guid: d082a8cb43042da4c92630b9b1ee11e9, type: 3}
+  - {fileID: 9210999716350393411, guid: dda5b4b8cec380141bc985a055e8d2ae, type: 3}
+  - {fileID: 3646844490993092522, guid: 64ef33f1dddc45c43ac88901127e18c7, type: 3}
+  - {fileID: 6405237077865621898, guid: be48c73300fd2499aa4f74457e5b1ae7, type: 3}
+  - {fileID: 596588159599763984, guid: d200148e52f736d4fbe32f2ef6f0dbcc, type: 3}
   generatedRooms: []
   extraRoomsPos: []
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
@@ -1529,7 +1548,7 @@ MonoBehaviour:
   maxX: 35
   minY: 5
   maxY: 35
-  maxRoomNumber: 5
+  maxRoomNumber: 16
   currentRoomNumber: 0
   stopGeneration: 0
   exitSpawned: 0
@@ -1550,6 +1569,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127098245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127098242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a05ae0b5c3d4297abd560aeaa5c8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131254427
 GameObject:
   m_ObjectHideFlags: 0
