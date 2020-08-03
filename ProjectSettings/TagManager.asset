@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Walls
+  - Obstacles
+  - UICamera
+  - DialogueContinueButton
+  - Pose
+  - Room
+  - Level Exit
   layers:
   - Default
   - TransparentFX
@@ -13,8 +21,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Player
   - 
+=======
+  - PostProcess
+  - Room
+>>>>>>> master
   - 
   - 
   - 
@@ -38,12 +51,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Player
+    uniqueID: 3734926495
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Weapon
     uniqueID: 1420622033
     locked: 0
   - name: Player
     uniqueID: 1141631217
+=======
+  - name: Ground
+    uniqueID: 3295107733
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3322136669
+>>>>>>> master
     locked: 0
