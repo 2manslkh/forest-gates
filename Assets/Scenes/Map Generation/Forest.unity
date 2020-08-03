@@ -1541,7 +1541,7 @@ MonoBehaviour:
   extraRoomsPos: []
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
-  player: {fileID: 2613128792421471275, guid: 46fd5b2cdbd8a4bcba768336bae76182, type: 3}
+  player: {fileID: 7098541782123167762, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
   moveAmount: 10
   startTimneBtwRoom: 0.25
   minX: 5

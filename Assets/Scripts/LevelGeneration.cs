@@ -206,7 +206,7 @@ public class LevelGeneration : MonoBehaviour
         {
             // STOP LEVEL GENERATION
             stopGeneration = true;
-            Debug.Log("Stop Map Generation!");
+            // Debug.Log("Stop Map Generation!");
         }
     }
 
@@ -264,8 +264,8 @@ public class LevelGeneration : MonoBehaviour
             }
             if (availDir.Count == 0)
             {
-                Debug.Log("Previous Direction :" + prevDir);
-                Debug.Log("Stop position :" + transform.position);
+                // Debug.Log("Previous Direction :" + prevDir);
+                // Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
@@ -301,11 +301,11 @@ public class LevelGeneration : MonoBehaviour
             {
                 availDir.Add(leftPos);
             }
-            Debug.Log("AvailDir Count : " + availDir.Count);
+            // Debug.Log("AvailDir Count : " + availDir.Count);
             if (availDir.Count == 0)
             {
-                Debug.Log("Previous Direction :" + prevDir);
-                Debug.Log("Stop position :" + transform.position);
+                // Debug.Log("Previous Direction :" + prevDir);
+                // Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
@@ -341,11 +341,11 @@ public class LevelGeneration : MonoBehaviour
             {
                 availDir.Add(leftPos);
             }
-            Debug.Log("AvailDir Count : " + availDir.Count);
+            // Debug.Log("AvailDir Count : " + availDir.Count);
             if (availDir.Count == 0)
             {
-                Debug.Log("Previous Direction :" + prevDir);
-                Debug.Log("Stop position :" + transform.position);
+                // Debug.Log("Previous Direction :" + prevDir);
+                // Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
@@ -381,11 +381,11 @@ public class LevelGeneration : MonoBehaviour
             {
                 availDir.Add(rightPos);
             }
-            Debug.Log("AvailDir Count : " + availDir.Count);
+            // Debug.Log("AvailDir Count : " + availDir.Count);
             if (availDir.Count == 0)
             {
-                Debug.Log("Previous Direction :" + prevDir);
-                Debug.Log("Stop position :" + transform.position);
+                // Debug.Log("Previous Direction :" + prevDir);
+                // Debug.Log("Stop position :" + transform.position);
                 stopGeneration = true;
             }
             else
@@ -406,7 +406,7 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
         }
-        Debug.Log(" Current Direction : " + direction);
+        // Debug.Log(" Current Direction : " + direction);
     }
 
     private void SpawnSceneTransition()
@@ -416,7 +416,7 @@ public class LevelGeneration : MonoBehaviour
         exitSpawned = true;
 
         string currentSceneName = SceneManager.GetActiveScene().name;
-        Debug.Log("Current Scene Name : " + currentSceneName);
+        // Debug.Log("Current Scene Name : " + currentSceneName);
 
         sceneTransition = GameObject.FindWithTag("Level Exit").GetComponent<SceneTransition>();
 

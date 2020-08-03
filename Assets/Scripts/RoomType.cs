@@ -26,7 +26,7 @@ public class RoomType : MonoBehaviour
     public void RoomDestruction() {
         levelGen.generatedRooms.Remove(gameObject);
         Destroy(gameObject);
-        Debug.Log("Destroyed : " + gameObject);
+        // Debug.Log("Destroyed : " + gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
