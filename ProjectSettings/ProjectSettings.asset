@@ -648,10 +648,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 8ed7a517-f349-4460-ae83-136412595444
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Forest Gates
+  organizationId: 2manslkh
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
