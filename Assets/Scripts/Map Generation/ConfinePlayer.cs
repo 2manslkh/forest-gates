@@ -11,6 +11,7 @@ public class ConfinePlayer : MonoBehaviour
     private bool enemiesCleared = false;
     private PlayerController playerController;
     private GameObject player;
+    private GameCamera gameCamera;
 
     //public List<Collider2D> roomDetection;
 
@@ -21,6 +22,7 @@ public class ConfinePlayer : MonoBehaviour
     }
     void Start()
     {
+        gameCamera = GameObject.Find("Main Camera").GetComponent<GameCamera>();
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         player = playerController.gameObject;
@@ -29,7 +31,8 @@ public class ConfinePlayer : MonoBehaviour
     private void Update()
     {
         //if (Mathf.Abs(player.transform.position.x - transform.position.x) < 5.0 || Mathf.Abs(player.transform.position.y - transform.position.y) < 5.0)
-        if (gameObject == GameCamera.Instance.CurrentRoom)
+        //if (gameObject == GameCamera.Instance.CurrentRoom)
+        if (gameObject == gameCamera.CurrentRoom)
         {
             if (enemiesCleared == false && Input.GetKey(KeyCode.Space))
             {
