@@ -15,9 +15,9 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource source;
 
 	private Rigidbody2D rigidbody;
-	
-	// Use this for initialization
-	void Start()
+
+    // Use this for initialization
+    void Start()
 	{
 		count = 0;
 		rigidbody = GetComponent<Rigidbody2D>();
