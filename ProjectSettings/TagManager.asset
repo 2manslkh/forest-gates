@@ -21,8 +21,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
+  - Player
+  - 
+=======
   - PostProcess
   - Room
+>>>>>>> master
   - 
   - 
   - 
@@ -52,9 +57,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+  - name: Weapon
+    uniqueID: 1420622033
+    locked: 0
+  - name: Player
+    uniqueID: 1141631217
+=======
   - name: Ground
     uniqueID: 3295107733
     locked: 0
   - name: Obstacles
     uniqueID: 3322136669
+>>>>>>> master
     locked: 0
