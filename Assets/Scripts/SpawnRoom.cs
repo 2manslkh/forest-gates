@@ -21,7 +21,7 @@ public class SpawnRoom : MonoBehaviour
         {
             levelGen.currentRoomNumber++;
             spawned = true;
-            Debug.Log("Current Room Number : " + levelGen.currentRoomNumber);
+            // Debug.Log("Current Room Number : " + levelGen.currentRoomNumber);
         }
 
         // Check if any room is spawned around the current position.

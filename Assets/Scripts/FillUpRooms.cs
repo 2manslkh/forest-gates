@@ -110,7 +110,7 @@ public class FillUpRooms : MonoBehaviour
                     Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
 
                 }
-                Debug.Log("extraRoomsPos" + extraRoomsPos.Count);
+                // Debug.Log("extraRoomsPos" + extraRoomsPos.Count);
 
 
             }

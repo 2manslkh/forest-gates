@@ -13,7 +13,6 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     public Animator weapon_anim;
     private Vector3 movement;
     private Vector2 mousePosition;
-    private Fireball fireballScript;
     // Update is called once per frame
 
     public enum facingDirection{ //WIP
@@ -22,6 +21,13 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         DOWN=3,
         LEFT=4
     } 
+
+    private void Start() {
+        cam = Camera.main;
+        // anim = gameObject.GetComponent<Animator>();
+        anim.enabled = false;
+        anim.enabled = true;
+    }
 
     public int currentFacingDirection;
 
@@ -45,10 +51,11 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
             // Get mouse position
-            mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+            var mousePos = Input.mousePosition;
+            mousePos.z = 10;
+            mousePosition = cam.ScreenToWorldPoint(mousePos);
             // Get vector that points from player to mouse position
             Vector2 lookDir = mousePosition - rb.position;
-
             anim.SetFloat("Mouse X", lookDir.x);
             anim.SetFloat("Mouse Y", lookDir.y);
             anim.SetFloat("Magnitude", movement.magnitude);
@@ -61,9 +68,6 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
             StartCoroutine(animateBasicAttack(anim));
         }
-        if (Input.GetMouseButtonDown(1) && !anim.GetCurrentAnimatorStateInfo(0).IsName("FireballAttack")){
-            StartCoroutine(FireballAttack());
-        }
     }
 
     // Basic Attack Animation Routine
@@ -74,11 +78,4 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
         anim.SetBool("BasicAttack", false);
         weapon_anim.SetBool("BasicAttack", false);
     }
-    IEnumerator FireballAttack(){
-        anim.SetBool("FireballAttack", true);
-        // fireballScript.ShootFireball();
-        yield return new WaitForSeconds(0.4f);
-        anim.SetBool("FireballAttack", false);
-    }
-
 }

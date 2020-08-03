@@ -9,7 +9,6 @@ public class ConfinePlayer : MonoBehaviour
     BoxCollider2D boxCollider;
     EdgeCollider2D edgeCollider;
     private bool enemiesCleared = false;
-    private PlayerController playerController;
     private GameObject player;
 
     //public List<Collider2D> roomDetection;
@@ -22,8 +21,7 @@ public class ConfinePlayer : MonoBehaviour
     void Start()
     {
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        player = playerController.gameObject;
+        player = GameObject.FindWithTag("Player");
     }
 
     private void Update()
