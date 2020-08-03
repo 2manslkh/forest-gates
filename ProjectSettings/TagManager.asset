@@ -8,6 +8,7 @@ TagManager:
   - Walls
   - Obstacles
   - UICamera
+  - DialogueContinueButton
   - Pose
   - Room
   - Level Exit
