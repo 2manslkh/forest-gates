@@ -5,19 +5,19 @@ using UnityEngine;
 public class IdleBehaviour : StateMachineBehaviour
 {
     // public GameObject effect;
+		private Transform playerPos;
+		public float followDistance;
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-  
+		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            animator.SetBool("isFollowing", true);
-        }
-        if (Input.GetKeyDown(KeyCode.P)) {
-            animator.SetBool("isPatrolling", true);
-        }
+		Vector2 difference = playerPos.position - animator.transform.position;
+		if (difference.magnitude < followDistance) {
+			animator.SetBool("isFollowing", true);
+		}
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
