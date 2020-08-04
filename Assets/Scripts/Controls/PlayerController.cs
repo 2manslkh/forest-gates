@@ -91,6 +91,12 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
         }
     }
 
+
+      void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
+    }
+
     // Basic Attack Animation Routine
     public IEnumerator animateBasicAttack(Animator anim){
         anim.SetBool("BasicAttack", true);
