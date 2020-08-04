@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
-    public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB, index 4 -->TB
+    // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB, index 4 -->TB
+    // index 5 --> LU, index 6 --> LD, index 7 -->LUD, index 8 --> RU, index 9 -->RD, index 10 -->RUD
+    public GameObject[] rooms; 
     public List<GameObject> generatedRooms;
     public List<Vector3> extraRoomsPos;
     public GameObject levelExit;
