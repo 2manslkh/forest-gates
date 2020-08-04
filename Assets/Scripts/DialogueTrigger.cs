@@ -6,23 +6,51 @@ public class DialogueTrigger : MonoBehaviour
 {
     //public Dialogue dialogue;
     public GameObject dialogueBox;
-    //public Animation anim;
+    public GameObject toContinueCanvas;
+    private bool triggered;
+    private bool finishedTalking;
+    private float sec = 10f;
+    
 
     void OnAwake(){
         dialogueBox.SetActive(false);
-        //anim = GetComponent<Animation>();
+        toContinueCanvas.SetActive(false);
+        triggered = false;
+        finishedTalking = false;
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(collider.gameObject.name + " : " + gameObject.name + " : " + Time.time);
-        if(collider.gameObject.CompareTag("Gatekeeper")){
-            Debug.Log(collider.tag);
-            if (Input.GetKeyDown("E")){
-                dialogueBox.SetActive(true);
-                print("E key was pressed");
-                //anim.Play();
-            }
+        if (other.CompareTag("Gatekeeper"))
+        {
+            triggered = true;
+            Debug.Log(other.tag);
         }
+
     }
+
+    void Update(){
+        if (Input.GetKeyDown(KeyCode.E) && triggered)
+        {
+            dialogueBox.SetActive(true);
+            Debug.Log("E key was pressed");
+            StartCoroutine(LateCall());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && finishedTalking){
+            dialogueBox.SetActive(false);
+            toContinueCanvas.SetActive(false);
+            Debug.Log("Enter was pressed after talking");
+        }
+        
+    }
+
+    IEnumerator LateCall()
+     {
+         yield return new WaitForSeconds(sec);
+         toContinueCanvas.SetActive(true);
+         finishedTalking = true;
+         Debug.Log("finishedTalking is true");
+     }
+    
 }

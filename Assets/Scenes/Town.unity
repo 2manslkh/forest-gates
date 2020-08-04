@@ -1069,6 +1069,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6716937706686974687, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -8352954786317406394, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3944728165793418899, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1040598189
@@ -1293,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568cebb7a657e43e3aad1de0c84340c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  dialogueBox: {fileID: 42490164}
 --- !u!1 &1147755042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,32 +3175,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &1226733867317205467
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3280769517868237110}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 14.5, y: 14.5}
-  m_EdgeRadius: 0
 --- !u!1839735485 &1257916592350418829
 Tilemap:
   m_ObjectHideFlags: 0
@@ -4854,7 +4832,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3280769517868237112}
   - component: {fileID: 3280769517868237111}
-  - component: {fileID: 1226733867317205467}
   - component: {fileID: 2932794062716116337}
   m_Layer: 9
   m_Name: town
