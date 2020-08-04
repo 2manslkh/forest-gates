@@ -14,6 +14,12 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     private Vector3 movement;
     private Vector2 mousePosition;
     // Update is called once per frame
+    private bool isAttacking;
+    public Transform attackPosition;
+    public LayerMask enemyLayer;
+    public float attackRadius;
+    private int damage;
+
 
     public enum facingDirection{ //WIP
         UP=1,
@@ -64,10 +70,23 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
             weapon_anim.SetFloat("Mouse Y", lookDir.y);
             weapon_anim.SetFloat("Magnitude", movement.magnitude);
             transform.position = transform.position + movement * Time.deltaTime;
+            attackPosition.position = Vector3.Normalize(lookDir) + gameObject.transform.position;
+            Debug.Log(attackPosition.position);
         }
 
         if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
             StartCoroutine(animateBasicAttack(anim));
+
+            anim.SetBool("BasicAttack", true);
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, enemyLayer);
+            for (int i = 0; i < enemiesToDamage.Length; i++)
+            {
+                damage = gameObject.GetComponent<PlayerStats>().damage.GetValue(); // Calculate damage with equipement modifiers
+                enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
+                if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
+                    enemiesToDamage[i].GetComponent<Animator>().SetBool("isHit", true);
+                }
+            }
         }
     }
 
