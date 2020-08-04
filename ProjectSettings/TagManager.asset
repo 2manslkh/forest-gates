@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Pose
   - Level Exit
+  - Room
+  - Ground
+  - Obstacles
+  - DialogueContinueButton
+  - UICamera
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Debug_UI
   - 
   - 
   - 
