@@ -143,9 +143,10 @@ GameObject:
   - component: {fileID: 7098541782123167789}
   - component: {fileID: 7098541782123167763}
   - component: {fileID: 7098541782123167788}
-  - component: {fileID: 7098541782123167790}
   - component: {fileID: 7098541782123167791}
   - component: {fileID: 7098541782123167784}
+  - component: {fileID: -811386532015616037}
+  - component: {fileID: -8766022587422234791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -162,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 7098541782123167762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8299999, y: 1.56, z: 1}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1700820771}
   - {fileID: 566101490375576180}
@@ -241,24 +242,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7098541782123167790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7098541782123167762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6631f9e8ca77e4489d5ed873004c8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rb: {fileID: 7098541782123167788}
-  cam: {fileID: 0}
-  anim: {fileID: 7098541782123167791}
-  weapon_anim: {fileID: 1700820773}
-  currentFacingDirection: 0
 --- !u!95 &7098541782123167791
 Animator:
   serializedVersion: 3
@@ -294,3 +277,53 @@ CircleCollider2D:
   m_Offset: {x: -0.0016015545, y: -0.004804671}
   serializedVersion: 2
   m_Radius: 0.06611987
+--- !u!114 &-811386532015616037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098541782123167762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3103355012e0dcf4bbda938852a7767d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth:
+    baseValue: 0
+  damage:
+    baseValue: 0
+  armor:
+    baseValue: 0
+  currentMana:
+    baseValue: 0
+  maxMana:
+    baseValue: 0
+  manaRegen:
+    baseValue: 0
+  dodgeChance:
+    baseValue: 0
+  movementSpeed:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  agility: 0
+  intelligence: 0
+  strength: 0
+--- !u!114 &-8766022587422234791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098541782123167762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6631f9e8ca77e4489d5ed873004c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rb: {fileID: 0}
+  anim: {fileID: 7098541782123167791}
+  weapon_anim: {fileID: 1700820773}
+  currentFacingDirection: 0

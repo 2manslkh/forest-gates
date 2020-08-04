@@ -5,7 +5,8 @@
 public class CharacterStats : MonoBehaviour {
 
 	public Stat maxHealth;			// Maximum amount of health
-	public int currentHealth {get;protected set;}	// Current amount of health
+
+	public int currentHealth;	// Current amount of health
 
 	public Stat damage;
 	public Stat armor;

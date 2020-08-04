@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DebugManager : MonoBehaviour
 {
+
+    public GameObject player;
     public string scene_0;
     public string scene_1;
     public string scene_2;
@@ -37,4 +39,13 @@ public class DebugManager : MonoBehaviour
         SceneManager.LoadScene(scene_5);
     }
 
+    public void damagePlayer(){
+        player.GetComponent<PlayerStats>().currentHealth -= 10;
+        Debug.Log(player.GetComponent<PlayerStats>().currentHealth);
+    }
+
+    public void healPlayer(){
+        player.GetComponent<PlayerStats>().currentHealth += 10;
+        Debug.Log(player.GetComponent<PlayerStats>().currentHealth);
+    }
 }

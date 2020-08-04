@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1537,6 +1537,12 @@ MonoBehaviour:
   - {fileID: 3646844490993092522, guid: 64ef33f1dddc45c43ac88901127e18c7, type: 3}
   - {fileID: 6405237077865621898, guid: be48c73300fd2499aa4f74457e5b1ae7, type: 3}
   - {fileID: 596588159599763984, guid: d200148e52f736d4fbe32f2ef6f0dbcc, type: 3}
+  - {fileID: 2388167006810927028, guid: 029a6b3b3ba054497a2859d6e1926a7c, type: 3}
+  - {fileID: 5025656184232683463, guid: 3888aa9fb894e4ad88fe6fe59b7ad3c0, type: 3}
+  - {fileID: 6955184373631033011, guid: 2b29dde8918944be6b7d6c788d6bdad1, type: 3}
+  - {fileID: 5989381025582941960, guid: 14a114a3d8c024a98a1bfe3c453d5737, type: 3}
+  - {fileID: 2027592507355068665, guid: 664c80706522349969828c3262926153, type: 3}
+  - {fileID: 4072776703013313787, guid: 7291d0400bade48b1bfcc6dc2bb3bc8a, type: 3}
   generatedRooms: []
   extraRoomsPos: []
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,

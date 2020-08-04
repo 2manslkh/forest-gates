@@ -7,8 +7,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
    
     public float speed = 5f;
-    public Rigidbody2D rb;
-    public Camera cam;
+    public Camera playerCamera;
     public Animator anim;
     private Vector3 movement;
     private Vector2 mousePosition;
@@ -49,9 +48,9 @@ public class PlayerController : MonoBehaviour
         movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         // Get mouse position
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = playerCamera.ScreenToWorldPoint(Input.mousePosition);
         // Get vector that points from player to mouse position
-        Vector2 lookDir = mousePosition - rb.position;
+        Vector2 lookDir = mousePosition - (Vector2) gameObject.GetComponent<Transform>().position;
 
         anim.SetFloat("Mouse X", lookDir.x);
         anim.SetFloat("Mouse Y", lookDir.y);
