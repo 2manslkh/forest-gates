@@ -160,7 +160,8 @@ GameObject:
   - component: {fileID: 6230804717354743626}
   - component: {fileID: 6230804717354743629}
   - component: {fileID: 4631448621363361982}
-  - component: {fileID: 3648902107737362492}
+  - component: {fileID: 8637264434653052881}
+  - component: {fileID: 5442683682688123834}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -325,7 +326,7 @@ MonoBehaviour:
   agility: 0
   intelligence: 0
   strength: 0
---- !u!114 &3648902107737362492
+--- !u!114 &8637264434653052881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6230804717354743671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6631f9e8ca77e4489d5ed873004c8f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a09e4871024b62408f1db9d4afdb4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
@@ -343,6 +344,20 @@ MonoBehaviour:
   attackPosition: {fileID: 3684058340022713617}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 512
-  attackRadius: 2
+    m_Bits: 0
+  attackRadius: 5
   currentFacingDirection: 0
+--- !u!114 &5442683682688123834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230804717354743671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd21eb90c88d194bb4dad7ad3f1a706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultWear: []
+  targetMesh: {fileID: 0}
