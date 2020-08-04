@@ -29,7 +29,8 @@ public class FillUpRooms : MonoBehaviour
             List<Vector3> extraRoomsPos = levelGen.extraRoomsPos;
             //stopGeneration = false;
             int unspawnedRoomNumber = levelGen.maxRoomNumber - levelGen.currentRoomNumber;
-            for (int i = 0; i < unspawnedRoomNumber; i++)
+            //for (int i = 0; i < unspawnedRoomNumber; i++)
+            while (extraRoomsPos.Count > 0)
             {
                 int idx = Random.Range(0, extraRoomsPos.Count);
                 Vector3 roomPos = extraRoomsPos[idx];

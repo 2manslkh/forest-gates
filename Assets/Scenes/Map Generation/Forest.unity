@@ -494,6 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449935532}
   - component: {fileID: 449935533}
+  - component: {fileID: 449935534}
   m_Layer: 0
   m_Name: Pose (6)
   m_TagString: Pose
@@ -531,6 +532,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   levelGen: {fileID: 2127098243}
+--- !u!114 &449935534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449935531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018e4fa7065304516abbfca171df0e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeChecked: 0
 --- !u!1 &526369261
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726740173}
   - component: {fileID: 726740174}
+  - component: {fileID: 726740175}
   m_Layer: 0
   m_Name: Pose (5)
   m_TagString: Pose
@@ -869,6 +884,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   levelGen: {fileID: 2127098243}
+--- !u!114 &726740175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726740172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018e4fa7065304516abbfca171df0e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeChecked: 0
 --- !u!1 &741183882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921575860}
   - component: {fileID: 921575861}
+  - component: {fileID: 921575862}
   m_Layer: 0
   m_Name: Pose (10)
   m_TagString: Pose
@@ -1146,6 +1175,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   levelGen: {fileID: 2127098243}
+--- !u!114 &921575862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921575859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018e4fa7065304516abbfca171df0e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeChecked: 0
 --- !u!1 &1088468594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,6 +1198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088468595}
   - component: {fileID: 1088468596}
+  - component: {fileID: 1088468597}
   m_Layer: 0
   m_Name: Pose (9)
   m_TagString: Pose
@@ -1193,6 +1236,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   levelGen: {fileID: 2127098243}
+--- !u!114 &1088468597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088468594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018e4fa7065304516abbfca171df0e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeChecked: 0
 --- !u!1 &1118610269
 GameObject:
   m_ObjectHideFlags: 0
