@@ -5,11 +5,12 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     //public Dialogue dialogue;
-    //public GameObject dialogueBox;
-    public Animation anim;
+    public GameObject dialogueBox;
+    //public Animation anim;
 
     void OnAwake(){
-        anim = GetComponent<Animation>();
+        dialogueBox.SetActive(false);
+        //anim = GetComponent<Animation>();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -18,8 +19,9 @@ public class DialogueTrigger : MonoBehaviour
         if(collider.gameObject.CompareTag("Gatekeeper")){
             Debug.Log(collider.tag);
             if (Input.GetKeyDown("E")){
+                dialogueBox.SetActive(true);
                 print("E key was pressed");
-                anim.Play();
+                //anim.Play();
             }
         }
     }
