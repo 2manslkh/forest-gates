@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5052493110257788420}
   - component: {fileID: 5052493110257788443}
   - component: {fileID: 5052493110257788440}
+  - component: {fileID: 3264184376965942857}
+  - component: {fileID: 1757680374810959299}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -71,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -3795149127210610995, guid: 336075f445393bf4bbba65012081baaa,
     type: 3}
@@ -151,3 +153,52 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3264184376965942857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052493110257788422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbda2c616c37764dbb91e76694825e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  enemyAnimator: {fileID: 0}
+  isHit: 0
+--- !u!114 &1757680374810959299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052493110257788422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c5ddcd1ab7e134cacac836af9c8b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth:
+    baseValue: 100
+  currentHealth: 0
+  damage:
+    baseValue: 0
+  armor:
+    baseValue: 0
+  currentMana:
+    baseValue: 0
+  maxMana:
+    baseValue: 0
+  manaRegen:
+    baseValue: 0
+  dodgeChance:
+    baseValue: 0
+  movementSpeed:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  agility: 0
+  intelligence: 0
+  strength: 0

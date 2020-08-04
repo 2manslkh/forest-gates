@@ -51,7 +51,7 @@ public class CharacterStats : MonoBehaviour {
             // Cast all subscribed methods when character health = 0
 			if (OnHealthReachedZero != null) 
             {
-				OnHealthReachedZero (); 
+				OnHealthReachedZero (); // CAST
 			}
 		}
 	}
