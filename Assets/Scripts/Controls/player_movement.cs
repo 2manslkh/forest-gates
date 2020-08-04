@@ -7,8 +7,8 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
     // Start is called before the first frame update
    
     public float speed = 5f;
-    public Rigidbody2D rb;
-    public Camera cam;
+    private Rigidbody2D rb;
+    private Camera cam;
     public Animator anim;
     public Animator weapon_anim;
     private Vector3 movement;
@@ -24,6 +24,7 @@ public class player_movement : MonoBehaviour, BasicAttackInterface
 
     private void Start() {
         cam = Camera.main;
+        rb = gameObject.GetComponent<Rigidbody2D>();
         // anim = gameObject.GetComponent<Animator>();
         anim.enabled = false;
         anim.enabled = true;
