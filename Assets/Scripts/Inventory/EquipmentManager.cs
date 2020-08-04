@@ -8,7 +8,6 @@ public class EquipmentManager : MonoBehaviour {
 
 	#region Singleton
 
-
 	public static EquipmentManager instance {
 		get {
 			if (_instance == null) {

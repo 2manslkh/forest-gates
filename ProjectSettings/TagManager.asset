@@ -23,7 +23,7 @@ TagManager:
   - 
   - 
   - Debug_UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -50,9 +50,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 3922044873
+    locked: 0
   - name: Enemy
     uniqueID: 3223495121
     locked: 0
-  - name: Player
-    uniqueID: 3922044873
+  - name: Tiles
+    uniqueID: 4111844639
     locked: 0
