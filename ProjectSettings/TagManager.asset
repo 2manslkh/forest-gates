@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - PatrolSpots
   - Pose
   - Level Exit
   - Room
@@ -11,6 +12,7 @@ TagManager:
   - Obstacles
   - DialogueContinueButton
   - UICamera
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -47,6 +49,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 3223495121
     locked: 0
   - name: Player
     uniqueID: 3922044873
