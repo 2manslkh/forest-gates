@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
-
+	// public CharacterCombat playerCombatManager;
+	public PlayerStats playerStats;
+	
     public int gold; // Current player gold
 
 	#region Singleton
@@ -21,10 +23,6 @@ public class Player : MonoBehaviour
 	void Start() {
 		playerStats.OnHealthReachedZero += Die;
 	}
-
-	// public CharacterCombat playerCombatManager;
-	public PlayerStats playerStats;
-
 
 	void Die() {
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
