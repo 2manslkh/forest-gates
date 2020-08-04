@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8812366976137544593}
   - component: {fileID: 5954438398339248739}
   - component: {fileID: 5425181414306030327}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa790853e77254a4bb5a67fd2f7132c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
 --- !u!114 &5954438398339248739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adbda2c616c37764dbb91e76694825e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterStats: {fileID: 5425181414306030327}
   rb: {fileID: 0}
   enemyAnimator: {fileID: 0}
   isHit: 0

@@ -8,19 +8,17 @@ public class EquipmentManager : MonoBehaviour {
 
 	#region Singleton
 
-	public static EquipmentManager instance {
-		get {
-			if (_instance == null) {
-				_instance = FindObjectOfType<EquipmentManager> ();
-			}
-			return _instance;
-		}
-	}
-	static EquipmentManager _instance;
+	public static EquipmentManager instance;
 
 	void Awake ()
 	{
-		_instance = this;
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of Inventory Found.");
+            return;
+        }
+
+        instance = this;
 	}
 
 	#endregion
