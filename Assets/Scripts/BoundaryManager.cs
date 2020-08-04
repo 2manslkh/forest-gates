@@ -4,33 +4,18 @@ using UnityEngine;
 
 public class BoundaryManager : MonoBehaviour
 {
-    private Camera cam;
     public Renderer spriteRenderer;
     public GameObject[] boundaries;
     public GameObject[] enemies;
 
-    private void Start() {
-        cam = Camera.main;
+    private void Awake() {
+        foreach (GameObject boundary in boundaries)
+        {
+            boundary.SetActive(false);
+        }
     }
     void Update()
     {
-        // if (cam.tag == "MainCamera")
-        // {
-        //     if (spriteRenderer.isVisible == false)
-        //     {
-        //         foreach (GameObject boundary in boundaries)
-        //         {
-        //             boundary.SetActive(false);
-        //         }
-        //     }
-        //     else
-        //     {
-        //         foreach (GameObject boundary in boundaries)
-        //         {
-        //             boundary.SetActive(true);
-        //         }
-        //     }
-        // }
         bool anyEnemyAlive = false;
         foreach (GameObject enemy in enemies)
         {
