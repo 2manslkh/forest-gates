@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -6245242244292192685
     second: Saturn - Princess Crown - Items_3
+  - first:
+      213: -6999174699814790800
+    second: pinksword1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -190,6 +193,27 @@ TextureImporter:
       bones: []
       spriteID: 35653bc74417459a0800000000000000
       internalID: -6245242244292192685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinksword1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 242
+        width: 49
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07953a891bfedde90800000000000000
+      internalID: -6999174699814790800
       vertices: []
       indices: 
       edges: []
