@@ -12742,9 +12742,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   boundaries:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 2203805689060110478}
+  - {fileID: 7909959781109159010}
   enemies: []
 --- !u!1 &8562721340572315206
 GameObject:

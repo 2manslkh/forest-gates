@@ -28,8 +28,8 @@ Transform:
   m_LocalPosition: {x: -3.64, y: -3.45, z: -1.2587891}
   m_LocalScale: {x: 3, y: 3.2, z: 1}
   m_Children:
-  - {fileID: 5254226158965171342}
   - {fileID: 7042708285921746577}
+  - {fileID: 5254226158965171342}
   - {fileID: 9217614186529124652}
   - {fileID: 5939946665745517588}
   m_Father: {fileID: 5411424277761715413}
@@ -49,8 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   boundaries:
-  - {fileID: 8977124324685965933}
   - {fileID: 6279081951150586911}
+  - {fileID: 8977124324685965933}
   - {fileID: 9039759378212851135}
   - {fileID: 8869611005482334484}
   enemies:
@@ -86,7 +86,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5254226158965171342}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &144309710472963680
 SpriteRenderer:
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 1120847717023403984}
   - component: {fileID: 7689823778921553173}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 7042708285921746577}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &1120847717023403984
 SpriteRenderer:
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 2660531145987857371}
   - component: {fileID: 4692664812352788113}
   m_Layer: 0
-  m_Name: Barrier (2)
+  m_Name: Barrier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3064,7 +3064,7 @@ GameObject:
   - component: {fileID: 1720991381853893849}
   - component: {fileID: 2604083858726381776}
   m_Layer: 0
-  m_Name: Barrier (3)
+  m_Name: Barrier (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3082,7 +3082,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5254226158965171342}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1720991381853893849
 SpriteRenderer:
@@ -3165,7 +3165,7 @@ GameObject:
   - component: {fileID: 7389987568724678344}
   - component: {fileID: 1935181698807001761}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3183,7 +3183,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 9217614186529124652}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &7389987568724678344
 SpriteRenderer:
@@ -3266,7 +3266,7 @@ GameObject:
   - component: {fileID: 7308848320553560670}
   - component: {fileID: 5337764022698301760}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3284,7 +3284,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5254226158965171342}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7308848320553560670
 SpriteRenderer:
@@ -3367,7 +3367,7 @@ GameObject:
   - component: {fileID: 3427700852972574689}
   - component: {fileID: 477382048201161016}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3385,7 +3385,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5254226158965171342}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3427700852972574689
 SpriteRenderer:
@@ -11808,7 +11808,7 @@ GameObject:
   - component: {fileID: 1462151372136224767}
   - component: {fileID: 3818515548366130108}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11826,7 +11826,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 9217614186529124652}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &1462151372136224767
 SpriteRenderer:
@@ -11909,7 +11909,7 @@ GameObject:
   - component: {fileID: 3879869615657702243}
   - component: {fileID: 5945756080669378802}
   m_Layer: 0
-  m_Name: Barrier (3)
+  m_Name: Barrier (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11927,7 +11927,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5939946665745517588}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3879869615657702243
 SpriteRenderer:
@@ -14247,11 +14247,11 @@ Transform:
   m_LocalScale: {x: 0.20833434, y: 0.22222331, z: 1}
   m_Children:
   - {fileID: 4704724940248331672}
-  - {fileID: 7286115117603721136}
   - {fileID: 3309678426935092835}
+  - {fileID: 7286115117603721136}
   - {fileID: 98750977128778607}
   m_Father: {fileID: 855093937249285695}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1064024136739814611
 BoxCollider2D:
@@ -14640,7 +14640,7 @@ GameObject:
   - component: {fileID: 4523490520001088773}
   - component: {fileID: 2295017552300553363}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14658,7 +14658,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5939946665745517588}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4523490520001088773
 SpriteRenderer:
@@ -14820,7 +14820,7 @@ GameObject:
   - component: {fileID: 6907396877315433000}
   - component: {fileID: 2019221254324332372}
   m_Layer: 0
-  m_Name: Barrier (2)
+  m_Name: Barrier (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14921,7 +14921,7 @@ GameObject:
   - component: {fileID: 408424135116724459}
   - component: {fileID: 8090808124250227273}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14939,7 +14939,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5939946665745517588}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &408424135116724459
 SpriteRenderer:
@@ -15040,7 +15040,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5939946665745517588}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4283920853381189094
 SpriteRenderer:
@@ -15123,7 +15123,7 @@ GameObject:
   - component: {fileID: 2405975996658694142}
   - component: {fileID: 6897370916797725148}
   m_Layer: 0
-  m_Name: Barrier (1)
+  m_Name: Barrier (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15141,7 +15141,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5254226158965171342}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2405975996658694142
 SpriteRenderer:
@@ -15325,7 +15325,7 @@ GameObject:
   - component: {fileID: 4987661607754891755}
   - component: {fileID: 2160350159165131999}
   m_Layer: 0
-  m_Name: Barrier (1)
+  m_Name: Barrier (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15343,7 +15343,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 5939946665745517588}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4987661607754891755
 SpriteRenderer:
@@ -15426,7 +15426,7 @@ GameObject:
   - component: {fileID: 2186621567258666662}
   - component: {fileID: 3544267123757199891}
   m_Layer: 0
-  m_Name: Barrier
+  m_Name: Barrier (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15444,7 +15444,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 7042708285921746577}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &2186621567258666662
 SpriteRenderer:
@@ -15527,7 +15527,7 @@ GameObject:
   - component: {fileID: 3950532340827467820}
   - component: {fileID: 1553037058067802096}
   m_Layer: 0
-  m_Name: Boundaries (5)
+  m_Name: Boundaries (4)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15544,11 +15544,11 @@ Transform:
   m_LocalPosition: {x: 1.2977779, y: 2.391, z: 0}
   m_LocalScale: {x: 0.20833334, y: 0.22222188, z: 1}
   m_Children:
-  - {fileID: 904345285432270584}
+  - {fileID: 7190890957839531320}
+  - {fileID: 8309131583800858736}
   - {fileID: 8415254022725443392}
   - {fileID: 3692729477951466497}
-  - {fileID: 8309131583800858736}
-  - {fileID: 7190890957839531320}
+  - {fileID: 904345285432270584}
   m_Father: {fileID: 855093937249285695}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15611,7 +15611,7 @@ GameObject:
   - component: {fileID: 3123159956394740203}
   - component: {fileID: 9169604921703283493}
   m_Layer: 0
-  m_Name: Boundaries (3)
+  m_Name: Boundaries (2)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15628,13 +15628,13 @@ Transform:
   m_LocalPosition: {x: 1.2977779, y: -0.146, z: 0}
   m_LocalScale: {x: 0.20833334, y: 0.22222188, z: 1}
   m_Children:
-  - {fileID: 7492371706824510103}
+  - {fileID: 1437763847829684613}
+  - {fileID: 8600054890852273961}
   - {fileID: 8126165190912491442}
   - {fileID: 3361493755824895063}
-  - {fileID: 8600054890852273961}
-  - {fileID: 1437763847829684613}
+  - {fileID: 7492371706824510103}
   m_Father: {fileID: 855093937249285695}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3123159956394740203
 BoxCollider2D:
@@ -15695,7 +15695,7 @@ GameObject:
   - component: {fileID: 6940845024020804486}
   - component: {fileID: 5971253382800150070}
   m_Layer: 0
-  m_Name: Boundaries (4)
+  m_Name: Boundaries (3)
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15713,8 +15713,8 @@ Transform:
   m_LocalScale: {x: 0.20833434, y: 0.22222331, z: 1}
   m_Children:
   - {fileID: 5524250276108526918}
-  - {fileID: 442863497433202269}
   - {fileID: 5579395798554946128}
+  - {fileID: 442863497433202269}
   - {fileID: 8427219496716645438}
   m_Father: {fileID: 855093937249285695}
   m_RootOrder: 2
