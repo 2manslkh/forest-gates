@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &118639158
 Transform:
@@ -166,7 +166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254906128
 GameObject:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &254906130
 Transform:
@@ -213,7 +213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280108495
 GameObject:
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 300083306}
   - component: {fileID: 300083305}
   m_Layer: 0
-  m_Name: Pose (13)
+  m_Name: Pose (12)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &300083306
 Transform:
@@ -368,7 +368,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533882239
 GameObject:
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &533882241
 Transform:
@@ -415,7 +415,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634648245
 GameObject:
@@ -446,7 +446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &634648247
 MonoBehaviour:
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!1 &645256176
 GameObject:
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &645256178
 Transform:
@@ -509,7 +509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788267292
 GameObject:
@@ -543,7 +543,7 @@ Transform:
   - {fileID: 1472859172}
   - {fileID: 280108496}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855334572
 GameObject:
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 855334573}
   - component: {fileID: 855334574}
   m_Layer: 0
-  m_Name: Pose (9)
+  m_Name: Pose (10)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -574,7 +574,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &855334574
 MonoBehaviour:
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!1 &969651740
 GameObject:
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &969651742
 Transform:
@@ -637,7 +637,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1158859835
 GameObject:
@@ -709,7 +709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175509534
 GameObject:
@@ -841,7 +841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1218339690
 GameObject:
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 1218339692}
   - component: {fileID: 1218339691}
   m_Layer: 0
-  m_Name: Pose (12)
+  m_Name: Pose (15)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &1218339692
 Transform:
@@ -888,7 +888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253533356
 GameObject:
@@ -919,7 +919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1253533358
 MonoBehaviour:
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!1 &1463997057
 GameObject:
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 1463997059}
   - component: {fileID: 1463997058}
   m_Layer: 0
-  m_Name: Pose (10)
+  m_Name: Pose (8)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &1463997059
 Transform:
@@ -977,12 +977,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463997057}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472859171
 GameObject:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &1557585879
 Transform:
@@ -1137,7 +1137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1778213182
 GameObject:
@@ -1150,7 +1150,7 @@ GameObject:
   - component: {fileID: 1778213183}
   - component: {fileID: 1778213184}
   m_Layer: 0
-  m_Name: Pose (8)
+  m_Name: Pose (9)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1168,7 +1168,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1778213184
 MonoBehaviour:
@@ -1184,7 +1184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!1 &1836003831
 GameObject:
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 1836003834}
   - component: {fileID: 1836003832}
   - component: {fileID: 1836003833}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Level Generation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   exitSpawned: 0
   room:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
 --- !u!114 &1836003833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &1839833969
 Transform:
@@ -1322,7 +1322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848729842
 GameObject:
@@ -1551,7 +1551,7 @@ GameObject:
   - component: {fileID: 2042533242}
   - component: {fileID: 2042533241}
   m_Layer: 0
-  m_Name: Pose (15)
+  m_Name: Pose (13)
   m_TagString: Pose
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &2042533242
 Transform:
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatIsRoom:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   levelGen: {fileID: 1836003832}
 --- !u!4 &2094967712
 Transform:
@@ -1632,5 +1632,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
