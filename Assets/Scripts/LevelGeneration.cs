@@ -48,9 +48,30 @@ public class LevelGeneration : MonoBehaviour
     {
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].position;
-        Instantiate(rooms[Random.Range(0, 11)], transform.position, Quaternion.identity);
+        int firstRoomType = Random.Range(0, 11);
+        Instantiate(rooms[firstRoomType], transform.position, Quaternion.identity);
         Instantiate(player, transform.position, Quaternion.identity);
-        direction = Random.Range(1, 7);
+        //direction = Random.Range(1, 7);
+        if (TopOpeningRoomTypes.Contains(firstRoomType))
+        {
+            direction = 6;
+            //prevDir = "Right";
+        }
+        else if (BotOpeningRoomTypes.Contains(firstRoomType))
+        {
+            direction = 5;
+            //prevDir = "Left";
+        }
+        else if (RightOpeningRoomTypes.Contains(firstRoomType))
+        {
+            direction = 1;
+            //prevDir = "Down";
+        }
+        else if (LeftOpeningRoomTypes.Contains(firstRoomType))
+        {
+            direction = 3;
+            //prevDir = "Up";
+        }
         fillUpRooms = GetComponent<FillUpRooms>();
     }
 
