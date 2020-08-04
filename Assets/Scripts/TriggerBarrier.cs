@@ -11,7 +11,7 @@ public class TriggerBarrier : MonoBehaviour
         once = false;
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if(once == false){
+        if((other.tag == "Player") && (once == false)){
             print("triggered");
             once = true;
             foreach (GameObject boundary in boundaries)
