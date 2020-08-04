@@ -948,6 +948,10 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -6716937706686974687, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -8352954786317406394, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3944728165793418899, guid: 5b919054896d34f14a64071ecd6bc7d0, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1040598189
@@ -1682,6 +1686,7 @@ GameObject:
   - component: {fileID: 2060626892}
   - component: {fileID: 2060626894}
   - component: {fileID: 2060626893}
+  - component: {fileID: 2060626895}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -1747,6 +1752,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060626891}
   m_CullTransparentMesh: 0
+--- !u!114 &2060626895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060626891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c24c744540d8a04dbfcbb98b969487a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &530206686880709272
 PrefabInstance:
   m_ObjectHideFlags: 0
