@@ -2,16 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, BasicAttackInterface
 {
     // Start is called before the first frame update
    
     public float speed = 5f;
-    public Camera playerCamera;
+    private Rigidbody2D rb;
+    private Camera cam;
     public Animator anim;
+    public Animator weapon_anim;
     private Vector3 movement;
     private Vector2 mousePosition;
     // Update is called once per frame
+    private bool isAttacking;
+    public Transform attackPosition;
+    public LayerMask enemyLayer;
+    public float attackRadius;
+    private int damage;
+
 
     public enum facingDirection{ //WIP
         UP=1,
@@ -19,6 +27,14 @@ public class PlayerController : MonoBehaviour
         DOWN=3,
         LEFT=4
     } 
+
+    private void Start() {
+        cam = Camera.main;
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        // anim = gameObject.GetComponent<Animator>();
+        anim.enabled = false;
+        anim.enabled = true;
+    }
 
     public int currentFacingDirection;
 
@@ -33,36 +49,40 @@ public class PlayerController : MonoBehaviour
             currentFacingDirection = (int) facingDirection.LEFT;
         }
     }
-
-    private bool isAttacking;
-    public Transform attackPosition;
-    public LayerMask enemyLayer;
-    public float attackRadius;
-    private int damage;
-
     void Update()
     {
-        isAttacking = anim.GetBool("BasicAttack");
-
+        // Time.timeScale = 0.05f;
         // Get input of WASD keys
-        movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        // Get mouse position
-        mousePosition = playerCamera.ScreenToWorldPoint(Input.mousePosition);
-        // Get vector that points from player to mouse position
-        Vector2 lookDir = mousePosition - (Vector2) gameObject.GetComponent<Transform>().position;
+            // Get mouse position
+            var mousePos = Input.mousePosition;
+            mousePos.z = 10;
+            mousePosition = cam.ScreenToWorldPoint(mousePos);
+            // Get vector that points from player to mouse position
+            Vector2 lookDir = mousePosition - rb.position;
+            anim.SetFloat("Mouse X", lookDir.x);
+            anim.SetFloat("Mouse Y", lookDir.y);
+            anim.SetFloat("Magnitude", movement.magnitude);
+            weapon_anim.SetFloat("Mouse X", lookDir.x);
+            weapon_anim.SetFloat("Mouse Y", lookDir.y);
+            weapon_anim.SetFloat("Magnitude", movement.magnitude);
+            transform.position = transform.position + movement * Time.deltaTime;
+            attackPosition.position = Vector3.Normalize(lookDir) + gameObject.transform.position;
+        }
 
-        anim.SetFloat("Mouse X", lookDir.x);
-        anim.SetFloat("Mouse Y", lookDir.y);
-        anim.SetFloat("Magnitude", movement.magnitude);
-        transform.position = transform.position + movement * Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+            StartCoroutine(animateBasicAttack(anim));
 
-        if (Input.GetMouseButtonDown(0) && !isAttacking){
             anim.SetBool("BasicAttack", true);
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, enemyLayer);
+            Debug.Log(enemiesToDamage.Length);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 damage = gameObject.GetComponent<PlayerStats>().damage.GetValue(); // Calculate damage with equipement modifiers
+                Debug.Log(enemiesToDamage[i]);
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
                     enemiesToDamage[i].GetComponent<Animator>().SetBool("isHit", true);
@@ -71,12 +91,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void resetBasicAttack(){
-        anim.SetBool("BasicAttack", false);
+
+      void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
     }
 
-    void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPosition.position, attackRadius);
+    // Basic Attack Animation Routine
+    public IEnumerator animateBasicAttack(Animator anim){
+        anim.SetBool("BasicAttack", true);
+        weapon_anim.SetBool("BasicAttack", true);
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("BasicAttack", false);
+        weapon_anim.SetBool("BasicAttack", false);
     }
 }

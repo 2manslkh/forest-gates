@@ -6,7 +6,7 @@ public class CheckVisible : MonoBehaviour
 {
     Animator animator;
     Renderer spriteRenderer;
-    public Camera camera;
+    private Camera camera;
     // Start is called before the first frame update
     private void Start() {
         animator = gameObject.GetComponent<Animator>();

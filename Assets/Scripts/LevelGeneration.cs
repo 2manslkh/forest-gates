@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
-    public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB, index 4 -->TB
+    // index 0 --> LR, index 1 --> LRD, index 2 --> LRU, index 3 -->LRUD, index 4 -->UD
+    // index 5 --> LU, index 6 --> LD, index 7 -->LUD, index 8 --> RU, index 9 -->RD, index 10 -->RUD
+    private int[] LeftOpeningRoomTypes = new int[] {0, 1, 2, 3, 5, 6, 7};
+    private int[] RightOpeningRoomTypes = new int[] { 0, 1, 2, 3, 8, 9, 10 };
+    private int[] TopOpeningRoomTypes = new int[] { 2, 3, 4, 5, 7, 8, 10 };
+    private int[] BotOpeningRoomTypes = new int[] { 1, 3, 4, 6, 7, 9, 10 };
+
+    public GameObject[] rooms; 
     public List<GameObject> generatedRooms;
     public List<Vector3> extraRoomsPos;
     public GameObject levelExit;
@@ -84,10 +92,9 @@ public class LevelGeneration : MonoBehaviour
                 transform.position = new Vector3(transform.position.x + moveAmount, transform.position.y, 0);
                 Navigate(prevDir, direction);
 
-                int rand = Random.Range(0, 4);
-                if (stopGeneration == false)
+                int rand = Random.Range(0, LeftOpeningRoomTypes.Length);
                 {
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                    Instantiate(rooms[LeftOpeningRoomTypes[rand]], transform.position, Quaternion.identity);
                 }
             }
             else
@@ -107,10 +114,10 @@ public class LevelGeneration : MonoBehaviour
                 transform.position = new Vector3(transform.position.x - moveAmount, transform.position.y, 0);
                 Navigate(prevDir, direction);
 
-                int rand = Random.Range(0, 4);
+                int rand = Random.Range(0, RightOpeningRoomTypes.Length);
                 if (stopGeneration == false)
                 {
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                    Instantiate(rooms[RightOpeningRoomTypes[rand]], transform.position, Quaternion.identity);
                 }
             }
             else
@@ -128,24 +135,21 @@ public class LevelGeneration : MonoBehaviour
             {
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
                 // Check if the room doesn't have bottom opening
-                if (roomDetection.GetComponent<RoomType>().type != 1 && roomDetection.GetComponent<RoomType>().type != 3)
+                int detectedRoomType = roomDetection.GetComponent<RoomType>().type;
+                if (BotOpeningRoomTypes.Contains(detectedRoomType) == false)
                 {
                     if (prevDir == "Down")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        Instantiate(rooms[Random.Range(3, 5)], transform.position, Quaternion.identity);
+                        int randTopRoom = Random.Range(0, TopOpeningRoomTypes.Length);                            
+                        Instantiate(rooms[TopOpeningRoomTypes[randTopRoom]], transform.position, Quaternion.identity);
                         
                     }
                     else
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-
-                        int randBottomRoom = Random.Range(1, 5);
-                        while (randBottomRoom == 2)
-                        {
-                            randBottomRoom = Random.Range(1, 5);
-                        }
-                        Instantiate(rooms[randBottomRoom], transform.position, Quaternion.identity);
+                        int randBottomRoom = Random.Range(0, BotOpeningRoomTypes.Length);
+                        Instantiate(rooms[BotOpeningRoomTypes[randBottomRoom]], transform.position, Quaternion.identity);
                         
                     }
                 }
@@ -153,10 +157,10 @@ public class LevelGeneration : MonoBehaviour
                 Navigate(prevDir, direction);
 
                 // Ensure room always has top opening
-                int rand = Random.Range(2, 5);
+                int rand = Random.Range(0, TopOpeningRoomTypes.Length);
                 if (stopGeneration == false)
                 {
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                    Instantiate(rooms[TopOpeningRoomTypes[rand]], transform.position, Quaternion.identity);
                 }
             }
             prevDir = "Down";
@@ -169,19 +173,21 @@ public class LevelGeneration : MonoBehaviour
             {
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
                 // Check if the room doesn't have top opening
-                if (roomDetection.GetComponent<RoomType>().type != 2 && roomDetection.GetComponent<RoomType>().type != 3)
+                int detectedRoomType = roomDetection.GetComponent<RoomType>().type;
+                if (TopOpeningRoomTypes.Contains(detectedRoomType) == false)
                 {
                     if (prevDir == "UP")//upCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        Instantiate(rooms[Random.Range(3, 5)], transform.position, Quaternion.identity);
+                        int randBottomRoom = Random.Range(0, BotOpeningRoomTypes.Length);
+                        Instantiate(rooms[BotOpeningRoomTypes[randBottomRoom]], transform.position, Quaternion.identity);
                         
                     }
                     else
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randTopRoom = Random.Range(2, 5);
-                        Instantiate(rooms[randTopRoom], transform.position, Quaternion.identity);
+                        int randTopRoom = Random.Range(0, TopOpeningRoomTypes.Length);
+                        Instantiate(rooms[TopOpeningRoomTypes[randTopRoom]], transform.position, Quaternion.identity);
                         
                     }
                 }
@@ -189,14 +195,10 @@ public class LevelGeneration : MonoBehaviour
                 Navigate(prevDir, direction);
 
                 // Ensure room always has bottom opening
-                int rand = Random.Range(1, 5);
-                while (rand == 2)
-                {
-                    rand = Random.Range(1, 5);
-                }
+                int rand = Random.Range(0, BotOpeningRoomTypes.Length);
                 if (stopGeneration == false)
                 {
-                    Instantiate(rooms[rand], transform.position, Quaternion.identity);
+                    Instantiate(rooms[BotOpeningRoomTypes[rand]], transform.position, Quaternion.identity);
                 }
 
             }
