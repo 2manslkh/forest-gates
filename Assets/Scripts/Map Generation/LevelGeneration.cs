@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class LevelGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
-    public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB
+    public GameObject[] rooms; // index 0 --> LR, index 1 --> LRB, index 2 --> LRT, index 3 -->LRTB, index 4 -->TB
     public List<GameObject> generatedRooms;
     public List<Vector3> extraRoomsPos;
     public GameObject levelExit;
     private SceneTransition sceneTransition;
     public GameObject player;
+    private FillUpRooms fillUpRooms;
 
     private int direction;
     public float moveAmount;
@@ -35,6 +36,7 @@ public class LevelGeneration : MonoBehaviour
 
     private string prevDir = "";
 
+
     private void Start()
     {
         int randStartingPos = Random.Range(0, startingPositions.Length);
@@ -42,6 +44,7 @@ public class LevelGeneration : MonoBehaviour
         Instantiate(rooms[3], transform.position, Quaternion.identity);
         Instantiate(player, transform.position, Quaternion.identity);
         direction = Random.Range(1, 7);
+        fillUpRooms = GetComponent<FillUpRooms>();
     }
 
     private void Update()
@@ -56,7 +59,8 @@ public class LevelGeneration : MonoBehaviour
         }
         else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
         {
-            FillUp();
+            fillUpRooms.FillUp();
+            //FillUpRooms.Instance.FillUp();
         }
         else if (timeBtwRoom <= 0 && stopGeneration == false)
         {
@@ -80,7 +84,7 @@ public class LevelGeneration : MonoBehaviour
                 transform.position = new Vector3(transform.position.x + moveAmount, transform.position.y, 0);
                 Navigate(prevDir, direction);
 
-                int rand = Random.Range(0, rooms.Length);
+                int rand = Random.Range(0, 4);
                 if (stopGeneration == false)
                 {
                     Instantiate(rooms[rand], transform.position, Quaternion.identity);
@@ -103,7 +107,7 @@ public class LevelGeneration : MonoBehaviour
                 transform.position = new Vector3(transform.position.x - moveAmount, transform.position.y, 0);
                 Navigate(prevDir, direction);
 
-                int rand = Random.Range(0, rooms.Length);
+                int rand = Random.Range(0, 4);
                 if (stopGeneration == false)
                 {
                     Instantiate(rooms[rand], transform.position, Quaternion.identity);
@@ -129,17 +133,17 @@ public class LevelGeneration : MonoBehaviour
                     if (prevDir == "Down")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        Instantiate(rooms[3], transform.position, Quaternion.identity);
+                        Instantiate(rooms[Random.Range(3, 5)], transform.position, Quaternion.identity);
                         
                     }
                     else
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
 
-                        int randBottomRoom = Random.Range(1, 4);
+                        int randBottomRoom = Random.Range(1, 5);
                         while (randBottomRoom == 2)
                         {
-                            randBottomRoom = Random.Range(1, 4);
+                            randBottomRoom = Random.Range(1, 5);
                         }
                         Instantiate(rooms[randBottomRoom], transform.position, Quaternion.identity);
                         
@@ -149,7 +153,7 @@ public class LevelGeneration : MonoBehaviour
                 Navigate(prevDir, direction);
 
                 // Ensure room always has top opening
-                int rand = Random.Range(2, 4);
+                int rand = Random.Range(2, 5);
                 if (stopGeneration == false)
                 {
                     Instantiate(rooms[rand], transform.position, Quaternion.identity);
@@ -170,13 +174,13 @@ public class LevelGeneration : MonoBehaviour
                     if (prevDir == "UP")//upCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        Instantiate(rooms[3], transform.position, Quaternion.identity);
+                        Instantiate(rooms[Random.Range(3, 5)], transform.position, Quaternion.identity);
                         
                     }
                     else
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randTopRoom = Random.Range(2, 4);
+                        int randTopRoom = Random.Range(2, 5);
                         Instantiate(rooms[randTopRoom], transform.position, Quaternion.identity);
                         
                     }
@@ -185,10 +189,10 @@ public class LevelGeneration : MonoBehaviour
                 Navigate(prevDir, direction);
 
                 // Ensure room always has bottom opening
-                int rand = Random.Range(1, 4);
+                int rand = Random.Range(1, 5);
                 while (rand == 2)
                 {
-                    rand = Random.Range(1, 4);
+                    rand = Random.Range(1, 5);
                 }
                 if (stopGeneration == false)
                 {
@@ -405,18 +409,6 @@ public class LevelGeneration : MonoBehaviour
         Debug.Log(" Current Direction : " + direction);
     }
 
-    private void FillUp()
-    {
-        int unspawnedRoomNumber = maxRoomNumber - currentRoomNumber;
-        for (int i = 0; i < unspawnedRoomNumber; i++)
-        {
-            int idx= Random.Range(0, extraRoomsPos.Count);
-            Vector3 roomPos = extraRoomsPos[idx];
-            Instantiate(rooms[3], roomPos, Quaternion.identity);
-            extraRoomsPos.Remove(roomPos);
-        }
-    }
-
     private void SpawnSceneTransition()
     {
         Vector2 lastRoomPos = generatedRooms[generatedRooms.Count-1].transform.position;
@@ -446,4 +438,5 @@ public class LevelGeneration : MonoBehaviour
         }
 
     }
+
 }
