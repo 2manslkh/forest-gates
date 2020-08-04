@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 damage = gameObject.GetComponent<PlayerStats>().damage.GetValue(); // Calculate damage with equipement modifiers
+                damage *= Conductor.instance.getBeatMultiplier();
+                Debug.Log(damage);
                 Debug.Log(enemiesToDamage[i]);
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
