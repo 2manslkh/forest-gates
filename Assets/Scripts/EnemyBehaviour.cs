@@ -10,7 +10,7 @@ public enum EnemyState
   Die,
 };
 
-public class Enemy : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour
 {
     GameObject player;
     public EnemyState currentState = EnemyState.Wander;
