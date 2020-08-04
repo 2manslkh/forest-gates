@@ -8,6 +8,8 @@ public class FillUpRooms : MonoBehaviour
     private LevelGeneration levelGen;
     public static FillUpRooms Instance;
 
+    public bool FilledUp = false;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -151,6 +153,7 @@ public class FillUpRooms : MonoBehaviour
                         Instantiate(levelGen.rooms[availRoomIntersect[rand]], roomPos, Quaternion.identity);
                     }
                     extraRoomsPos.Remove(roomPos);
+                    unspawnedRoomNumber -= 1;
                     //else
                     //{
                     //    Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
@@ -164,6 +167,7 @@ public class FillUpRooms : MonoBehaviour
 
             }
         }
+        FilledUp = true;
     }
         
 }
