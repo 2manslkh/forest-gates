@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FillUpRooms : MonoBehaviour
@@ -47,69 +48,109 @@ public class FillUpRooms : MonoBehaviour
             detectList.Add(rightDetection);
             detectList.Add(leftDetection);
 
-            int rand = Random.Range(0, 4);
+            //int rand = Random.Range(0, 4);
 
             //int left_type = leftDetection.GetComponent<RoomType>().type;
             //int right_type = rightDetection.GetComponent<RoomType>().type;
             //int up_type = upDetection.GetComponent<RoomType>().type;
             //int down_type = downDetection.GetComponent<RoomType>().type;
 
+            List<int> availRoomIntersect = new List<int> { };
+            //int[] availRoomIntersect = new int[] { };
 
             //Debug.Log("this is" + leftPos + leftDetection + (leftDetection != null));
             if (currentSpot == null)
             {
-                if (upDetection != null && upDetection.GetComponent<RoomType>().type != 0)// && (rand == 0 || rand == 1))
+                if (upDetection != null && levelGen.BotOpeningRoomTypes.Contains(upDetection.GetComponent<RoomType>().type))// && (rand == 0 || rand == 1))
                 {
                     //int rm_type = upDetection.GetComponent<RoomType>().type;
                     //if (rm_type != 0)
                     //{
-                    Instantiate(levelGen.rooms[Random.Range(2, 5)], roomPos, Quaternion.identity);
-                    extraRoomsPos.Remove(roomPos);
+                    //int rand = Random.Range(0, levelGen.TopOpeningRoomTypes.Length)
+                    if (availRoomIntersect.Count == 0)
+                    {
+                        availRoomIntersect = levelGen.BotOpeningRoomTypes;
+                    }
+                    else
+                    {
+                        availRoomIntersect = availRoomIntersect.Intersect(levelGen.BotOpeningRoomTypes).ToList();
+                    }
+                    //Instantiate(levelGen.rooms[Random.Range(2, 5)], roomPos, Quaternion.identity);
+                    //extraRoomsPos.Remove(roomPos);
                     //}
 
                 }
 
-                else if (downDetection != null && downDetection.GetComponent<RoomType>().type != 0 && downDetection.GetComponent<RoomType>().type != 1)// && (rand == 1 || rand == 2))
+                if (downDetection != null && levelGen.TopOpeningRoomTypes.Contains(downDetection.GetComponent<RoomType>().type))// && (rand == 1 || rand == 2))
                 {
                     //int rm_type = downDetection.GetComponent<RoomType>().type;
                     //if (rm_type != 0 && rm_type != 1)
                     //{
-                    int[] availRoom = { 1, 3, 4 };
-                    Instantiate(levelGen.rooms[availRoom[Random.Range(0, availRoom.Length)]], roomPos, Quaternion.identity);
-                    extraRoomsPos.Remove(roomPos);
+
+                    if (availRoomIntersect.Count == 0)
+                    {
+                        availRoomIntersect = levelGen.TopOpeningRoomTypes;
+                    }
+                    else
+                    {
+                        availRoomIntersect = availRoomIntersect.Intersect(levelGen.TopOpeningRoomTypes).ToList();
+                    }
+                    //int[] availRoom = { 1, 3, 4 };
+                    //Instantiate(levelGen.rooms[availRoom[Random.Range(0, availRoom.Length)]], roomPos, Quaternion.identity);
+                    //extraRoomsPos.Remove(roomPos);
 
                     //}
                 }
 
-                else if (rightDetection != null && rightDetection.GetComponent<RoomType>().type != 4)// && (rand == 2 || rand == 3))
+                if (rightDetection != null && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type))// && (rand == 2 || rand == 3))
                 {
                     //int rm_type = rightDetection.GetComponent<RoomType>().type;
                     //if (rm_type != 4)
                     //{
-                        //int[] availRoom = { 1, 3, 4 };
-                    Instantiate(levelGen.rooms[Random.Range(0, 4)], roomPos, Quaternion.identity);
-                    extraRoomsPos.Remove(roomPos);
+                    //int[] availRoom = { 1, 3, 4 };
+
+                    if (availRoomIntersect.Count == 0)
+                    {
+                        availRoomIntersect = levelGen.LeftOpeningRoomTypes;
+                    }
+                    else
+                    {
+                        availRoomIntersect = availRoomIntersect.Intersect(levelGen.LeftOpeningRoomTypes).ToList();
+                    }
+                    //Instantiate(levelGen.rooms[Random.Range(0, 4)], roomPos, Quaternion.identity);
+                    //extraRoomsPos.Remove(roomPos);
 
                     //}
 
                 }
 
-                else if (leftDetection != null && leftDetection.GetComponent<RoomType>().type != 4)// && (rand == 3 || rand == 0))
+                if (leftDetection != null && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type))// && (rand == 3 || rand == 0))
                 {
                     //int rm_type = leftDetection.GetComponent<RoomType>().type;
                     //if (rm_type != 0 && rm_type != 1)
                     //{
-                        //int[] availRoom = { 1, 3, 4 };
-                    Instantiate(levelGen.rooms[Random.Range(0, 4)], roomPos, Quaternion.identity);
-                    extraRoomsPos.Remove(roomPos);
+                    //int[] availRoom = { 1, 3, 4 };
+                    if (availRoomIntersect.Count == 0)
+                    {
+                        availRoomIntersect = levelGen.RightOpeningRoomTypes;
+                    }
+                    else
+                    {
+                        availRoomIntersect = availRoomIntersect.Intersect(levelGen.RightOpeningRoomTypes).ToList();
+                    }
+                    //Instantiate(levelGen.rooms[Random.Range(0, 4)], roomPos, Quaternion.identity);
+                    //extraRoomsPos.Remove(roomPos);
 
                     //}
                 }
-                else
-                {
-                    Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
+                int rand = Random.Range(0, availRoomIntersect.Count);
+                Instantiate(levelGen.rooms[availRoomIntersect[rand]], roomPos, Quaternion.identity);
+                extraRoomsPos.Remove(roomPos);
+                //else
+                //{
+                //    Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
 
-                }
+                //}
                 // Debug.Log("extraRoomsPos" + extraRoomsPos.Count);
 
 
