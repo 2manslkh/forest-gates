@@ -46,13 +46,13 @@ public class RoomChecker : MonoBehaviour
                 //if (iter % 2 == 0)
                 //{
                 RoomCheck();
-                Debug.Log("Checking non center rooms");
+                //Debug.Log("Checking non center rooms");
                 //}
                 //else
                 //{
 
                 CheckCenterRooms();
-                Debug.Log("Checking Center Rooms");
+                //Debug.Log("Checking Center Rooms");
                 //}
 
                 timeBtwFunctions = startTimeBtwFunctions;
