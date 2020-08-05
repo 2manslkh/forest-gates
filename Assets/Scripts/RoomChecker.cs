@@ -37,23 +37,23 @@ public class RoomChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelGen.stopGeneration == true && iter < 10 && fillUpRooms.FilledUp == true)
+        if (levelGen.stopGeneration == true && iter < levelGen.maxRoomNumber && fillUpRooms.FilledUp == true)
         {
             if (timeBtwFunctions <= 0)
             {
                 iter += 1;
                 Debug.Log("Iteration no : " + iter);
-                if (iter % 2 == 0)
-                {
-                    RoomCheck();
-                    Debug.Log("Checking non center rooms");
-                }
-                else
-                {
+                //if (iter % 2 == 0)
+                //{
+                RoomCheck();
+                Debug.Log("Checking non center rooms");
+                //}
+                //else
+                //{
 
-                    CheckCenterRooms();
-                    Debug.Log("Checking Center Rooms");
-                }
+                CheckCenterRooms();
+                Debug.Log("Checking Center Rooms");
+                //}
 
                 timeBtwFunctions = startTimeBtwFunctions;
             }
@@ -67,7 +67,7 @@ public class RoomChecker : MonoBehaviour
     public void RoomCheck()
     {
         Collider2D currentSpot = Physics2D.OverlapCircle(transform.position, 1, levelGen.room);
-        if (currentSpot != null)
+        if (currentSpot != null && (gameObject.name == "Pose" || gameObject.name == "Pose" + " (" + iter + ")"))
         {
             int roomType = currentSpot.GetComponent<RoomType>().type;
 
@@ -98,7 +98,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -109,7 +109,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -125,7 +125,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -136,7 +136,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -150,7 +150,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.BotOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -161,7 +161,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -176,7 +176,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.LeftOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
@@ -187,7 +187,7 @@ public class RoomChecker : MonoBehaviour
                     currentSpot.GetComponent<RoomType>().RoomDestruction();
                     UpdateAvailRooms();
                     int rand = Random.Range(0, availRooms.Count);
-                    while (levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]))
+                    while (levelGen.TopOpeningRoomTypes.Contains(availRooms[rand]) || levelGen.RightOpeningRoomTypes.Contains(availRooms[rand]) == false)
                     {
                         rand = Random.Range(0, availRooms.Count);
                     }
