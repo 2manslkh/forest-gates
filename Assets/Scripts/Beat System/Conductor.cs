@@ -51,9 +51,9 @@ public class Conductor : MonoBehaviour
     # endregion
 
     public static class TimingThresholds{
-        public static float perfect = 0.25f;
-        public static float great = 0.35f;
-        public static float good = 0.45f;
+        public static float perfect = 0.15f;
+        public static float great = 0.25f;
+        public static float good = 0.35f;
 
     }
 
