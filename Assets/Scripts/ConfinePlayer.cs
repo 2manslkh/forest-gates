@@ -18,7 +18,6 @@ public class ConfinePlayer : MonoBehaviour
     {
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         edgeCollider = gameObject.GetComponent<EdgeCollider2D>();
-        edgeCollider.isTrigger = true;
     }
     void Start()
     {

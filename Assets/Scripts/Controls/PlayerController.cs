@@ -70,7 +70,6 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             weapon_anim.SetFloat("Mouse Y", lookDir.y);
             weapon_anim.SetFloat("Magnitude", movement.magnitude);
             transform.position = transform.position + movement * Time.deltaTime;
-            
             attackPosition.position = Vector3.Normalize(lookDir) + gameObject.transform.position;
         }
 
@@ -83,8 +82,6 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 damage = gameObject.GetComponent<PlayerStats>().damage.GetValue(); // Calculate damage with equipement modifiers
-                damage *= Conductor.instance.getBeatMultiplier();
-                Debug.Log(damage);
                 Debug.Log(enemiesToDamage[i]);
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
@@ -93,6 +90,8 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             }
         }
     }
+
+
       void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("OnCollisionEnter2D");

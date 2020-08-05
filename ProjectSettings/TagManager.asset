@@ -14,8 +14,6 @@ TagManager:
   - UICamera
   - Enemy
   - NPC
-  - Beat
-  - Gatekeeper
   layers:
   - Default
   - TransparentFX
@@ -29,6 +27,7 @@ TagManager:
   - Enemy
   - NPC
   - Room
+  - 
   - 
   - 
   - 
