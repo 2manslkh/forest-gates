@@ -7,8 +7,6 @@ public class FillUpRooms : MonoBehaviour
     private LevelGeneration levelGen;
     public static FillUpRooms Instance;
 
-    public bool FilledUp = false;
-
     // Start is called before the first frame update
 
     private void Awake()
@@ -28,11 +26,37 @@ public class FillUpRooms : MonoBehaviour
         int unspawnedRoomNumber = levelGen.maxRoomNumber - levelGen.currentRoomNumber;
         for (int i = 0; i < unspawnedRoomNumber; i++)
         {
-            List<Vector3> extraRoomsPos = levelGen.extraRoomsPos;
-            //stopGeneration = false;
-            int unspawnedRoomNumber = levelGen.maxRoomNumber - levelGen.currentRoomNumber;
-            //for (int i = 0; i < unspawnedRoomNumber; i++)
-            while (extraRoomsPos.Count > 0)
+            int idx = Random.Range(0, extraRoomsPos.Count);
+            Vector3 roomPos = extraRoomsPos[idx];
+            transform.position = roomPos;
+
+            Vector2 upPos = new Vector2(transform.position.x, transform.position.y + levelGen.moveAmount);
+            Vector2 downPos = new Vector2(transform.position.x, transform.position.y - levelGen.moveAmount);
+            Vector2 rightPos = new Vector2(transform.position.x + levelGen.moveAmount, transform.position.y);
+            Vector2 leftPos = new Vector2(transform.position.x - levelGen.moveAmount, transform.position.y);
+
+            Collider2D currentSpot= Physics2D.OverlapCircle(transform.position, 1, levelGen.room);
+            Collider2D upDetection = Physics2D.OverlapCircle(upPos, 1, levelGen.room);
+            Collider2D downDetection = Physics2D.OverlapCircle(downPos, 1, levelGen.room);
+            Collider2D rightDetection = Physics2D.OverlapCircle(rightPos, 1, levelGen.room);
+            Collider2D leftDetection = Physics2D.OverlapCircle(leftPos, 1, levelGen.room);
+
+            List<Collider2D> detectList = new List<Collider2D>();
+            detectList.Add(upDetection);
+            detectList.Add(downDetection);
+            detectList.Add(rightDetection);
+            detectList.Add(leftDetection);
+
+            int rand = Random.Range(0, 4);
+
+            //int left_type = leftDetection.GetComponent<RoomType>().type;
+            //int right_type = rightDetection.GetComponent<RoomType>().type;
+            //int up_type = upDetection.GetComponent<RoomType>().type;
+            //int down_type = downDetection.GetComponent<RoomType>().type;
+
+
+            //Debug.Log("this is" + leftPos + leftDetection + (leftDetection != null));
+            if (currentSpot == null)
             {
                 if (upDetection != null && upDetection.GetComponent<RoomType>().type != 0)// && (rand == 0 || rand == 1))
                 {
@@ -65,10 +89,6 @@ public class FillUpRooms : MonoBehaviour
                         //int[] availRoom = { 1, 3, 4 };
                     Instantiate(levelGen.rooms[Random.Range(0, 4)], roomPos, Quaternion.identity);
                     extraRoomsPos.Remove(roomPos);
-                    unspawnedRoomNumber -= 1;
-                    //else
-                    //{
-                    //    Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
 
                     //}
 
@@ -97,6 +117,5 @@ public class FillUpRooms : MonoBehaviour
 
 
         }
-        FilledUp = true;
     }
 }

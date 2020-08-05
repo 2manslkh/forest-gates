@@ -60,7 +60,6 @@ public class LevelGeneration : MonoBehaviour
         if (maxRoomNumber == currentRoomNumber)
         {
             stopGeneration = true;
-            fillUpRooms.FilledUp = true;
             if (exitSpawned == false)
             {
                 SpawnSceneTransition();
