@@ -1,15 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class Conductor : MonoBehaviour
 {
-    public GameObject beatObject;
-
-    public Transform spawnLocation;
-    public Transform endLocation;
-    public Transform targetLocation;
     //Song beats per minute
     //This is determined by the song you're trying to sync up to
     public float songBpm;
@@ -50,7 +44,7 @@ public class Conductor : MonoBehaviour
 
     # endregion
 
-    public static class TimingThresholds{
+    public static class TimingThreshold{
         public static float perfect = 0.15f;
         public static float great = 0.25f;
         public static float good = 0.35f;
@@ -77,8 +71,6 @@ public class Conductor : MonoBehaviour
 
         //Start the music
         musicSource.Play();
-
-        
     }
 
     // Update is called once per frame
@@ -97,29 +89,9 @@ public class Conductor : MonoBehaviour
         loopPositionInAnalog = loopPositionInBeats / beatsPerLoop;
     }
 
-    public void SpawnBeat(){
-        Debug.Log("Beat Spawned");
-        Instantiate(beatObject, spawnLocation);
-    }
-
     public bool isBeatInRange(float threshold, float currentBeat, float nearestBeat){
-        if (Math.Abs(currentBeat - nearestBeat) < threshold){
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 
-    public int getBeatMultiplier(){
-        float nearestBeat = (float) Math.Round(instance.songPositionInBeats);
-        if (isBeatInRange(TimingThresholds.perfect, instance.songPositionInBeats, nearestBeat)){
-            return TimingMultipliers.perfect;
-        } else if (isBeatInRange(TimingThresholds.great, instance.songPositionInBeats, nearestBeat)){
-            return TimingMultipliers.great;
-        }  else if (isBeatInRange(TimingThresholds.good, instance.songPositionInBeats, nearestBeat)){
-            return TimingMultipliers.good;
-        } else {
-            return 0;
-        }
-    }
+
 }

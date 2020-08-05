@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313505043}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 197cda7ebaa82467593465a5cfa4258a, type: 3}
   m_Name: 
@@ -1426,11 +1426,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DebugMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 5803178604253210723, guid: 395f987e4c242454eba342448f9215be,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5803178604253210724, guid: 395f987e4c242454eba342448f9215be,
         type: 3}
