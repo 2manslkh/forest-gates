@@ -49,7 +49,7 @@ public class EquipmentManager : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetKeyDown (KeyCode.U)) {
-			UnequipAll ();
+			UnequipAll();
 		}
 	}
 

@@ -9,7 +9,12 @@ public class Enemy : Character
     public Animator enemyAnimator;
     public bool isHit = false;
 
-    void resetHit(){
-    //    enemyAnimator.SetBool("isHit",false);
+
+    public void getHit(){
+        enemyAnimator.SetBool("isHit",true);
+    }
+
+    public void resetHit(){
+       enemyAnimator.SetBool("isHit",false);
     }
 }

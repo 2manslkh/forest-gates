@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 5425181414306030327}
-  rb: {fileID: 0}
-  enemyAnimator: {fileID: 0}
+  rb: {fileID: 52041012496881728}
+  enemyAnimator: {fileID: 52041012496881756}
   isHit: 0
 --- !u!114 &5425181414306030327
 MonoBehaviour:

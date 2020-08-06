@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
                 Debug.Log(damage);
                 Debug.Log(enemiesToDamage[i]);
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Enemy>().getHit();
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
                     enemiesToDamage[i].GetComponent<Animator>().SetBool("isHit", true);
                 }
