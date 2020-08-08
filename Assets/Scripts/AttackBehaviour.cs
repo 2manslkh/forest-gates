@@ -9,6 +9,7 @@ public class AttackBehaviour : StateMachineBehaviour
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+
 	}
 
 
@@ -20,15 +21,14 @@ public class AttackBehaviour : StateMachineBehaviour
             animator.SetFloat("Vertical", difference.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            animator.SetBool("isFollowing", true);
-        }
-        if (Input.GetKeyDown(KeyCode.P)) {
-            animator.SetBool("isPatrolling", true);
-        }
         if (difference.magnitude > attackDistance) {
             animator.SetBool("isAttacking", false);
         }
+        
+        if (animator.GetBool("isAttacking")){
+            animator.GetComponent<Enemy>().dealDamage();
+        }
+
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

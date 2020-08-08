@@ -196,7 +196,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 0}
+  m_renderer: {fileID: 4575248171634617230}
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}

@@ -15,6 +15,17 @@ public class Character : MonoBehaviour
         characterStats.OnHealthReachedZero += checkIfDead;
     }
 
+    
+    public Animator characterAnimator;
+
+    public void setHit(){
+        characterAnimator.SetBool("isHit",true);
+    }
+
+    public void resetHit(){
+       characterAnimator.SetBool("isHit",false);
+    }
+
     public void checkIfDead(){
         Debug.Log("CAST CHECK IF DEAD");
         if (characterStats.currentHealth <= 0){

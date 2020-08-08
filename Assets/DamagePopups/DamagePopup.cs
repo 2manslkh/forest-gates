@@ -27,6 +27,15 @@ public class DamagePopup : MonoBehaviour {
         return damagePopup;
     }
 
+    public static DamagePopup Create(Vector3 position, int damageAmount) {
+        Transform damagePopupTransform = Instantiate(GameAssets.i.pfDamagePopup, position, Quaternion.identity);
+
+        DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
+        damagePopup.Setup(damageAmount);
+
+        return damagePopup;
+    }
+
     private static int sortingOrder;
 
     private const float DISAPPEAR_TIMER_MAX = 1f;
@@ -48,17 +57,37 @@ public class DamagePopup : MonoBehaviour {
         textMesh.SetText(damageAmount.ToString());
         if (timing == "good") {
             // Normal hit
-            textMesh.fontSize = 12;
+            textMesh.fontSize = 10;
             textColor = goodTextColor;
         } else if (timing == "great"){
             // Critical hit
-            textMesh.fontSize = 15;
+            textMesh.fontSize = 12;
             textColor = greatTextColor;
         } else if (timing == "perfect"){
             // Critical hit
             textMesh.fontSize = 15;
             textColor = perfectTextColor;
+        } else if (timing == "miss"){
+            textMesh.fontSize = 8;
+            textColor = missTextColor;
+            textMesh.SetText("Miss");
         }
+        textMesh.color = textColor;
+        disappearTimer = DISAPPEAR_TIMER_MAX;
+
+        sortingOrder++;
+        textMesh.sortingOrder = sortingOrder;
+
+        moveVector = new Vector3(.7f, 1) * 6f;
+    }
+
+        public void Setup(int damageAmount) {
+        textMesh.SetText(damageAmount.ToString());
+
+        // Enemy hit
+        textMesh.fontSize = 10;
+        textColor = missTextColor;
+
         textMesh.color = textColor;
         disappearTimer = DISAPPEAR_TIMER_MAX;
 
