@@ -179,9 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth:
     baseValue: 0
-  currentHealth: 0
+  currentHealth: 200
   damage:
-    baseValue: 0
+    baseValue: 30
   armor:
     baseValue: 0
   currentMana:
