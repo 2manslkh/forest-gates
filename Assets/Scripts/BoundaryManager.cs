@@ -7,6 +7,8 @@ public class BoundaryManager : MonoBehaviour
     public GameObject[] boundaries;
     public GameObject[] enemies;
     private RoomType roomTypeScript;
+    public TriggerBarrier triggerBarrierScript;
+    public bool moveOnce;
 
     private void Awake() {
         roomTypeScript = GetComponentInParent<RoomType>();
@@ -14,12 +16,17 @@ public class BoundaryManager : MonoBehaviour
         {
             boundary.SetActive(false);
         }
+        foreach (GameObject enemy in enemies)
+        {
+            // enemy.GetComponent<Animator>().enabled = false;
+            enemy.SetActive(false);
+        }
     }
 
     private void Start() {
+        moveOnce = false;
         if (roomTypeScript.firstRoom)
         {
-            print(roomTypeScript.gameObject.name);
             foreach (GameObject enemy in enemies)
             {
                 enemy.SetActive(false);
@@ -28,6 +35,19 @@ public class BoundaryManager : MonoBehaviour
     }
     void Update()
     {
+        if(moveOnce == false)
+        {
+            if(triggerBarrierScript.enemyMove)
+            {
+                foreach (GameObject enemy in enemies)
+                {
+                    // enemy.GetComponent<Animator>().enabled = true;
+                    enemy.SetActive(true);
+                }
+                print("enable room " + triggerBarrierScript.gameObject.name);
+                moveOnce = true;
+            }
+        }
         bool anyEnemyAlive = false;
         foreach (GameObject enemy in enemies)
         {

@@ -3251,6 +3251,7 @@ MonoBehaviour:
   boundaries:
   - {fileID: 7596447172742856048}
   - {fileID: 4855611356272165479}
+  enemyMove: 0
 --- !u!1 &838198312273831346
 GameObject:
   m_ObjectHideFlags: 0
@@ -6568,7 +6569,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 1001515291750471309}
   - {fileID: 5282183302993509350}
-  - {fileID: 5282183302993509350}
+  - {fileID: 2825470024160145671}
+  triggerBarrierScript: {fileID: 8556171225762002027}
 --- !u!1 &8390777765388758835
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,6 +7236,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3c4fe23551cae438f2b6621853e80d, type: 3}
+--- !u!1 &2825470024160145671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7063065073704402845, guid: 8f3c4fe23551cae438f2b6621853e80d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4986358105178246810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2825470024160145666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7063065073704402840, guid: 8f3c4fe23551cae438f2b6621853e80d,

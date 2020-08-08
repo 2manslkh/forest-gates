@@ -3404,13 +3404,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b151594aa0f976489e43fcfc88e5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 7606483167630596031}
   boundaries:
   - {fileID: 416576687043383021}
   - {fileID: 8402378507281046878}
   enemies:
   - {fileID: 7606483167630596027}
   - {fileID: 209817541749658782}
+  triggerBarrierScript: {fileID: 2410518057815500346}
 --- !u!1 &4142841979322904713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3787,6 +3787,7 @@ MonoBehaviour:
   boundaries:
   - {fileID: 416576687043383021}
   - {fileID: 8402378507281046878}
+  enemyMove: 0
 --- !u!1 &5174903885407192798
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,12 +6020,6 @@ GameObject:
 --- !u!4 &7606483167630596030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583371784813143461, guid: 679d639acf61818428d2ba19c9adcc91,
-    type: 3}
-  m_PrefabInstance: {fileID: 2662673211663446555}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &7606483167630596031 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5583371784813143460, guid: 679d639acf61818428d2ba19c9adcc91,
     type: 3}
   m_PrefabInstance: {fileID: 2662673211663446555}
   m_PrefabAsset: {fileID: 0}

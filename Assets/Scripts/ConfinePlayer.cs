@@ -36,7 +36,7 @@ public class ConfinePlayer : MonoBehaviour
             if (enemiesCleared == false && Input.GetKey(KeyCode.Space))
             {
                 OnRoomClear();
-                Debug.Log("Confinement broken!");
+                // Debug.Log("Confinement broken!");
             }
         }
     }

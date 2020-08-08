@@ -15,7 +15,6 @@ public class FollowBehaviour : StateMachineBehaviour
         // source.Play();
 
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.Log("enter follow");
 	}
 
     // Update
