@@ -22,7 +22,7 @@ public class DamagePopup : MonoBehaviour {
         Transform damagePopupTransform = Instantiate(GameAssets.i.pfDamagePopup, position, Quaternion.identity);
 
         DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
-        damagePopup.Setup(damageAmount, "good");
+        damagePopup.Setup(damageAmount, isCriticalHit);
 
         return damagePopup;
     }
@@ -48,11 +48,15 @@ public class DamagePopup : MonoBehaviour {
         textMesh.SetText(damageAmount.ToString());
         if (timing == "good") {
             // Normal hit
-            textMesh.fontSize = 36;
+            textMesh.fontSize = 12;
             textColor = goodTextColor;
+        } else if (timing == "great"){
+            // Critical hit
+            textMesh.fontSize = 15;
+            textColor = greatTextColor;
         } else if (timing == "perfect"){
             // Critical hit
-            textMesh.fontSize = 45;
+            textMesh.fontSize = 15;
             textColor = perfectTextColor;
         }
         textMesh.color = textColor;
@@ -61,12 +65,12 @@ public class DamagePopup : MonoBehaviour {
         sortingOrder++;
         textMesh.sortingOrder = sortingOrder;
 
-        moveVector = new Vector3(.7f, 1) * 60f;
+        moveVector = new Vector3(.7f, 1) * 6f;
     }
 
     private void Update() {
         transform.position += moveVector * Time.deltaTime;
-        moveVector -= moveVector * 8f * Time.deltaTime;
+        moveVector -= moveVector * 16f * Time.deltaTime;
 
         if (disappearTimer > DISAPPEAR_TIMER_MAX * .5f) {
             // First half of the popup lifetime

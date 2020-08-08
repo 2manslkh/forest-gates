@@ -15,7 +15,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Testing : MonoBehaviour {
 
+    
+    [SerializeField] private Transform pfDamagePopup;
     private void Start() {
+        Instantiate(GameAssets.i.pfDamagePopup, Vector3.zero, Quaternion.identity);
         // DamagePopup.Create(Vector3.zero, 300);
     }
 
