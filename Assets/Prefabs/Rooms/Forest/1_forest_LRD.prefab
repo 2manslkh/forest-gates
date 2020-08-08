@@ -13159,15 +13159,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5263788607923032117}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &5310967578793920628 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
-    type: 3}
-  m_PrefabInstance: {fileID: 5263788607923032117}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5310967578793920619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 52041012496881758, guid: c5df7f96e06177b4395e6c79f4f87e35,
+    type: 3}
+  m_PrefabInstance: {fileID: 5263788607923032117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &5310967578793920628 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
     type: 3}
   m_PrefabInstance: {fileID: 5263788607923032117}
   m_PrefabAsset: {fileID: 0}
