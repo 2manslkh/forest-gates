@@ -6566,10 +6566,9 @@ MonoBehaviour:
   - {fileID: 4089040327655990590}
   - {fileID: 4855611356272165479}
   enemies:
-  - {fileID: 0}
+  - {fileID: 7507920125047090892}
   - {fileID: 439253789019650973}
   - {fileID: 5630709667839693864}
-  - {fileID: 7507920125047090892}
 --- !u!1 &8390777765388758835
 GameObject:
   m_ObjectHideFlags: 0

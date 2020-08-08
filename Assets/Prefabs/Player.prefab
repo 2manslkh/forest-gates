@@ -113,7 +113,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -372922423
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 5956946754449639209, guid: 2b11245c9c77d11499b916c85cc972d9,
     type: 3}
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -372922423
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4494631860909567817, guid: d3b8b2ec2b5ed5a4888c54e5d7ef80d4,
     type: 3}
@@ -343,7 +343,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  attackRadius: 2
+  attackRadius: 1
   currentFacingDirection: 0
 --- !u!61 &8465612868750409329
 BoxCollider2D:

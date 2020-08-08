@@ -19,22 +19,24 @@ public class TurretBehaviour : MonoBehaviour
         animator = GetComponent<Animator>();
         numberOfProjectiles = 8;
         radius = 5f;
-        projectileSpeed = 5f;
+        projectileSpeed = 2f;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        float attackTime = Random.Range(minAttackTime, maxAttackTime);
-        if(!attacking)
-        {
-            timeLeft -= Time.deltaTime;
-            if(timeLeft < 0)
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Ready")){
+            float attackTime = Random.Range(minAttackTime, maxAttackTime);
+            if(!attacking)
             {
-                attacking = true;
-                StartCoroutine("TurretAttack", attackTime);
-                timeLeft = attackTime;
+                timeLeft -= Time.deltaTime;
+                if(timeLeft < 0)
+                {
+                    attacking = true;
+                    StartCoroutine("TurretAttack", attackTime);
+                    timeLeft = attackTime;
+                }
             }
         }
 
@@ -44,7 +46,7 @@ public class TurretBehaviour : MonoBehaviour
     {
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(1.1f);
-        //instantiate projectiles here
+        SpawnProjectiles();
         animator.SetBool("isAttacking", false);
         attacking  = false;
     }
@@ -54,10 +56,10 @@ public class TurretBehaviour : MonoBehaviour
         float angleStep = 360f / numberOfProjectiles;
         float angle = 0f;
 
-        for(int i=0; i < numberOfProjectiles - 1; i++)
+        for(int i=0; i < numberOfProjectiles; i++)
         {
             float projectileXPosition = gameObject.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
-            float projectileYPosition = gameObject.transform.position.y + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
+            float projectileYPosition = gameObject.transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
 
             Vector2 projectileVector = new Vector2 (projectileXPosition, projectileYPosition);
             Vector2 turretPosition = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3656204211181538475, guid: 336075f445393bf4bbba65012081baaa,
     type: 3}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth:
     baseValue: 0
-  currentHealth: 0
+  currentHealth: 100
   damage:
     baseValue: 0
   armor:
@@ -215,8 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStats: {fileID: 402996164972519678}
   rb: {fileID: 7063065073704402842}
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 7063065073704402844}
   isHit: 0
+  attackPosition: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &8939624671087089695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,5 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0ccfea743cad045ae07fe5f2c8b91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7130769614346594203, guid: 529f021882c1591448843a1afbbbf943,
+    type: 3}
   minAttackTime: 1
   maxAttackTime: 3
