@@ -16,6 +16,7 @@ TagManager:
   - NPC
   - Beat
   - Gatekeeper
+  - Top
   layers:
   - Default
   - TransparentFX
@@ -52,6 +53,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 876637209
     locked: 0
   - name: Player
     uniqueID: 3922044873
