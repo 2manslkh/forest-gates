@@ -183,10 +183,11 @@ MonoBehaviour:
   characterAnimator: {fileID: 52041012496881756}
   rb: {fileID: 52041012496881728}
   isHit: 0
-  attackPosition: {fileID: 0}
+  attackPosition: {fileID: 7269185428143828742}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
+  attackRadius: 0.5
 --- !u!114 &5425181414306030327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
     baseValue: 50
   currentHealth: 0
   damage:
-    baseValue: 0
+    baseValue: 1
   armor:
     baseValue: 0
   currentMana:
@@ -230,7 +231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7269185428143828742}
-  - component: {fileID: 5291358819945417294}
+  - component: {fileID: 2025663158703623979}
   m_Layer: 9
   m_Name: Attack Position
   m_TagString: Untagged
@@ -252,7 +253,7 @@ Transform:
   m_Father: {fileID: 52041012496881758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5291358819945417294
+--- !u!114 &2025663158703623979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198600969838107088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97dd132474d7541458119170c7ee8fe7, type: 3}
+  m_Script: {fileID: 11500000, guid: c8ea9d54123b8384a98b9de48b916d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 52041012496881730}
+  enemy: {fileID: 52041012496881730}
