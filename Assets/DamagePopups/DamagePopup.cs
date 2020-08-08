@@ -14,16 +14,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using CodeMonkey.Utils;
-
 public class DamagePopup : MonoBehaviour {
 
+    public GameObject pfDamagePopup;
+
     // Create a Damage Popup
-    public static DamagePopup Create(Vector3 position, int damageAmount, bool isCriticalHit) {
-        Transform damagePopupTransform = Instantiate(GameAssets.i.pfDamagePopup, position, Quaternion.identity);
+    public DamagePopup Create(Vector3 position, int damageAmount, bool isCriticalHit) {
+        GameObject damagePopupTransform = Instantiate(pfDamagePopup, position, Quaternion.identity);
 
         DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
-        damagePopup.Setup(damageAmount, isCriticalHit);
+        damagePopup.Setup(damageAmount, "good");
 
         return damagePopup;
     }
@@ -35,22 +35,26 @@ public class DamagePopup : MonoBehaviour {
     private TextMeshPro textMesh;
     private float disappearTimer;
     private Color textColor;
+    public Color missTextColor;
+    public Color goodTextColor;
+    public Color greatTextColor;
+    public Color perfectTextColor;
     private Vector3 moveVector;
 
     private void Awake() {
         textMesh = transform.GetComponent<TextMeshPro>();
     }
 
-    public void Setup(int damageAmount, bool isCriticalHit) {
+    public void Setup(int damageAmount, string timing) {
         textMesh.SetText(damageAmount.ToString());
-        if (!isCriticalHit) {
+        if (timing == "good") {
             // Normal hit
             textMesh.fontSize = 36;
-            textColor = UtilsClass.GetColorFromString("FFC500");
-        } else {
+            textColor = goodTextColor;
+        } else if (timing == "perfect"){
             // Critical hit
             textMesh.fontSize = 45;
-            textColor = UtilsClass.GetColorFromString("FF2B00");
+            textColor = perfectTextColor;
         }
         textMesh.color = textColor;
         disappearTimer = DISAPPEAR_TIMER_MAX;
