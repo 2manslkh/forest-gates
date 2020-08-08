@@ -9,6 +9,7 @@ public class IdleBehaviour : StateMachineBehaviour
 		public float followDistance;
 
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		animator.enabled = true;
 		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 
