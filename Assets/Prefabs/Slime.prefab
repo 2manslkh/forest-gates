@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 4441879043521645503, guid: 336075f445393bf4bbba65012081baaa,
     type: 3}
@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 5425181414306030327}
+  characterAnimator: {fileID: 52041012496881756}
   rb: {fileID: 52041012496881728}
-  enemyAnimator: {fileID: 52041012496881756}
   isHit: 0
   attackPosition: {fileID: 0}
   playerLayer:
