@@ -17,14 +17,14 @@ public class RoomChecker : MonoBehaviour
 
     List<int> availRooms = new List<int> { };
 
-    float timeBtwFunctions = 0.5f;
-    float startTimeBtwFunctions = 0.5f;
+    float timeBtwFunctions = 0.25f;
+    float startTimeBtwFunctions = 0.25f;
 
     // Start is called before the first frame update
     void Start()
     {
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
-
+        transform.position = new Vector3(levelGen.minX, levelGen.maxY, 0);
         upPos = new Vector2(transform.position.x, transform.position.y + levelGen.moveAmount);
         downPos = new Vector2(transform.position.x, transform.position.y - levelGen.moveAmount);
         rightPos = new Vector2(transform.position.x + levelGen.moveAmount, transform.position.y);
@@ -45,13 +45,16 @@ public class RoomChecker : MonoBehaviour
                 Debug.Log("Iteration no : " + iter);
                 //if (iter % 2 == 0)
                 //{
+
+                CheckCenterRooms();
                 RoomCheck();
+                Move();
                 //Debug.Log("Checking non center rooms");
                 //}
                 //else
                 //{
 
-                CheckCenterRooms();
+
                 //Debug.Log("Checking Center Rooms");
                 //}
 
@@ -63,14 +66,51 @@ public class RoomChecker : MonoBehaviour
             }
         }
     }
+    void Move()
+    {
+        // Move from top left corner to the right bottom corner
+        Vector3 currentPos = transform.position;
+        Debug.Log("Room Checker's Current Posistion : " + transform.position);
+        if (currentPos.x == levelGen.maxX && currentPos.y == levelGen.minY)
+        {
+            return;
+        }
+        else if (currentPos.x < levelGen.maxX)
+        {
+            transform.position = new Vector3(transform.position.x + levelGen.moveAmount, transform.position.y, 0);
+        }
+        else if (currentPos.y > levelGen.minY)
+        {
+            transform.position = new Vector3(levelGen.minX, transform.position.y - levelGen.moveAmount, 0);
+        }
+    }
 
     public void RoomCheck()
     {
         Collider2D currentSpot = Physics2D.OverlapCircle(transform.position, 1, levelGen.room);
-        if (currentSpot != null && (gameObject.name == "Pose" || gameObject.name == "Pose" + " (" + iter + ")"))
+        if (currentSpot != null)// && (gameObject.name == "Pose" || gameObject.name == "Pose" + " (" + iter + ")"))
         {
             int roomType = currentSpot.GetComponent<RoomType>().type;
 
+            //if (currentSpot.GetComponent<RoomType>().GetInstanceID() == levelGen.generatedRooms[0].GetComponent<RoomType>().GetInstanceID())
+            //{
+            //    return;
+            //}
+            //else if (transform.position.y > 5 && transform.position.y < 35 && transform.position.x > 5 && transform.position.x < 35)
+            //{
+
+            //    UpdateAvailRooms();
+            //    if (availRooms.Contains(currentSpot.GetComponent<RoomType>().type))
+            //    {
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        currentSpot.GetComponent<RoomType>().RoomDestruction();
+            //        int rand = Random.Range(0, availRooms.Count);
+            //        Instantiate(levelGen.rooms[availRooms[rand]], transform.position, Quaternion.identity);
+            //    }
+            //}
             if (transform.position.x == 5 && transform.position.y == 5)
             {
                 currentSpot.GetComponent<RoomType>().RoomDestruction();
@@ -287,6 +327,6 @@ public class RoomChecker : MonoBehaviour
                 availRooms = availRooms.Intersect(levelGen.LeftOpeningRoomTypes).ToList();
             }
         }
-        //Debug.Log("Available Edge Rooms : " + availRooms.Count);
+        Debug.Log("Available Edge Rooms : " + availRooms.Count);
     }
 }

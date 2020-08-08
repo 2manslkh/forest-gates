@@ -259,7 +259,7 @@ TextureImporter:
     second: Enemies_84
   - first:
       213: 3656204211181538475
-    second: Enemies_85
+    second: Turret_idle
   - first:
       213: 8006013045212815849
     second: Enemies_86
@@ -322,10 +322,10 @@ TextureImporter:
     second: Zombie_walk_up3
   - first:
       213: 281971560821966503
-    second: Enemies_106
+    second: Turret_attack_1
   - first:
       213: 6760816455620728065
-    second: Enemies_107
+    second: Turret_attack_2
   - first:
       213: -1632509268861782422
     second: Enemies_108
@@ -547,37 +547,37 @@ TextureImporter:
     second: Enemies_180
   - first:
       213: 4583930189806690113
-    second: Enemies_181
+    second: Lizard_walk_down1
   - first:
       213: -1218937507090427075
-    second: Enemies_182
+    second: Lizard_walk_down2
   - first:
       213: 2937133513788191200
-    second: Enemies_183
+    second: Lizard_walk_down3
   - first:
       213: 10345393667205939
-    second: Enemies_184
+    second: Lizard_walk_left1
   - first:
       213: -3038209794551486904
-    second: Enemies_185
+    second: Lizard_walk_left2
   - first:
       213: -1864957766386997569
-    second: Enemies_186
+    second: Lizard_walk_left3
   - first:
       213: -2025086420242167891
-    second: Enemies_187
+    second: Lizard_walk_up1
   - first:
       213: -2408052495545595840
-    second: Enemies_188
+    second: Lizard_walk_up2
   - first:
       213: 1535263735973889304
-    second: Enemies_189
+    second: Lizard_walk_up3
   - first:
       213: 6771326890201044819
     second: Enemies_190
   - first:
       213: 6619421400457741058
-    second: Enemies_191
+    second: Lizard_die
   - first:
       213: -8538539388643661794
     second: Enemies_192
@@ -598,22 +598,22 @@ TextureImporter:
     second: Enemies_197
   - first:
       213: 2225621924217437087
-    second: Enemies_198
+    second: Lizard_attack_down1
   - first:
       213: 8754005474037824801
-    second: Enemies_199
+    second: Lizard_attack_down2
   - first:
       213: 164160190863964622
-    second: Enemies_200
+    second: Lizard_attack_left1
   - first:
       213: 9138905052854166341
-    second: Enemies_201
+    second: Lizard_attack_left2
   - first:
       213: 1687240986898388350
-    second: Enemies_202
+    second: Lizard_attack_up1
   - first:
       213: -802682707019039759
-    second: Enemies_203
+    second: Lizard_attack_up2
   - first:
       213: -9110094597733130819
     second: Enemies_204
@@ -685,7 +685,7 @@ TextureImporter:
     second: Enemies_226
   - first:
       213: 813520580439144714
-    second: Enemies_227
+    second: Ghost_idle
   - first:
       213: 4271345581519410839
     second: Enemies_228
@@ -697,22 +697,22 @@ TextureImporter:
     second: Enemies_230
   - first:
       213: 2728579479829287826
-    second: Enemies_231
+    second: Ghost_walk_down1
   - first:
       213: 2363175670851836744
-    second: Enemies_232
+    second: Ghost_walk_down2
   - first:
       213: 4041866385873694594
-    second: Enemies_233
+    second: Ghost_walk_left1
   - first:
       213: 6246379654809495032
-    second: Enemies_234
+    second: Ghost_walk_left2
   - first:
       213: 447255352704130743
-    second: Enemies_235
+    second: Ghost_walk_up1
   - first:
       213: 5950219484977665032
-    second: Enemies_236
+    second: Ghost_walk_up2
   - first:
       213: -5932147564638271566
     second: Enemies_237
@@ -733,31 +733,31 @@ TextureImporter:
     second: Enemies_242
   - first:
       213: 60767016681613908
-    second: Enemies_243
+    second: Ghost_die
   - first:
       213: 7153376495585855215
     second: Enemies_244
   - first:
       213: -5955555526024132248
-    second: Enemies_245
+    second: Ghost_attack_down1
   - first:
       213: 7579167608835221759
-    second: Enemies_246
+    second: Ghost_attack_down2
   - first:
       213: -1737786152111897650
-    second: Enemies_247
+    second: Ghost_attack_left1
   - first:
       213: 3264726618614749270
-    second: Enemies_248
+    second: Ghost_attack_left2
   - first:
       213: -2714495509778516710
     second: Enemies_249
   - first:
       213: -6339232397671667343
-    second: Enemies_250
+    second: Ghost_attack_up1
   - first:
       213: -2490035257475996553
-    second: Enemies_251
+    second: Ghost_attack_up2
   - first:
       213: -2812670552243292070
     second: Enemies_252
@@ -2856,7 +2856,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_85
+      name: Turret_idle
       rect:
         serializedVersion: 2
         x: 8
@@ -3297,7 +3297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_106
+      name: Turret_attack_1
       rect:
         serializedVersion: 2
         x: 14
@@ -3318,7 +3318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_107
+      name: Turret_attack_2
       rect:
         serializedVersion: 2
         x: 56
@@ -4872,7 +4872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_181
+      name: Lizard_walk_down1
       rect:
         serializedVersion: 2
         x: 510
@@ -4893,7 +4893,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_182
+      name: Lizard_walk_down2
       rect:
         serializedVersion: 2
         x: 545
@@ -4914,7 +4914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_183
+      name: Lizard_walk_down3
       rect:
         serializedVersion: 2
         x: 581
@@ -4935,7 +4935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_184
+      name: Lizard_walk_left1
       rect:
         serializedVersion: 2
         x: 627
@@ -4956,7 +4956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_185
+      name: Lizard_walk_left2
       rect:
         serializedVersion: 2
         x: 710
@@ -4977,7 +4977,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_186
+      name: Lizard_walk_left3
       rect:
         serializedVersion: 2
         x: 792
@@ -4998,7 +4998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_187
+      name: Lizard_walk_up1
       rect:
         serializedVersion: 2
         x: 876
@@ -5019,7 +5019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_188
+      name: Lizard_walk_up2
       rect:
         serializedVersion: 2
         x: 912
@@ -5040,7 +5040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_189
+      name: Lizard_walk_up3
       rect:
         serializedVersion: 2
         x: 949
@@ -5082,7 +5082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_191
+      name: Lizard_die
       rect:
         serializedVersion: 2
         x: 508
@@ -5229,7 +5229,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_198
+      name: Lizard_attack_down1
       rect:
         serializedVersion: 2
         x: 508
@@ -5250,7 +5250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_199
+      name: Lizard_attack_down2
       rect:
         serializedVersion: 2
         x: 544
@@ -5271,7 +5271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_200
+      name: Lizard_attack_left1
       rect:
         serializedVersion: 2
         x: 589
@@ -5292,7 +5292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_201
+      name: Lizard_attack_left2
       rect:
         serializedVersion: 2
         x: 650
@@ -5313,7 +5313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_202
+      name: Lizard_attack_up1
       rect:
         serializedVersion: 2
         x: 740
@@ -5334,7 +5334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_203
+      name: Lizard_attack_up2
       rect:
         serializedVersion: 2
         x: 776
@@ -5838,7 +5838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_227
+      name: Ghost_idle
       rect:
         serializedVersion: 2
         x: 567
@@ -5922,7 +5922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_231
+      name: Ghost_walk_down1
       rect:
         serializedVersion: 2
         x: 567
@@ -5943,7 +5943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_232
+      name: Ghost_walk_down2
       rect:
         serializedVersion: 2
         x: 602
@@ -5964,7 +5964,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_233
+      name: Ghost_walk_left1
       rect:
         serializedVersion: 2
         x: 644
@@ -5985,7 +5985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_234
+      name: Ghost_walk_left2
       rect:
         serializedVersion: 2
         x: 672
@@ -6006,7 +6006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_235
+      name: Ghost_walk_up1
       rect:
         serializedVersion: 2
         x: 710
@@ -6027,7 +6027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_236
+      name: Ghost_walk_up2
       rect:
         serializedVersion: 2
         x: 748
@@ -6174,7 +6174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_243
+      name: Ghost_die
       rect:
         serializedVersion: 2
         x: 566
@@ -6216,11 +6216,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_245
+      name: Ghost_attack_down1
       rect:
         serializedVersion: 2
-        x: 564
-        y: 237
+        x: 559
+        y: 0
         width: 36
         height: 41
       alignment: 0
@@ -6237,7 +6237,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_246
+      name: Ghost_attack_down2
       rect:
         serializedVersion: 2
         x: 608
@@ -6258,7 +6258,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_247
+      name: Ghost_attack_left1
       rect:
         serializedVersion: 2
         x: 660
@@ -6279,13 +6279,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_248
+      name: Ghost_attack_left2
       rect:
         serializedVersion: 2
         x: 696
         y: 235
         width: 47
-        height: 37
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6300,28 +6300,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_249
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 265
-        width: 23
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15324347bc245ad0800000000000000
-      internalID: -2714495509778516710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemies_250
+      name: Ghost_attack_up1
       rect:
         serializedVersion: 2
         x: 758
@@ -6342,13 +6321,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_251
+      name: Ghost_attack_up2
       rect:
         serializedVersion: 2
         x: 801
         y: 233
         width: 45
-        height: 34
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

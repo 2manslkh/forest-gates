@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+DefaultImporter:
+=======
+guid: b7240cf70caf7b344a8610b31989a25c
+NativeFormatImporter:
+>>>>>>> origin/master:Assets/Animations/Lizard.controller.meta
+  externalObjects: {}
+  mainObjectFileID: 0
+=======
+guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> origin/master
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

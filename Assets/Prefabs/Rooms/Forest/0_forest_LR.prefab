@@ -9591,6 +9591,7 @@ MonoBehaviour:
   Y: 0
   Width: 0
   Height: 0
+  firstRoom: 0
 --- !u!61 &7460418694538749946
 BoxCollider2D:
   m_ObjectHideFlags: 0

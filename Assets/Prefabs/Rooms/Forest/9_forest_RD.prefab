@@ -1107,6 +1107,7 @@ MonoBehaviour:
   Y: 0
   Width: 0
   Height: 0
+  firstRoom: 0
 --- !u!114 &5550913078612624735
 MonoBehaviour:
   m_ObjectHideFlags: 0

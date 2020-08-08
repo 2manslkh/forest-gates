@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoundaryManager : MonoBehaviour
 {
-    public Renderer spriteRenderer;
     public GameObject[] boundaries;
     public GameObject[] enemies;
     private RoomType roomTypeScript;
