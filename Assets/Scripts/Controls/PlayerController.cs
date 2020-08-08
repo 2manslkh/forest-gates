@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             weapon_anim.SetFloat("Mouse X", lookDir.x);
             weapon_anim.SetFloat("Mouse Y", lookDir.y);
             weapon_anim.SetFloat("Magnitude", movement.magnitude);
-            transform.position = transform.position + movement * Time.deltaTime;
+            transform.position = transform.position + movement * speed * Time.deltaTime;
             
             attackPosition.position = Vector3.Normalize(lookDir) + gameObject.transform.position;
         }
