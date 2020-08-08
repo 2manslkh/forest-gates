@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfDamagePopup: {fileID: 2920174026715650587, guid: d5cbb6859cac94e41a282a83df2e600c,
     type: 3}
+  pfDeathCoin: {fileID: 2821115981857557705, guid: 3acd7207490864f4b9cae66c8f570562,
+    type: 3}

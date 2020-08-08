@@ -6,7 +6,8 @@ public class Character : MonoBehaviour
 {
     public CharacterStats characterStats;
     private int maxHealth;
-
+    public AudioSource characterAudioSource;
+    public AudioClip deathAudio;
     private int currentHealth;
     
     void Start(){
@@ -29,9 +30,20 @@ public class Character : MonoBehaviour
     public void checkIfDead(){
         Debug.Log("CAST CHECK IF DEAD");
         if (characterStats.currentHealth <= 0){
-            // Play death Animation
 
-            gameObject.SetActive(false);
+            Debug.Log("DEAD");
+            // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);
+            // Play death Animation
+            // characterAudioSource.PlayOneShot(deathAudio, 1f);
+            StartCoroutine (DeathCoroutine());
+            // gameObject.SetActive(false);
+            
         }
+    }
+    IEnumerator DeathCoroutine(){
+        Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin, gameObject.transform.position, Quaternion.identity);
+        yield return new WaitWhile (()=> deathCoin.GetComponent<AudioSource>().isPlaying);
+        //do something
+        Destroy(gameObject);
     }
 }
