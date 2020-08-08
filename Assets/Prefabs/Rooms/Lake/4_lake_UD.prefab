@@ -6675,7 +6675,9 @@ MonoBehaviour:
   - {fileID: 4115711849834002809}
   - {fileID: 847427122698177966}
   enemies:
-  - {fileID: 0}
+  - {fileID: 2848103747143042415}
+  - {fileID: 9193209463397538296}
+  - {fileID: 3933134864123626622}
 --- !u!1001 &3668402086332611672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6755,6 +6757,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679d639acf61818428d2ba19c9adcc91, type: 3}
+--- !u!1 &9193209463397538296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583371784813143456, guid: 679d639acf61818428d2ba19c9adcc91,
+    type: 3}
+  m_PrefabInstance: {fileID: 3668402086332611672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9193209463397538301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583371784813143461, guid: 679d639acf61818428d2ba19c9adcc91,
@@ -6840,6 +6848,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679d639acf61818428d2ba19c9adcc91, type: 3}
+--- !u!1 &2848103747143042415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583371784813143456, guid: 679d639acf61818428d2ba19c9adcc91,
+    type: 3}
+  m_PrefabInstance: {fileID: 7708579586519490767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2848103747143042410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583371784813143461, guid: 679d639acf61818428d2ba19c9adcc91,
@@ -6925,6 +6939,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679d639acf61818428d2ba19c9adcc91, type: 3}
+--- !u!1 &3933134864123626622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583371784813143456, guid: 679d639acf61818428d2ba19c9adcc91,
+    type: 3}
+  m_PrefabInstance: {fileID: 8928758306754978270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3933134864123626619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583371784813143461, guid: 679d639acf61818428d2ba19c9adcc91,

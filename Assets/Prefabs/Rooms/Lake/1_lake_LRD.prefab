@@ -6562,13 +6562,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b151594aa0f976489e43fcfc88e5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
   boundaries:
   - {fileID: 7596447172742856048}
   - {fileID: 4089040327655990590}
   - {fileID: 4855611356272165479}
   enemies:
-  - {fileID: 0}
+  - {fileID: 4892817507628631945}
+  - {fileID: 6446810664041956601}
 --- !u!1 &8390777765388758835
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,6 +7052,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679d639acf61818428d2ba19c9adcc91, type: 3}
+--- !u!1 &4892817507628631945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583371784813143456, guid: 679d639acf61818428d2ba19c9adcc91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1052391610286711337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4892817507628631948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583371784813143461, guid: 679d639acf61818428d2ba19c9adcc91,
@@ -7137,6 +7143,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3c4fe23551cae438f2b6621853e80d, type: 3}
+--- !u!1 &6446810664041956601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7063065073704402845, guid: 8f3c4fe23551cae438f2b6621853e80d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4283662560562363236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6446810664041956604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7063065073704402840, guid: 8f3c4fe23551cae438f2b6621853e80d,
