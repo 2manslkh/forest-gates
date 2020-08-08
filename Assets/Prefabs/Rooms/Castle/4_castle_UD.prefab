@@ -16820,10 +16820,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundaries:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7954859219001427610}
+  - {fileID: 3378473912444091867}
 --- !u!1 &7172367131071152389
 GameObject:
   m_ObjectHideFlags: 0
