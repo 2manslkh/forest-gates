@@ -751,7 +751,7 @@ TextureImporter:
     second: Ghost_attack_left2
   - first:
       213: -2714495509778516710
-    second: Enemies_249
+    second: Ghost_attack_down1
   - first:
       213: -6339232397671667343
     second: Ghost_attack_up1
@@ -6216,27 +6216,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghost_attack_down1
-      rect:
-        serializedVersion: 2
-        x: 559
-        y: 0
-        width: 36
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 869873f8dcd995da0800000000000000
-      internalID: -5955555526024132248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ghost_attack_down2
       rect:
         serializedVersion: 2
@@ -6337,27 +6316,6 @@ TextureImporter:
       bones: []
       spriteID: 774e1f7402e917dd0800000000000000
       internalID: -2490035257475996553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemies_252
-      rect:
-        serializedVersion: 2
-        x: 829
-        y: 256
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a58365fe80367f8d0800000000000000
-      internalID: -2812670552243292070
       vertices: []
       indices: 
       edges: []
@@ -6673,27 +6631,6 @@ TextureImporter:
       bones: []
       spriteID: 909f031ec57dba150800000000000000
       internalID: 5885034132004731145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemies_268
-      rect:
-        serializedVersion: 2
-        x: 563
-        y: 208
-        width: 57
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2d3921a1c01fb430800000000000000
-      internalID: 3800775034342554927
       vertices: []
       indices: 
       edges: []
@@ -7765,6 +7702,27 @@ TextureImporter:
       bones: []
       spriteID: 702d9124b38324cc0800000000000000
       internalID: -3728355714346135033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_attack_down1
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 237
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15324347bc245ad0800000000000000
+      internalID: -2714495509778516710
       vertices: []
       indices: 
       edges: []
