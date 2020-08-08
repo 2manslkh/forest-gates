@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
                 // damage *= Conductor.instance.getBeatMultiplier();
                 Debug.Log(damage);
                 Debug.Log(enemiesToDamage[i]);
+                DamagePopup.Create(enemiesToDamage[i].transform.position, damage, "good");
                 enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
                 enemiesToDamage[i].GetComponent<Enemy>().getHit();
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){

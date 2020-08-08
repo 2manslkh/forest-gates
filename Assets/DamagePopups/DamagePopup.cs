@@ -16,11 +16,10 @@ using UnityEngine;
 using TMPro;
 public class DamagePopup : MonoBehaviour {
 
-    public GameObject pfDamagePopup;
 
     // Create a Damage Popup
-    public DamagePopup Create(Vector3 position, int damageAmount, bool isCriticalHit) {
-        GameObject damagePopupTransform = Instantiate(pfDamagePopup, position, Quaternion.identity);
+    public static DamagePopup Create(Vector3 position, int damageAmount, string isCriticalHit) {
+        Transform damagePopupTransform = Instantiate(GameAssets.i.pfDamagePopup, position, Quaternion.identity);
 
         DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
         damagePopup.Setup(damageAmount, "good");
