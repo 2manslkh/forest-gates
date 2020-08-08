@@ -47,7 +47,7 @@ public class LevelGeneration : MonoBehaviour
     private void Start()
     {
         int randStartingPos = Random.Range(0, startingPositions.Length);
-        transform.position = startingPositions[randStartingPos].position;
+        transform.position = startingPositions[randStartingPos].transform.position;
         int firstRoomType = Random.Range(0, 11);
         GameObject firstRoom = Instantiate(rooms[firstRoomType], transform.position, Quaternion.identity);
         firstRoom.GetComponent<RoomType>().firstRoom = true;

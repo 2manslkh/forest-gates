@@ -12908,6 +12908,7 @@ MonoBehaviour:
   Y: 0
   Width: 0
   Height: 0
+  firstRoom: 0
 --- !u!114 &7854211953907207366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16010,9 +16011,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5df7f96e06177b4395e6c79f4f87e35, type: 3}
---- !u!212 &2012573349184396924 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
+--- !u!1 &2012573349184396927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 52041012496881730, guid: c5df7f96e06177b4395e6c79f4f87e35,
     type: 3}
   m_PrefabInstance: {fileID: 1970038732646843965}
   m_PrefabAsset: {fileID: 0}
@@ -16022,9 +16023,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1970038732646843965}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2012573349184396927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 52041012496881730, guid: c5df7f96e06177b4395e6c79f4f87e35,
+--- !u!212 &2012573349184396924 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
     type: 3}
   m_PrefabInstance: {fileID: 1970038732646843965}
   m_PrefabAsset: {fileID: 0}
