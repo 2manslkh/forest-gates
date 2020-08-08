@@ -111,7 +111,7 @@ public class Conductor : MonoBehaviour
     }
 
     public int getBeatMultiplier(){
-        float nearestBeat = (float) Math.Round(instance.songPositionInBeats);
+        float nearestBeat = (float) Mathf.Floor(instance.songPositionInBeats);
         if (isBeatInRange(TimingThresholds.perfect, instance.songPositionInBeats, nearestBeat)){
             return TimingMultipliers.perfect;
         } else if (isBeatInRange(TimingThresholds.great, instance.songPositionInBeats, nearestBeat)){
@@ -124,7 +124,7 @@ public class Conductor : MonoBehaviour
     }
 
     public string getBeatMultiplierLevel(){
-        float nearestBeat = (float) Math.Round(instance.songPositionInBeats);
+        float nearestBeat = (float) Mathf.Floor(instance.songPositionInBeats);
         if (isBeatInRange(TimingThresholds.perfect, instance.songPositionInBeats, nearestBeat)){
             return "perfect";
         } else if (isBeatInRange(TimingThresholds.great, instance.songPositionInBeats, nearestBeat)){
