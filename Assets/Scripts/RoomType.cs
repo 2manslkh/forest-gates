@@ -10,6 +10,7 @@ public class RoomType : MonoBehaviour
     public float Y;
     public float Width;
     public float Height;
+    public bool firstRoom = false;
 
     void Start()
     {

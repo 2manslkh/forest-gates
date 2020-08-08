@@ -7,11 +7,24 @@ public class BoundaryManager : MonoBehaviour
     public Renderer spriteRenderer;
     public GameObject[] boundaries;
     public GameObject[] enemies;
+    private RoomType roomTypeScript;
 
     private void Awake() {
+        roomTypeScript = GetComponentInParent<RoomType>();
         foreach (GameObject boundary in boundaries)
         {
             boundary.SetActive(false);
+        }
+    }
+
+    private void Start() {
+        if (roomTypeScript.firstRoom)
+        {
+            print(roomTypeScript.gameObject.name);
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.SetActive(false);
+            }
         }
     }
     void Update()

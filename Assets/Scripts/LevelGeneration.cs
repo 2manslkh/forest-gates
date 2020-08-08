@@ -49,7 +49,8 @@ public class LevelGeneration : MonoBehaviour
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].position;
         int firstRoomType = Random.Range(0, 11);
-        Instantiate(rooms[firstRoomType], transform.position, Quaternion.identity);
+        GameObject firstRoom = Instantiate(rooms[firstRoomType], transform.position, Quaternion.identity);
+        firstRoom.GetComponent<RoomType>().firstRoom = true;
         Instantiate(player, transform.position, Quaternion.identity);
         //direction = Random.Range(1, 7);
         if (TopOpeningRoomTypes.Contains(firstRoomType))
