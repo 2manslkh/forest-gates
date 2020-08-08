@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b151594aa0f976489e43fcfc88e5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 2560338949733787973}
   boundaries:
   - {fileID: 6279081951150586911}
   - {fileID: 8977124324685965933}
@@ -14266,7 +14265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8876476, y: -0.11171082}
+  m_Offset: {x: -0.8876476, y: 0.2144348}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14277,7 +14276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.900032, y: 1.6265769}
+  m_Size: {x: 14.900032, y: 2.2788682}
   m_EdgeRadius: 0
 --- !u!50 &1920605571241934084
 Rigidbody2D:
@@ -15642,7 +15641,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5304861, y: -0.2618246}
+  m_Offset: {x: -0.3526864, y: 0.13752997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15653,7 +15652,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.264788, y: 1.9268045}
+  m_Size: {x: 15.860288, y: 2.7255137}
   m_EdgeRadius: 0
 --- !u!50 &1553037058067802096
 Rigidbody2D:
@@ -15726,7 +15725,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5304861, y: 0.10472986}
+  m_Offset: {x: -0.41195345, y: -0.48562217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15737,7 +15736,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.264788, y: 1.6126151}
+  m_Size: {x: 15.978822, y: 2.7933197}
   m_EdgeRadius: 0
 --- !u!50 &9169604921703283493
 Rigidbody2D:
@@ -15809,7 +15808,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8876476, y: 0.09309265}
+  m_Offset: {x: -0.18386245, y: -0.24027991}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15820,7 +15819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.900032, y: 1.5893407}
+  m_Size: {x: 14.900032, y: 2.2560859}
   m_EdgeRadius: 0
 --- !u!50 &5971253382800150070
 Rigidbody2D:
@@ -16104,12 +16103,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5df7f96e06177b4395e6c79f4f87e35, type: 3}
---- !u!212 &2560338949733787973 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
-    type: 3}
-  m_PrefabInstance: {fileID: 2535743966236274948}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2560338949733787994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 52041012496881758, guid: c5df7f96e06177b4395e6c79f4f87e35,

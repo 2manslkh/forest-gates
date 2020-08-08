@@ -1234,7 +1234,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8102002, y: -0.12815821}
+  m_Offset: {x: -0.8102002, y: -0.31616426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1245,7 +1245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.919429, y: 1.8265872}
+  m_Size: {x: 14.919429, y: 2.2025995}
   m_EdgeRadius: 0
 --- !u!50 &4832494506340927137
 Rigidbody2D:
@@ -1392,7 +1392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b151594aa0f976489e43fcfc88e5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 5853670309251815747}
   boundaries:
   - {fileID: 496993780736806468}
   - {fileID: 2695044827531843474}
@@ -2270,7 +2269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2053337, y: 0.05523932}
+  m_Offset: {x: 1.2053337, y: 0.30983216}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2281,7 +2280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.025803, y: 2.1509001}
+  m_Size: {x: 16.025803, y: 2.6600857}
   m_EdgeRadius: 0
 --- !u!50 &4050546013652970655
 Rigidbody2D:
@@ -3062,7 +3061,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.8799329, y: -0.023710817}
+  m_Offset: {x: -1.8799329, y: 0.18518543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3073,7 +3072,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.919425, y: 2.035482}
+  m_Size: {x: 14.919425, y: 2.4532747}
   m_EdgeRadius: 0
 --- !u!50 &3592646156843052161
 Rigidbody2D:
@@ -12756,12 +12755,6 @@ GameObject:
 --- !u!4 &5853670309251815772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 52041012496881758, guid: c5df7f96e06177b4395e6c79f4f87e35,
-    type: 3}
-  m_PrefabInstance: {fileID: 5873970617691422978}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &5853670309251815747 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 52041012496881729, guid: c5df7f96e06177b4395e6c79f4f87e35,
     type: 3}
   m_PrefabInstance: {fileID: 5873970617691422978}
   m_PrefabAsset: {fileID: 0}
