@@ -122,4 +122,17 @@ public class Conductor : MonoBehaviour
             return 0;
         }
     }
+
+    public string getBeatMultiplierLevel(){
+        float nearestBeat = (float) Math.Round(instance.songPositionInBeats);
+        if (isBeatInRange(TimingThresholds.perfect, instance.songPositionInBeats, nearestBeat)){
+            return "perfect";
+        } else if (isBeatInRange(TimingThresholds.great, instance.songPositionInBeats, nearestBeat)){
+            return "great";
+        }  else if (isBeatInRange(TimingThresholds.good, instance.songPositionInBeats, nearestBeat)){
+            return "good";
+        } else {
+            return "miss";
+        }
+    }
 }

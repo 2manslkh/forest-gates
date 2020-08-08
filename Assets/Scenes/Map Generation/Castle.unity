@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1093,23 +1093,28 @@ MonoBehaviour:
   - {fileID: 2037486391}
   - {fileID: 144480705}
   - {fileID: 649020127}
+  LeftOpeningRoomTypes: 00000000010000000200000003000000050000000600000007000000
+  RightOpeningRoomTypes: 0000000001000000020000000300000008000000090000000a000000
+  TopOpeningRoomTypes: 0200000003000000040000000500000007000000080000000a000000
+  BotOpeningRoomTypes: 0100000003000000040000000600000007000000090000000a000000
+  Boss: {fileID: 0}
   rooms:
   - {fileID: 7656772192173512503, guid: dfa1115418ce26d42837ca068c097c06, type: 3}
   - {fileID: 8361772949376679125, guid: 46d9bc5a5ba95c9469d51f70c176b2d4, type: 3}
   - {fileID: 4857571687621633089, guid: ea29ac6232885de42877d9f771f0d883, type: 3}
   - {fileID: 5323587033055866887, guid: efdc7bb3b4485244eaf8670a7074d079, type: 3}
   - {fileID: 1603136350236070703, guid: 58878656dc923e04caa1b23cec479169, type: 3}
-  - {fileID: 7961816298110809363, guid: 69bb6b08eb6aa45ecbfad0f11252b240, type: 3}
-  - {fileID: 132569365361604410, guid: 626fbd4c471da42ac8781d1368306056, type: 3}
-  - {fileID: 9191224489124221821, guid: 54e2f449f3763420faccaf31ad5d878a, type: 3}
-  - {fileID: 151014861513740512, guid: 2aaa8bcd5b7c440d6a018bfe99e7472f, type: 3}
-  - {fileID: 7173068555808219179, guid: ddc2fdc4e8f124fa48fbf9bfb09f2d03, type: 3}
-  - {fileID: 424584716201631232, guid: 76055f58a5bc8468abb8ac00bc259583, type: 3}
+  - {fileID: 4857571687621633089, guid: 699f085e6ca5b0b4dbd5032622655299, type: 3}
+  - {fileID: 8361772949376679125, guid: bb12b488b70559f43b5889eea6945fa7, type: 3}
+  - {fileID: 5323587033055866887, guid: 7fc0ece9262160a4bbe3d3bcb0718c8a, type: 3}
+  - {fileID: 4857571687621633089, guid: 2ed59e18bccd0f348a06c5160d058df3, type: 3}
+  - {fileID: 8361772949376679125, guid: 021a1af7afc4ba44bae2ecc9c2d42213, type: 3}
+  - {fileID: 5323587033055866887, guid: 3cd0943ef3038f04792e66347599a267, type: 3}
   generatedRooms: []
   extraRoomsPos: []
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
-  player: {fileID: 7098541782123167762, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
+  player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
   moveAmount: 10
   startTimneBtwRoom: 0.25
   minX: 5
@@ -1135,6 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a05ae0b5c3d4297abd560aeaa5c8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FilledUp: 0
 --- !u!4 &1399654384
 Transform:
   m_ObjectHideFlags: 0
