@@ -25,9 +25,9 @@ public class AttackBehaviour : StateMachineBehaviour
             animator.SetBool("isAttacking", false);
         }
         
-        if (animator.GetBool("isAttacking")){
-            animator.GetComponent<Enemy>().dealDamage();
-        }
+        // if (animator.GetBool("isAttacking")){
+        //     animator.GetComponent<Enemy>().dealDamage();
+        // }
 
 	}
 
