@@ -43,6 +43,7 @@ public class LevelGeneration : MonoBehaviour
 
     private string prevDir = "";
 
+    public int RoomBeingChecked = 0;
 
     private void Start()
     {
