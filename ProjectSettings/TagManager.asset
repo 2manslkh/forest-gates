@@ -30,7 +30,7 @@ TagManager:
   - Enemy
   - NPC
   - Room
-  - 
+  - Player
   - 
   - 
   - 
@@ -54,9 +54,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Top
-    uniqueID: 876637209
-    locked: 0
   - name: Player
     uniqueID: 3922044873
     locked: 0
@@ -68,4 +65,7 @@ TagManager:
     locked: 0
   - name: Tiles
     uniqueID: 4111844639
+    locked: 0
+  - name: Top
+    uniqueID: 876637209
     locked: 0

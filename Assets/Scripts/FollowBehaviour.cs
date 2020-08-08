@@ -15,6 +15,7 @@ public class FollowBehaviour : StateMachineBehaviour
         // source.Play();
 
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        Debug.Log("enter follow");
 	}
 
     // Update
@@ -23,15 +24,7 @@ public class FollowBehaviour : StateMachineBehaviour
         Vector2 difference = playerPos.position - animator.transform.position;
         animator.SetFloat("Horizontal", difference.x);
         animator.SetFloat("Vertical", difference.y);
-
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            animator.SetBool("isFollowing", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.P)) {
-            animator.SetBool("isPatrolling", true);
-        }
-        
+        Debug.Log(animator.transform.position);
         if (difference.magnitude < attackDistance) {
             animator.SetBool("isAttacking", true);
         }

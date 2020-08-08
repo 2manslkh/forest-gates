@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3684058340022713617}
   - component: {fileID: 3817739411924403030}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 3817739411930071110}
   - component: {fileID: 3817739411930071105}
   - component: {fileID: 3817739411930071104}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -372922423
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 5956946754449639209, guid: 2b11245c9c77d11499b916c85cc972d9,
     type: 3}
@@ -162,7 +162,8 @@ GameObject:
   - component: {fileID: 5442683682688123834}
   - component: {fileID: 602588489463882128}
   - component: {fileID: 8465612868750409329}
-  m_Layer: 0
+  - component: {fileID: 9122086806630633545}
+  m_Layer: 12
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -372922423
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4494631860909567817, guid: d3b8b2ec2b5ed5a4888c54e5d7ef80d4,
     type: 3}
@@ -371,3 +372,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.20937733, y: 0.40937734}
   m_EdgeRadius: 0
+--- !u!114 &9122086806630633545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230804717354743671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19dfecc2013ab96438cf731dc8012732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: {fileID: 4631448621363361982}
+  characterAnimator: {fileID: 6230804717354743626}
+  playerStats: {fileID: 4631448621363361982}
+  gold: 0
