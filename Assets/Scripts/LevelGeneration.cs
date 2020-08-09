@@ -506,16 +506,34 @@ public class LevelGeneration : MonoBehaviour
 
     private void SpawnSceneTransition()
     {
-        int rand = Random.Range(0, generatedRooms.Count - 2);
-        Vector2 lastRoomPos = generatedRooms[rand].transform.position;
+        Vector2 cornerPos = new Vector2();
+        int rand = Random.Range(0, 4);
+        if (rand == 0)
+        {
+            cornerPos = new Vector2(5, 35);
+        }
+        else if (rand == 1)
+        {
+            cornerPos = new Vector2(35, 35);
+        }
+        else if (rand == 2)
+        {
+            cornerPos = new Vector2(5, 5);
+        }
+        else if (rand == 3)
+        {
+            cornerPos = new Vector2(35, 5);
+        }
+
+
         // Instantiate the Boss
         //Instantiate(Boss, lastRoomPos, Quaternion.identity);
         // Instantiate level exit
-        Instantiate(levelExit, lastRoomPos, Quaternion.identity);
+        Instantiate(levelExit, cornerPos, Quaternion.identity);
         exitSpawned = true;
 
         string currentSceneName = SceneManager.GetActiveScene().name;
-        // Debug.Log("Current Scene Name : " + currentSceneName);
+        Debug.Log("Current Scene Name : " + currentSceneName);
 
         sceneTransition = GameObject.FindWithTag("Level Exit").GetComponent<SceneTransition>();
 
@@ -525,17 +543,27 @@ public class LevelGeneration : MonoBehaviour
         }
         else if (currentSceneName == "Forest")
         {
+            sceneTransition.sceneToLoad = "Forest Boss";
+        }
+        else if (currentSceneName == "Forest Boss")
+        {
             sceneTransition.sceneToLoad = "Lake";
         }
         else if (currentSceneName == "Lake")
+        {
+            sceneTransition.sceneToLoad = "Lake Boss";
+        }
+        else if (currentSceneName == "Lake Boss")
         {
             sceneTransition.sceneToLoad = "Castle";
         }
         else if (currentSceneName == "Castle")
         {
+            sceneTransition.sceneToLoad = "Castle Boss";
+        }
+        else if (currentSceneName == "Castle Boss")
+        {
             sceneTransition.sceneToLoad = "EndScene";
         }
-
     }
-
 }

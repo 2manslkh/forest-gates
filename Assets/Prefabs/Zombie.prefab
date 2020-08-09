@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 1757680374810959299}
+  characterAudioSource: {fileID: 0}
+  deathAudio: {fileID: 0}
   characterAnimator: {fileID: 5052493110257788440}
   rb: {fileID: 5052493110257788420}
   isHit: 0
@@ -175,6 +177,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackRadius: 0
+  goldDrop: 0
 --- !u!114 &1757680374810959299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,8 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 100
-  currentHealth: 150
+    baseValue: 200
+  currentHealth: 0
   damage:
     baseValue: 20
   armor:

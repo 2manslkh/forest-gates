@@ -215,7 +215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7130769614346594203, guid: 529f021882c1591448843a1afbbbf943,
     type: 3}
-  tornadoPrefab: {fileID: 0}
+  tornadoPrefab: {fileID: 278490443511349983, guid: 0642796ec70706b4c8442334d4185e1a,
+    type: 3}
   attackDistance: 2
   patrolSpots:
   - {fileID: 0}

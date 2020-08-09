@@ -14,13 +14,17 @@ public class GameCamera : MonoBehaviour
 
     public float fov;
 
-    public Camera cam;
+    private Camera cam;
 
     void Awake()
     {
         Instance = this;
+        // set fov == 90 for boss room
+        // set fov == 53 for normal level
         cam.fieldOfView = fov;
-        Camera.main.orthographic = false;
+        cam.orthographic = false;
+        //Camera.main.fieldOfView = fov;
+        //Camera.main.orthographic = false;
     }
 
     // Start is called before the first frame update
@@ -39,10 +43,15 @@ public class GameCamera : MonoBehaviour
     {
         if (CurrentRoom == null)
         {
-            return;
+            targetPosition.x = GameObject.FindWithTag("Player").transform.position.x;
+            targetPosition.y = GameObject.FindWithTag("Player").transform.position.y;
         }
-        targetPosition.x = CurrentRoom.transform.position.x;
-        targetPosition.y = CurrentRoom.transform.position.y;
+        else
+        {
+            targetPosition.x = CurrentRoom.transform.position.x;
+            targetPosition.y = CurrentRoom.transform.position.y;
+
+        }
         targetPosition.z = transform.position.z;
 
         //gameObject.transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * MovementSpeedOnRoomChange);
