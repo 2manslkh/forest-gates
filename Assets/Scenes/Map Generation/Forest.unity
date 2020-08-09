@@ -1107,7 +1107,6 @@ MonoBehaviour:
   CurrentRoom: {fileID: 0}
   targetAspect: 1
   fov: 53
-  cam: {fileID: 1313505046}
 --- !u!4 &859190769
 Transform:
   m_ObjectHideFlags: 0

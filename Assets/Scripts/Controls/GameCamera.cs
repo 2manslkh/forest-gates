@@ -19,9 +19,12 @@ public class GameCamera : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        // set fov == 90 for boss room
+        // set fov == 53 for normal level
         cam.fieldOfView = fov;
-        Camera.main.fieldOfView = fov;
-        Camera.main.orthographic = false;
+        cam.orthographic = false;
+        //Camera.main.fieldOfView = fov;
+        //Camera.main.orthographic = false;
     }
 
     // Start is called before the first frame update
