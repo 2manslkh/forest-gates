@@ -8,6 +8,7 @@ public class SpawnRoom : MonoBehaviour
     public LevelGeneration levelGen;
     private bool spawned = false;
 
+
     private void Start()
     {
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
@@ -71,5 +72,17 @@ public class SpawnRoom : MonoBehaviour
             //Instantiate(levelGen.rooms[3], transform.position, Quaternion.identity);
             //Destroy(gameObject);
         }
+
+        if (levelGen.firstRandomRoom == true && Physics2D.OverlapCircle(transform.position, 1, whatIsRoom) == null)
+        {
+            SpawnRandomRoom();
+        }
+    }
+
+    void SpawnRandomRoom()
+    {
+        int rand = Random.Range(0, 11);
+        Instantiate(levelGen.rooms[rand], transform.position, Quaternion.identity);
+        levelGen.stopGeneration = true;
     }
 }
