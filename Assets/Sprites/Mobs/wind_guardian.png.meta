@@ -10,13 +10,13 @@ TextureImporter:
     second: Guardian_walk_down2
   - first:
       213: 3613190521668037718
-    second: Guardian_walk_down3
+    second: Guardian_walk_left3
   - first:
       213: -4382943858490229661
-    second: Guardian_walk_left1
+    second: Guardian_walk_left3
   - first:
       213: -3510392443427492339
-    second: Guardian_walk_left2
+    second: Guardian_walk_left3
   - first:
       213: 498474039825095795
     second: Guardian_walk_up1
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_walk_down3
+      name: Guardian_walk_left1
       rect:
         serializedVersion: 2
         x: 148
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_walk_left1
+      name: Guardian_walk_left2
       rect:
         serializedVersion: 2
         x: 196
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guardian_walk_left2
+      name: Guardian_walk_left3
       rect:
         serializedVersion: 2
         x: 257
