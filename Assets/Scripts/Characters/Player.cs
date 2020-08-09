@@ -27,4 +27,19 @@ public class Player : Character
 	void Die() {
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+
+	override public void checkIfDead(){
+        Debug.Log("CAST CHECK IF DEAD");
+        if (characterStats.currentHealth <= 0){
+
+            Debug.Log("DEAD");
+            // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);
+            // Play death Animation
+            // characterAudioSource.PlayOneShot(deathAudio, 1f);
+            // StartCoroutine (DeathCoroutine());
+            // gameObject.SetActive(false);
+        }
+    }
+
+
 }
