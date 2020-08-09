@@ -176,6 +176,7 @@ MonoBehaviour:
   - {fileID: 4542829437788436506}
   - {fileID: 7509246598386090125}
   - {fileID: 5420143644140456192}
+  enemyMove: 0
 --- !u!1 &1317614896546892755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,7 +2452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd32172b2f110436f8fa2923d92e1b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 3
   X: 0
   Y: 0
   Width: 0
@@ -12978,6 +12979,8 @@ MonoBehaviour:
   - {fileID: 4052257254133862169}
   - {fileID: 6840441062839379795}
   - {fileID: 7589424038124292441}
+  triggerBarrierScript: {fileID: 0}
+  moveOnce: 0
 --- !u!1 &8737964571415532716
 GameObject:
   m_ObjectHideFlags: 0
