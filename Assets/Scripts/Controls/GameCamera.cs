@@ -21,6 +21,7 @@ public class GameCamera : MonoBehaviour
         Instance = this;
         Camera camera = GetComponent<Camera>();
         camera.fieldOfView = fov;
+        Camera.main.orthographic = false;
     }
 
     // Start is called before the first frame update

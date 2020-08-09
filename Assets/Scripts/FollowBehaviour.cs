@@ -15,7 +15,6 @@ public class FollowBehaviour : StateMachineBehaviour
         // source.Play();
 
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.Log("enter follow");
 	}
 
     // Update
@@ -24,7 +23,7 @@ public class FollowBehaviour : StateMachineBehaviour
         Vector2 difference = playerPos.position - animator.transform.position;
         animator.SetFloat("Horizontal", difference.x);
         animator.SetFloat("Vertical", difference.y);
-        Debug.Log(animator.transform.position);
+        // Debug.Log(animator.transform.position);
         if (difference.magnitude < attackDistance) {
             animator.SetBool("isAttacking", true);
         }

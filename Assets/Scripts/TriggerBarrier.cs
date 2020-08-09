@@ -5,14 +5,16 @@ using UnityEngine;
 public class TriggerBarrier : MonoBehaviour
 {
     public GameObject[] boundaries;
-    private bool once = false;
+    private bool once;
+    public bool enemyMove;
 
     private void Start() {
         once = false;
+        enemyMove = false;
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if((other.tag == "Player") && (once == false)){
-            print("triggered");
+            enemyMove = true;
             once = true;
             foreach (GameObject boundary in boundaries)
             {

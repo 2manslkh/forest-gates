@@ -154,6 +154,7 @@ MonoBehaviour:
   boundaries:
   - {fileID: 4715299243469017741}
   - {fileID: 7398395972872269844}
+  enemyMove: 0
 --- !u!1 &1677509863775876447
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,11 +674,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b151594aa0f976489e43fcfc88e5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1360952544846880827}
   boundaries:
   - {fileID: 4715299243469017741}
   - {fileID: 7398395972872269844}
   enemies: []
+  triggerBarrierScript: {fileID: 0}
+  moveOnce: 0
 --- !u!1 &4715299243469017741
 GameObject:
   m_ObjectHideFlags: 0
@@ -9314,7 +9316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd32172b2f110436f8fa2923d92e1b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 5
   X: 0
   Y: 0
   Width: 0

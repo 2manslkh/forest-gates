@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3656204211181538475, guid: 336075f445393bf4bbba65012081baaa,
     type: 3}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth:
     baseValue: 0
-  currentHealth: 100
+  currentHealth: 150
   damage:
     baseValue: 0
   armor:
@@ -214,13 +214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 402996164972519678}
+  characterAnimator: {fileID: 7063065073704402844}
   rb: {fileID: 7063065073704402842}
-  enemyAnimator: {fileID: 7063065073704402844}
   isHit: 0
   attackPosition: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+  attackRadius: 0
 --- !u!114 &8939624671087089695
 MonoBehaviour:
   m_ObjectHideFlags: 0

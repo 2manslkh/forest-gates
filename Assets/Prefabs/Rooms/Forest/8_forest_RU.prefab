@@ -1398,6 +1398,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 5853670309251815744}
   - {fileID: 6130530875584052235}
+  triggerBarrierScript: {fileID: 4366977432476193562}
 --- !u!1 &1572248836629418015
 GameObject:
   m_ObjectHideFlags: 0
@@ -12467,6 +12468,7 @@ MonoBehaviour:
   boundaries:
   - {fileID: 496993780736806468}
   - {fileID: 2695044827531843474}
+  enemyMove: 0
 --- !u!1 &7475228787558665580
 GameObject:
   m_ObjectHideFlags: 0

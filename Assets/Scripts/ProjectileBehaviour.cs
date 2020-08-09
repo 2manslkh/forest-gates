@@ -6,7 +6,7 @@ public class ProjectileBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     private void Start() {
-        Destroy(this, 3);
+        Destroy(gameObject, 3);
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player")

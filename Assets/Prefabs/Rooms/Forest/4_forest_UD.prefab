@@ -10734,7 +10734,7 @@ GameObject:
   - component: {fileID: 6018116376764514663}
   - component: {fileID: 2147584533555129017}
   m_Layer: 0
-  m_Name: Trigger (1)
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10795,6 +10795,7 @@ MonoBehaviour:
   boundaries:
   - {fileID: 2203805689060110478}
   - {fileID: 7909959781109159010}
+  enemyMove: 0
 --- !u!1 &6167065813834325033
 GameObject:
   m_ObjectHideFlags: 0
@@ -12823,6 +12824,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 3140474334484741626}
   - {fileID: 113128131761684495}
+  triggerBarrierScript: {fileID: 2147584533555129017}
 --- !u!1 &8562721340572315206
 GameObject:
   m_ObjectHideFlags: 0
