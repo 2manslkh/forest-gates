@@ -9,7 +9,7 @@ public class GolemBehaviour : MonoBehaviour
     private enum State {
         Follow,
         Attack,
-        Smash,
+        Slam,
     }
     private State state;
     private Animator animator;
@@ -17,10 +17,10 @@ public class GolemBehaviour : MonoBehaviour
     public float attackDistance;
     private CharacterStats characterStats;
     private SpriteRenderer spriteRenderer;
-    private bool Smashing;
+    private bool Slamming;
     private Vector3 currentPatrolSpot;
-    public float timeToSmash;
-    private bool readySmash;
+    public float timeToSlam;
+    private bool readySlam;
     private float rockSize;
     private bool doneAttacking;
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class GolemBehaviour : MonoBehaviour
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         speed = 0.7f;
-        timeToSmash = 2;
+        timeToSlam = 2;
         rockSize = 3f;
     }
     void Start()
@@ -45,11 +45,11 @@ public class GolemBehaviour : MonoBehaviour
         switch (state) {
             default:
             case State.Follow:
-                timeToSmash -= Time.deltaTime;
-                if (timeToSmash < 0)
+                timeToSlam -= Time.deltaTime;
+                if (timeToSlam < 0)
                 {
-                    state = State.Smash;
-                    timeToSmash = 5;
+                    state = State.Slam;
+                    timeToSlam = 5;
                 }
 
                 animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
@@ -79,39 +79,39 @@ public class GolemBehaviour : MonoBehaviour
                 }
                 break;
 
-            case State.Smash:
-                if(!Smashing)
+            case State.Slam:
+                if(!Slamming)
                 {
-                    Smashing = true;
-                    readySmash = false;
+                    Slamming = true;
+                    readySlam = false;
                 }
-                animator.SetBool("isSmashing", true);
-                var SmashTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, 3.0f * Time.deltaTime);
-                animator.SetFloat("Horizontal", SmashTowards.x);
-                animator.SetFloat("Vertical", SmashTowards.y);
+                animator.SetBool("isSlamming", true);
+                var SlamTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, 3.0f * Time.deltaTime);
+                animator.SetFloat("Horizontal", SlamTowards.x);
+                animator.SetFloat("Vertical", SlamTowards.y);
                 StartCoroutine("Timer");
-                if(readySmash)
+                if(readySlam)
                 {
-                    animator.transform.position = SmashTowards;
+                    animator.transform.position = SlamTowards;
                 }
                 if(animator.transform.position == currentPatrolSpot)
                 {
-                    Smashing = false;
-                    readySmash = false;
-                    animator.SetBool("isSmashing", false);
+                    Slamming = false;
+                    readySlam = false;
+                    animator.SetBool("isSlamming", false);
                     state = State.Follow;
                 }
                 break;
         }
     }
 
-    public void SmashRocks()
+    public void SlamRocks()
     {
         float mapHeight = Camera.main.orthographicSize * 2.0f;
         float mapWidth = mapHeight * Camera.main.aspect;
         for(int i=0; i < 8; i++)
         {
-            Vector2 randomPosition = (Random.Range(0 + rockSize, mapWidth - rockSize), Random.Range(0 + rockSize, mapHeight - rockSize);
+            Vector2 randomPosition = new Vector2(Random.Range(0 + rockSize, mapWidth - rockSize), Random.Range(0 + rockSize, mapHeight - rockSize));
             var rock = Instantiate(rockPrefab, randomPosition, Quaternion.identity);
         }
         doneAttacking = true;
