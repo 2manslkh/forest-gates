@@ -10,10 +10,10 @@ public class SceneTransition : MonoBehaviour
     private void Start()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-    if (currentSceneName == "EndScene")
-        {
-            Destroy(gameObject);
-        }
+        if (currentSceneName == "EndScene")
+            {
+                Destroy(gameObject);
+            }
 
     }
 

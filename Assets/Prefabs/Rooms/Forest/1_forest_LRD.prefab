@@ -4011,6 +4011,7 @@ MonoBehaviour:
   - {fileID: 5310967578793920631}
   - {fileID: 4428296117203606798}
   triggerBarrierScript: {fileID: 1738291325733231317}
+  moveOnce: 0
 --- !u!1 &9210999715907882213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,7 +4549,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210999716350393411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 493298af8a0e44e6cb9232945f526987, type: 3}
   m_Name: 

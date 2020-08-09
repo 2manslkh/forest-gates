@@ -14,12 +14,13 @@ public class GameCamera : MonoBehaviour
 
     public float fov;
 
-    public Camera cam;
+    private Camera cam;
 
     void Awake()
     {
         Instance = this;
         cam.fieldOfView = fov;
+        Camera.main.fieldOfView = fov;
         Camera.main.orthographic = false;
     }
 

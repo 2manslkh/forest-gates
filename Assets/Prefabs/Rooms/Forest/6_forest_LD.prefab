@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025656184232683463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 493298af8a0e44e6cb9232945f526987, type: 3}
   m_Name: 
@@ -12359,6 +12359,7 @@ MonoBehaviour:
   - {fileID: 3727110602103056874}
   - {fileID: 2112110226097458723}
   triggerBarrierScript: {fileID: 6631391468980703601}
+  moveOnce: 0
 --- !u!1 &6341469338411067157
 GameObject:
   m_ObjectHideFlags: 0
