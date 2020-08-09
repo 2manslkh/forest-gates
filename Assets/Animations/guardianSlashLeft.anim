@@ -22,10 +22,10 @@ AnimationClip:
     - time: 0
       value: {fileID: 6258006999530235245, guid: 2475c1e6ba34f01439733132a37a008a,
         type: 3}
-    - time: 1
+    - time: 0.6666667
       value: {fileID: -3086224536222766272, guid: 2475c1e6ba34f01439733132a37a008a,
         type: 3}
-    - time: 1.8333334
+    - time: 1.1666666
       value: {fileID: -3086224536222766272, guid: 2475c1e6ba34f01439733132a37a008a,
         type: 3}
     attribute: m_Sprite
@@ -55,7 +55,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.85
+    m_StopTime: 1.1833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -74,4 +74,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.6666667
+    functionName: SpawnProjectiles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
