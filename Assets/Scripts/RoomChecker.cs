@@ -16,7 +16,7 @@ public class RoomChecker : MonoBehaviour
     Vector2 leftPos;
 
     float timeBtwFunctions;
-    float startTimeBtwFunctions = 0.1f;
+    float startTimeBtwFunctions = 0.08f;
 
     public int RoomIndex;
     private bool cornerChecked = false;
@@ -500,14 +500,14 @@ public class RoomChecker : MonoBehaviour
                 //updateAvailRooms.availRooms.RemoveAll(r => levelGen.RightOpeningRoomTypes.Contains(r) == false);
                 int rand;
                 updateAvailRooms.updateAvailRooms();
-                if (updateAvailRooms.availRooms.Count == 1)
-                {
-                    rand = 0;
-                }
-                else
-                {
-                    rand = Random.Range(0, updateAvailRooms.availRooms.Count);
-                }
+                //if (updateAvailRooms.availRooms.Count == 1)
+                //{
+                //    rand = 0;
+                //}
+                //else
+                //{
+                rand = Random.Range(0, updateAvailRooms.availRooms.Count);
+                //}
                 Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
 
             }
