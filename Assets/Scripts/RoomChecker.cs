@@ -15,8 +15,8 @@ public class RoomChecker : MonoBehaviour
     Vector2 rightPos;
     Vector2 leftPos;
 
-    float timeBtwFunctions = 0.5f;
-    float startTimeBtwFunctions = 0.5f;
+    float timeBtwFunctions;
+    float startTimeBtwFunctions = 0.1f;
 
     public int RoomIndex;
     private bool cornerChecked = false;
@@ -452,11 +452,11 @@ public class RoomChecker : MonoBehaviour
             {
                 if (currentSpot != null)
                 {
-                    int roomType = currentSpot.GetComponent<RoomType>().type;
-                    if (levelGen.LeftOpeningRoomTypes.Contains(roomType) == false || levelGen.TopOpeningRoomTypes.Contains(roomType) == true)
-                    {
-                        currentSpot.GetComponent<RoomType>().RoomDestruction();
-                    }
+                    //int roomType = currentSpot.GetComponent<RoomType>().type;
+                    //if (levelGen.LeftOpeningRoomTypes.Contains(roomType) == false || levelGen.TopOpeningRoomTypes.Contains(roomType) == true)
+                    //{
+                    currentSpot.GetComponent<RoomType>().RoomDestruction();
+                    //}
                 }
 
                 //updateAvailRooms.updateAvailRooms();
@@ -481,14 +481,14 @@ public class RoomChecker : MonoBehaviour
             }
             else if (transform.position.x == 25)
             {
-                if (currentSpot != null)
-                {
-                    int roomType = currentSpot.GetComponent<RoomType>().type;
-                    if (levelGen.RightOpeningRoomTypes.Contains(roomType) == false || levelGen.TopOpeningRoomTypes.Contains(roomType) == true)
-                    {
-                        currentSpot.GetComponent<RoomType>().RoomDestruction();
-                    }
-                }
+                //if (currentSpot != null)
+                //{
+                //    int roomType = currentSpot.GetComponent<RoomType>().type;
+                //    if (levelGen.RightOpeningRoomTypes.Contains(roomType) == false || levelGen.TopOpeningRoomTypes.Contains(roomType) == true)
+                //    {
+                currentSpot.GetComponent<RoomType>().RoomDestruction();
+                //    }
+                //}
 
                 //updateAvailRooms.updateAvailRooms();
                 //int rand = Random.Range(0, updateAvailRooms.availRooms.Count);

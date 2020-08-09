@@ -42,7 +42,7 @@ public class UpdateAvailRooms : MonoBehaviour
     public void updateAvailRooms()
     {
         updatePosition();
-        availRooms = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        availRooms = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         Collider2D upDetection = Physics2D.OverlapCircle(upPos, 1, levelGen.room);
         Collider2D downDetection = Physics2D.OverlapCircle(downPos, 1, levelGen.room);
         Collider2D rightDetection = Physics2D.OverlapCircle(rightPos, 1, levelGen.room);
