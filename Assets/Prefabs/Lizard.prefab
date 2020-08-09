@@ -179,10 +179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 0
-  currentHealth: 80
+    baseValue: 200
+  currentHealth: 0
   damage:
-    baseValue: 0
+    baseValue: 30
   armor:
     baseValue: 0
   currentMana:
@@ -223,3 +223,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   attackRadius: 0
+  goldDrop: 0
