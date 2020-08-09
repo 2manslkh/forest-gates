@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7578617451605620217}
   m_Layer: 0
   m_Name: Camera Holder Non Generated Map
-  m_TagString: Untagged
+  m_TagString: Camera Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
