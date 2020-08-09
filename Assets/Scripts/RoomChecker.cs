@@ -106,7 +106,17 @@ public class RoomChecker : MonoBehaviour
         Debug.Log("Room Checker's Current Posistion : " + transform.position);
         if (currentPos.x == levelGen.maxX && currentPos.y == levelGen.minY)
         {
-            yield return null;
+            // Run Room Checker one more round if any of the spawn points fail to spawn a room
+            if (levelGen.currentRoomNumber < levelGen.maxRoomNumber)
+            {
+                Start();
+                levelGen.RoomBeingChecked = 0;
+            }
+            else
+            {
+                yield return null;
+            }
+            
             //return;
         }
         else if (currentPos.x < levelGen.maxX)

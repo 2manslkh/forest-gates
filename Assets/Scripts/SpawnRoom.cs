@@ -23,9 +23,14 @@ public class SpawnRoom : MonoBehaviour
             spawned = true;
             // Debug.Log("Current Room Number : " + levelGen.currentRoomNumber);
         }
+        else if (roomDetection == null && spawned == true)
+        {
+            levelGen.currentRoomNumber--;
+            spawned = false;
+        }
 
-        // Check if any room is spawned around the current position.
-        if (roomDetection == null && levelGen.currentRoomNumber < levelGen.maxRoomNumber && levelGen.stopGeneration == true) //(roomDetection == null && levelGen.stopGeneration == true)
+            // Check if any room is spawned around the current position.
+            if (roomDetection == null && levelGen.currentRoomNumber < levelGen.maxRoomNumber && levelGen.stopGeneration == true) //(roomDetection == null && levelGen.stopGeneration == true)
         {
             List<Vector2> posList = new List<Vector2>();
             Vector2 posRight = new Vector2(transform.position.x + levelGen.moveAmount, transform.position.y);
