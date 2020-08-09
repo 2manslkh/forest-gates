@@ -18,7 +18,7 @@ public class RoomType : MonoBehaviour
         levelGen.generatedRooms.Add(gameObject);
         if (levelGen.generatedRooms.Count == 1)
         {
-            GameCamera.Instance.CurrentRoom = gameObject;
+            GameCamera.instance.CurrentRoom = gameObject;
         }
         X = transform.position.x;
         Y = transform.position.y;
@@ -34,7 +34,7 @@ public class RoomType : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            GameCamera.Instance.CurrentRoom = gameObject;
+            GameCamera.instance.CurrentRoom = gameObject;
         }
     }
 

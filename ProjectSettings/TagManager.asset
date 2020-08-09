@@ -18,6 +18,7 @@ TagManager:
   - Gatekeeper
   - Top
   - Camera Holder
+  - Level Generation
   layers:
   - Default
   - TransparentFX
