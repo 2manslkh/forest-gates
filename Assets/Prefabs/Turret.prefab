@@ -214,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 402996164972519678}
+  characterAudioSource: {fileID: 0}
+  deathAudio: {fileID: 0}
   characterAnimator: {fileID: 7063065073704402844}
   rb: {fileID: 7063065073704402842}
   isHit: 0

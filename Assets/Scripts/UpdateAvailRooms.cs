@@ -50,7 +50,7 @@ public class UpdateAvailRooms : MonoBehaviour
 
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         if (upDetection != null && levelGen.BotOpeningRoomTypes.Contains(upDetection.GetComponent<RoomType>().type) == true)
         {
@@ -98,7 +98,7 @@ public class UpdateAvailRooms : MonoBehaviour
 
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         if (downDetection != null && levelGen.TopOpeningRoomTypes.Contains(downDetection.GetComponent<RoomType>().type) == true)
         {
@@ -121,7 +121,7 @@ public class UpdateAvailRooms : MonoBehaviour
 
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         Debug.Log("Check Down");
         if (downDetection != null && availRooms.Count > 0 && levelGen.TopOpeningRoomTypes.Contains(downDetection.GetComponent<RoomType>().type) == false)
@@ -150,7 +150,7 @@ public class UpdateAvailRooms : MonoBehaviour
 
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         if (rightDetection != null && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type) == true)
         {
@@ -197,7 +197,7 @@ public class UpdateAvailRooms : MonoBehaviour
 
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         if (leftDetection != null && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type) == true)
         {
@@ -243,7 +243,7 @@ public class UpdateAvailRooms : MonoBehaviour
         }
         for (int i = 0; i < availRooms.Count; i++)
         {
-            Debug.Log("availRooms Item " + availRooms[i]);
+            // Debug.Log("availRooms Item " + availRooms[i]);
         }
         //Debug.Log("Available Rooms : " + availRooms.Count);
     }

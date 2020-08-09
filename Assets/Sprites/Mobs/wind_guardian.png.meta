@@ -4,61 +4,61 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5499415912318702837
-    second: wind_guardian_0
+    second: Guardian_walk_down1
   - first:
       213: -6452067368853980382
-    second: wind_guardian_1
+    second: Guardian_walk_down2
   - first:
       213: 3613190521668037718
-    second: wind_guardian_2
+    second: Guardian_walk_left3
   - first:
       213: -4382943858490229661
-    second: wind_guardian_3
+    second: Guardian_walk_left3
   - first:
       213: -3510392443427492339
-    second: wind_guardian_4
+    second: Guardian_walk_left3
   - first:
       213: 498474039825095795
-    second: wind_guardian_5
+    second: Guardian_walk_up1
   - first:
       213: 5266391655327446488
-    second: wind_guardian_6
+    second: Guardian_walk_up2
   - first:
       213: -2942829403146012034
-    second: wind_guardian_7
+    second: Guardian_attack_down1
   - first:
       213: -880298268790056001
-    second: wind_guardian_8
+    second: Guardian_attack_down2
   - first:
       213: -7180460920748147502
-    second: wind_guardian_9
+    second: Guardian_attack_left1
   - first:
       213: 3199313952195290977
-    second: wind_guardian_10
+    second: Guardian_attack_left2
   - first:
       213: -7096867033832522374
-    second: wind_guardian_11
+    second: Guardian_attack_up1
   - first:
       213: -2457960632010913762
-    second: wind_guardian_12
+    second: Guardian_attack_up2
   - first:
       213: -2046168993554690188
-    second: wind_guardian_13
+    second: Guardian_slash_down1
   - first:
       213: -8363677313551222089
-    second: wind_guardian_14
+    second: Guardian_slash_down2
   - first:
       213: 6258006999530235245
-    second: wind_guardian_15
+    second: Guardian_slash_left1
   - first:
       213: -3086224536222766272
-    second: wind_guardian_16
+    second: Guardian_slash_left2
   - first:
       213: -3438650308777002235
-    second: wind_guardian_17
+    second: Guardian_slash_up1
   - first:
       213: -4070358114444121486
-    second: wind_guardian_18
+    second: Guardian_slash_up2
   - first:
       213: -4457171653941361538
     second: wind_guardian_19
@@ -91,7 +91,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -143,11 +143,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wind_guardian_0
+      name: Guardian_walk_down1
       rect:
         serializedVersion: 2
         x: 11
@@ -155,7 +167,7 @@ TextureImporter:
         width: 66
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_1
+      name: Guardian_walk_down2
       rect:
         serializedVersion: 2
         x: 84
@@ -176,7 +188,7 @@ TextureImporter:
         width: 47
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_2
+      name: Guardian_walk_left1
       rect:
         serializedVersion: 2
         x: 148
@@ -197,7 +209,7 @@ TextureImporter:
         width: 41
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_3
+      name: Guardian_walk_left2
       rect:
         serializedVersion: 2
         x: 196
@@ -218,7 +230,7 @@ TextureImporter:
         width: 51
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_4
+      name: Guardian_walk_left3
       rect:
         serializedVersion: 2
         x: 257
@@ -239,7 +251,7 @@ TextureImporter:
         width: 44
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_5
+      name: Guardian_walk_up1
       rect:
         serializedVersion: 2
         x: 319
@@ -260,7 +272,7 @@ TextureImporter:
         width: 66
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_6
+      name: Guardian_walk_up2
       rect:
         serializedVersion: 2
         x: 394
@@ -281,7 +293,7 @@ TextureImporter:
         width: 45
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_7
+      name: Guardian_attack_down1
       rect:
         serializedVersion: 2
         x: 11
@@ -302,7 +314,7 @@ TextureImporter:
         width: 66
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_8
+      name: Guardian_attack_down2
       rect:
         serializedVersion: 2
         x: 86
@@ -323,7 +335,7 @@ TextureImporter:
         width: 67
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_9
+      name: Guardian_attack_left1
       rect:
         serializedVersion: 2
         x: 174
@@ -344,7 +356,7 @@ TextureImporter:
         width: 53
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_10
+      name: Guardian_attack_left2
       rect:
         serializedVersion: 2
         x: 235
@@ -365,7 +377,7 @@ TextureImporter:
         width: 90
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_11
+      name: Guardian_attack_up1
       rect:
         serializedVersion: 2
         x: 340
@@ -386,7 +398,7 @@ TextureImporter:
         width: 63
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_12
+      name: Guardian_attack_up2
       rect:
         serializedVersion: 2
         x: 410
@@ -407,7 +419,7 @@ TextureImporter:
         width: 53
         height: 117
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_13
+      name: Guardian_slash_down1
       rect:
         serializedVersion: 2
         x: 10
@@ -428,7 +440,7 @@ TextureImporter:
         width: 52
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_14
+      name: Guardian_slash_down2
       rect:
         serializedVersion: 2
         x: 68
@@ -449,7 +461,7 @@ TextureImporter:
         width: 72
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_15
+      name: Guardian_slash_left1
       rect:
         serializedVersion: 2
         x: 153
@@ -470,7 +482,7 @@ TextureImporter:
         width: 44
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -483,15 +495,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_16
+      name: Guardian_slash_left2
       rect:
         serializedVersion: 2
-        x: 216
+        x: 215
         y: 76
         width: 53
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -504,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_17
+      name: Guardian_slash_up1
       rect:
         serializedVersion: 2
         x: 288
@@ -512,7 +524,7 @@ TextureImporter:
         width: 48
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wind_guardian_18
+      name: Guardian_slash_up2
       rect:
         serializedVersion: 2
         x: 342
@@ -533,7 +545,7 @@ TextureImporter:
         width: 76
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,7 +566,7 @@ TextureImporter:
         width: 142
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
