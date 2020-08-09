@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TornadoBehaviour : MonoBehaviour
 {
+    public int damage;
+    private bool hitOnce;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -12,17 +14,15 @@ public class TornadoBehaviour : MonoBehaviour
         Destroy(gameObject, 4);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !hitOnce)
         {
-            // Player takes dmg here
-            // other.GetComponent
+            DamagePopup.Create(other.transform.position, damage);
+            if (!other.gameObject.GetComponent<Animator>().GetBool("isHit")){
+                    other.gameObject.GetComponent<CharacterStats>().TakeDamage(damage);
+                    other.gameObject.GetComponent<Player>().setHit();
+                }
+            hitOnce = true;
         }
     }
 }

@@ -292,7 +292,7 @@ TextureImporter:
     second: Enemies_95
   - first:
       213: 8981017190978900272
-    second: Enemies_96
+    second: Turret_die
   - first:
       213: -3795149127210610995
     second: Zombie_walk_down1
@@ -3087,7 +3087,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemies_96
+      name: Turret_die
       rect:
         serializedVersion: 2
         x: 9
@@ -7715,7 +7715,7 @@ TextureImporter:
         width: 36
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
