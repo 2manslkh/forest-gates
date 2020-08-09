@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
                 Debug.Log(damage);
                 Debug.Log(enemiesToDamage[i]);
                 DamagePopup.Create(enemiesToDamage[i].transform.position, damage, damageBonusLevel);
-                
+                cam.GetComponent<CameraController>().playShake(damageBonusLevel);
                 
                 if (!enemiesToDamage[i].GetComponent<Animator>().GetBool("isHit")){
                     enemiesToDamage[i].GetComponent<CharacterStats>().TakeDamage(damage);
