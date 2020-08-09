@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 1982106722535710625}
   - component: {fileID: 1982106722535710624}
   - component: {fileID: 1982106722535710631}
-  m_Layer: 0
+  - component: {fileID: 1098957493}
+  - component: {fileID: 1098957494}
+  - component: {fileID: 1098957495}
+  m_Layer: 9
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -29,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1982106722535710630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.87, y: -1.08, z: -0.87890625}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 4293292320741767529, guid: 4ea81eb52c4360541a0dbf1c1c9a9420,
     type: 3}
@@ -151,3 +154,78 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1098957493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982106722535710630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba43340f8697cc4cae01847f44005be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 0.3
+  patrolSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  timeToDash: 0
+--- !u!114 &1098957494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982106722535710630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c5ddcd1ab7e134cacac836af9c8b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth:
+    baseValue: 500
+  currentHealth: 0
+  damage:
+    baseValue: 20
+  armor:
+    baseValue: 0
+  currentMana:
+    baseValue: 0
+  maxMana:
+    baseValue: 0
+  manaRegen:
+    baseValue: 0
+  dodgeChance:
+    baseValue: 0
+  movementSpeed:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  agility: 0
+  intelligence: 0
+  strength: 0
+--- !u!114 &1098957495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982106722535710630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbda2c616c37764dbb91e76694825e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: {fileID: 1098957494}
+  characterAudioSource: {fileID: 0}
+  deathAudio: {fileID: 0}
+  characterAnimator: {fileID: 1982106722535710631}
+  rb: {fileID: 1982106722535710625}
+  isHit: 0
+  attackPosition: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  attackRadius: 0
+  goldDrop: 0

@@ -19,6 +19,8 @@ public class KnightBehaviour : MonoBehaviour
     public GameObject[] patrolSpots;
     private bool dashing;
     private Vector3 currentPatrolSpot;
+    public float timeToDash;
+    private bool readyDash;
     // Start is called before the first frame update
     private void Awake() {
         state = State.Follow;
@@ -26,6 +28,7 @@ public class KnightBehaviour : MonoBehaviour
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         speed = 0.7f;
+        timeToDash = 2;
     }
     void Start()
     {
@@ -39,11 +42,19 @@ public class KnightBehaviour : MonoBehaviour
         switch (state) {
             default:
             case State.Follow:
+                timeToDash -= Time.deltaTime;
+                if (timeToDash < 0)
+                {
+                    state = State.Dash;
+                    timeToDash = 5;
+                }
+
                 animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
                 animator.SetBool("isFollowing", true);
                 animator.SetFloat("Horizontal", difference.x);
                 animator.SetFloat("Vertical", difference.y);
 
+                
 
                 if (difference.magnitude <= attackDistance) {
                     state = State.Attack;
@@ -55,7 +66,6 @@ public class KnightBehaviour : MonoBehaviour
 
                 if(characterStats.currentHealth < (characterStats.maxHealth.GetValue() / 2))
                 {
-                    print("BANKAII");
                     Bankai();
                 }
 
@@ -66,7 +76,7 @@ public class KnightBehaviour : MonoBehaviour
                 }
 
                 if (difference.magnitude > attackDistance) {
-                    state = State.Dash;
+                    state = State.Follow;
                     animator.SetBool("isAttacking", false);
                 }
                 break;
@@ -76,18 +86,24 @@ public class KnightBehaviour : MonoBehaviour
                 {
                     currentPatrolSpot = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
                     dashing = true;
+                    readyDash = false;
                 }
+                animator.SetBool("isDashing", true);
                 var dashTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, 3.0f * Time.deltaTime);
-                animator.transform.position = dashTowards;
                 animator.SetFloat("Horizontal", dashTowards.x);
                 animator.SetFloat("Vertical", dashTowards.y);
+                StartCoroutine("Timer");
+                if(readyDash)
+                {
+                    animator.transform.position = dashTowards;
+                }
                 if(animator.transform.position == currentPatrolSpot)
                 {
                     dashing = false;
+                    readyDash = false;
+                    animator.SetBool("isDashing", false);
                     state = State.Follow;
                 }
-                print(animator.transform.position);
-                print(currentPatrolSpot);
                 break;
         }
     }
@@ -101,6 +117,12 @@ public class KnightBehaviour : MonoBehaviour
 
     public void Teleport()
     {
-        // gameObject.transform.position = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+        gameObject.transform.position = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+    }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        readyDash = true;
     }
 }
