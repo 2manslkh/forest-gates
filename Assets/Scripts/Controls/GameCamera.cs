@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameCamera : MonoBehaviour
 {
-    public static GameCamera Instance;
+    public static GameCamera instance;
 
     public GameObject CurrentRoom;
 
@@ -17,8 +17,9 @@ public class GameCamera : MonoBehaviour
     private Camera cam;
 
     void Awake()
-    {
-        Instance = this;
+    {   
+        instance = this;
+        cam = Camera.main;
         // set fov == 90 for boss room
         // set fov == 53 for normal level
         cam.fieldOfView = fov;
