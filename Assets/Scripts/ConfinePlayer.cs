@@ -25,7 +25,7 @@ public class ConfinePlayer : MonoBehaviour
     void Start()
     {
         gameCameraHolder = GameObject.Find("Camera Holder").GetComponent<GameCamera>();
-        gameCamera = GameObject.Find("Main Camera").GetComponent<GameCamera>();
+        // gameCamera = GameObject.Find("Main Camera").GetComponent<GameCamera>();
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
         player = GameObject.FindWithTag("Player");
     }
