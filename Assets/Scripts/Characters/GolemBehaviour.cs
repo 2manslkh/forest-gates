@@ -5,7 +5,8 @@ using UnityEngine;
 public class GolemBehaviour : MonoBehaviour
 {
     private Transform playerPos;
-    public GameObject rockPrefab;
+    public GameObject rockSpawnPrefab;
+    private Camera cam;
     private enum State {
         Follow,
         Attack,
@@ -22,7 +23,7 @@ public class GolemBehaviour : MonoBehaviour
     public float timeToSlam;
     private bool readySlam;
     private float rockSize;
-    private bool doneAttacking;
+    private bool doneSlamming;
     // Start is called before the first frame update
     private void Awake() {
         state = State.Follow;
@@ -32,6 +33,7 @@ public class GolemBehaviour : MonoBehaviour
         speed = 0.7f;
         timeToSlam = 2;
         rockSize = 3f;
+        cam = Camera.main;
     }
     void Start()
     {
@@ -80,26 +82,18 @@ public class GolemBehaviour : MonoBehaviour
                 break;
 
             case State.Slam:
-                if(!Slamming)
+                if (doneSlamming)
                 {
-                    Slamming = true;
-                    readySlam = false;
-                }
-                animator.SetBool("isSlamming", true);
-                var SlamTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, 3.0f * Time.deltaTime);
-                animator.SetFloat("Horizontal", SlamTowards.x);
-                animator.SetFloat("Vertical", SlamTowards.y);
-                StartCoroutine("Timer");
-                if(readySlam)
-                {
-                    animator.transform.position = SlamTowards;
-                }
-                if(animator.transform.position == currentPatrolSpot)
-                {
-                    Slamming = false;
-                    readySlam = false;
                     animator.SetBool("isSlamming", false);
-                    state = State.Follow;
+                    if(!animator.GetCurrentAnimatorStateInfo(0).IsName("Slam"))
+                    {
+                        doneSlamming = false;
+                        state = State.Attack;
+                    }
+                } else {
+                    animator.SetFloat("Horizontal", difference.x);
+                    animator.SetFloat("Vertical", difference.y);
+                    animator.SetBool("isSlamming", true);
                 }
                 break;
         }
@@ -107,14 +101,16 @@ public class GolemBehaviour : MonoBehaviour
 
     public void SlamRocks()
     {
-        float mapHeight = Camera.main.orthographicSize * 2.0f;
-        float mapWidth = mapHeight * Camera.main.aspect;
+        float minWidth = cam.ScreenToWorldPoint(new Vector3(0,0,0)).x;
+        float maxWidth = cam.ScreenToWorldPoint(new Vector3(Screen.width,0,0)).x;
+        float minHeight = cam.ScreenToWorldPoint(new Vector3(0,0,0)).y;
+        float maxHeight = cam.ScreenToWorldPoint(new Vector3(0,Screen.height,0)).y;
         for(int i=0; i < 8; i++)
         {
-            Vector2 randomPosition = new Vector2(Random.Range(0 + rockSize, mapWidth - rockSize), Random.Range(0 + rockSize, mapHeight - rockSize));
-            var rock = Instantiate(rockPrefab, randomPosition, Quaternion.identity);
+            Vector2 randomPosition = new Vector2(Random.Range(minWidth, maxWidth), Random.Range(minHeight, maxHeight));
+            var rock = Instantiate(rockSpawnPrefab, randomPosition, Quaternion.identity);
         }
-        doneAttacking = true;
+        doneSlamming = true;
     }
 
 }
