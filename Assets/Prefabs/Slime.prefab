@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 500000
+    baseValue: 50
   currentHealth: 0
   damage:
     baseValue: 1

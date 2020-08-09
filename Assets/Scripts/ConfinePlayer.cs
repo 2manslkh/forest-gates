@@ -12,6 +12,8 @@ public class ConfinePlayer : MonoBehaviour
     private GameObject player;
     private GameCamera gameCamera;
 
+    private GameCamera gameCameraHolder;
+
     //public List<Collider2D> roomDetection;
 
     private void Awake()
@@ -22,6 +24,7 @@ public class ConfinePlayer : MonoBehaviour
     }
     void Start()
     {
+        gameCameraHolder = GameObject.Find("Camera Holder").GetComponent<GameCamera>();
         gameCamera = GameObject.Find("Main Camera").GetComponent<GameCamera>();
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
         player = GameObject.FindWithTag("Player");
@@ -31,7 +34,7 @@ public class ConfinePlayer : MonoBehaviour
     {
         //if (Mathf.Abs(player.transform.position.x - transform.position.x) < 5.0 || Mathf.Abs(player.transform.position.y - transform.position.y) < 5.0)
         //if (gameObject == GameCamera.Instance.CurrentRoom)
-        if (gameObject == gameCamera.CurrentRoom)
+        if (gameObject == gameCameraHolder.CurrentRoom)
         {
             if (enemiesCleared == false && Input.GetKey(KeyCode.Space))
             {

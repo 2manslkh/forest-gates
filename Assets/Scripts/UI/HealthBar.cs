@@ -16,6 +16,7 @@ public class HealthBar : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        player = GameObject.FindWithTag("Player");
         fill.fillAmount = (float) player.GetComponent<PlayerStats>().currentHealth/ (float) player.GetComponent<PlayerStats>().maxHealth.GetValue();
     }
 }

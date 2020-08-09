@@ -44,6 +44,6 @@ public class Character : MonoBehaviour
         Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin, gameObject.transform.position, Quaternion.identity);
         yield return new WaitWhile (()=> deathCoin.GetComponent<AudioSource>().isPlaying);
         //do something
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
