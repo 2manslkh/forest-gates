@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class DebugManager : MonoBehaviour
 {
 
-    public GameObject player;
+    public Player player;
     public string scene_0;
     public string scene_1;
     public string scene_2;
     public string scene_3;
     public string scene_4;
     public string scene_5;
+
+    void Start(){
+        player = Player.instance;
+    }
 
     public void GotoTitle(){
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
