@@ -40,10 +40,15 @@ public class GameCamera : MonoBehaviour
     {
         if (CurrentRoom == null)
         {
-            return;
+            targetPosition.x = GameObject.FindWithTag("Player").transform.position.x;
+            targetPosition.y = GameObject.FindWithTag("Player").transform.position.y;
         }
-        targetPosition.x = CurrentRoom.transform.position.x;
-        targetPosition.y = CurrentRoom.transform.position.y;
+        else
+        {
+            targetPosition.x = CurrentRoom.transform.position.x;
+            targetPosition.y = CurrentRoom.transform.position.y;
+
+        }
         targetPosition.z = transform.position.z;
 
         //gameObject.transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * MovementSpeedOnRoomChange);
