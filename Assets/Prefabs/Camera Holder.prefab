@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3375734449437405332}
   m_Layer: 0
   m_Name: Camera Holder
-  m_TagString: Untagged
+  m_TagString: Camera Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,6 @@ MonoBehaviour:
   CurrentRoom: {fileID: 0}
   targetAspect: 1
   fov: 53
-  cam: {fileID: 3375734450192104050}
 --- !u!1 &3375734450192104055
 GameObject:
   m_ObjectHideFlags: 0
