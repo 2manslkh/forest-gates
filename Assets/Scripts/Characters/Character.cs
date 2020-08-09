@@ -27,7 +27,7 @@ public class Character : MonoBehaviour
        characterAnimator.SetBool("isHit",false);
     }
 
-    public void checkIfDead(){
+    virtual public void checkIfDead(){
         Debug.Log("CAST CHECK IF DEAD");
         if (characterStats.currentHealth <= 0){
 
@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
             
         }
     }
-    IEnumerator DeathCoroutine(){
+    public IEnumerator DeathCoroutine(){
         Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin, gameObject.transform.position, Quaternion.identity);
         yield return new WaitWhile (()=> deathCoin.GetComponent<AudioSource>().isPlaying);
         //do something
