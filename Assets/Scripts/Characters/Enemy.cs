@@ -12,6 +12,8 @@ public class Enemy : Character
 
     public float attackRadius;
 
+    public int goldDrop;
+
 
     public void dealDamage(){
         // Calculate damage based on character's stats
@@ -38,9 +40,24 @@ public class Enemy : Character
                 DamagePopup.Create(enemiesToDamage[i].transform.position, damage);
             }
         }
+    }   
 
 
+    override public void checkIfDead(){
+        Debug.Log("CAST CHECK IF DEAD");
+        if (characterStats.currentHealth <= 0){
+
+            Debug.Log("DEAD");
+            Player.instance.gold += goldDrop;
+            // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);
+            // Play death Animation
+            // characterAudioSource.PlayOneShot(deathAudio, 1f);
+            StartCoroutine (DeathCoroutine());
+            // gameObject.SetActive(false);
+            
+        }
     }
+    
 
 
 }
