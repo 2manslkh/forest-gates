@@ -153,6 +153,10 @@ public class FillUpRooms : MonoBehaviour
                         int rand = Random.Range(0, availRoomIntersect.Count);
                         Instantiate(levelGen.rooms[availRoomIntersect[rand]], roomPos, Quaternion.identity);
                     }
+                    else
+                    {
+                        Instantiate(levelGen.rooms[3], roomPos, Quaternion.identity);
+                    }
                     extraRoomsPos.Remove(roomPos);
                     unspawnedRoomNumber -= 1;
                     //else

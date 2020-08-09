@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class LevelGeneration : MonoBehaviour
 {
     public Transform[] startingPositions;
-    // index 0 --> LR, index 1 --> LRD, index 2 --> LRU, index 3 -->LRUD, index 4 -->UD
-    // index 5 --> LU, index 6 --> LD, index 7 -->LUD, index 8 --> RU, index 9 -->RD, index 10 -->RUD
-    public List<int> LeftOpeningRoomTypes = new List<int> {0, 1, 2, 3, 5, 6, 7};
-    public List<int> RightOpeningRoomTypes = new List<int> { 0, 1, 2, 3, 8, 9, 10 };
-    public List<int> TopOpeningRoomTypes = new List<int> { 2, 3, 4, 5, 7, 8, 10 };
-    public List<int> BotOpeningRoomTypes = new List<int> { 1, 3, 4, 6, 7, 9, 10 };
+    // index 0 --> LR, index 1 --> LRD, index 2 --> LRU, index 3 --> LRUD, index 4 --> UD
+    // index 5 --> LU, index 6 --> LD, index 7 --> LUD, index 8 --> RU, index 9 --> RD, index 10 --> RUD
+    // index 11 --> L, index 12 --> R, index 13 --> U, index 14 --> D
+
+    public List<int> LeftOpeningRoomTypes = new List<int> {0, 1, 2, 3, 5, 6, 7, 11};
+    public List<int> RightOpeningRoomTypes = new List<int> { 0, 1, 2, 3, 8, 9, 10, 12 };
+    public List<int> TopOpeningRoomTypes = new List<int> { 2, 3, 4, 5, 7, 8, 10, 13 };
+    public List<int> BotOpeningRoomTypes = new List<int> { 1, 3, 4, 6, 7, 9, 10, 14 };
 
     public GameObject Boss;
     public GameObject[] rooms; 
@@ -23,11 +25,13 @@ public class LevelGeneration : MonoBehaviour
     public GameObject player;
     private FillUpRooms fillUpRooms;
 
+    public bool firstRandomRoom = false;
+
     private int direction;
     public float moveAmount;
 
     private float timeBtwRoom;
-    public float startTimneBtwRoom = 0.25f;
+    public float startTimeBtwRoom = 1.0f;
 
     public float minX;
     public float maxX;
@@ -79,29 +83,61 @@ public class LevelGeneration : MonoBehaviour
 
     private void Update()
     {
-        if (maxRoomNumber == currentRoomNumber)
+        
+
+        
+        firstRandomRoom = true;
+
+        if (timeBtwRoom <= 0.0)
         {
-            stopGeneration = true;
+            if (firstRandomRoom == true && fillUpRooms.FilledUp == false)
+            {
             fillUpRooms.FilledUp = true;
+
+            timeBtwRoom = startTimeBtwRoom;
+            }
+
+            
+        }
+
+        else
+        {
+            timeBtwRoom -= Time.deltaTime;
+        }
+
+        if (generatedRooms.Count == maxRoomNumber)
+        {
             if (exitSpawned == false)
             {
                 SpawnSceneTransition();
             }
         }
-        else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
-        {
-            fillUpRooms.FillUp();
-            //FillUpRooms.Instance.FillUp();
-        }
-        else if (timeBtwRoom <= 0 && stopGeneration == false)
-        {
-            Move();
-            timeBtwRoom = startTimneBtwRoom;
-        }
-        else
-        {
-            timeBtwRoom -= Time.deltaTime;
-        }
+        
+        
+
+        //if (maxRoomNumber == currentRoomNumber)
+        //{
+        //    stopGeneration = true;
+        //    //fillUpRooms.FilledUp = true;
+        //    if (exitSpawned == false)
+        //    {
+        //        SpawnSceneTransition();
+        //    }
+        //}
+        //else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
+        //{
+        //    fillUpRooms.FillUp();
+        //    //FillUpRooms.Instance.FillUp();
+        //}
+        //else if (timeBtwRoom <= 0 && stopGeneration == false)
+        //{
+        //    Move();
+        //    timeBtwRoom = startTimneBtwRoom;
+        //}
+        //else
+        //{
+        //    timeBtwRoom -= Time.deltaTime;
+        //}
     }
 
     private void Move()
@@ -470,9 +506,10 @@ public class LevelGeneration : MonoBehaviour
 
     private void SpawnSceneTransition()
     {
-        Vector2 lastRoomPos = generatedRooms[generatedRooms.Count-1].transform.position;
+        int rand = Random.Range(0, generatedRooms.Count - 2);
+        Vector2 lastRoomPos = generatedRooms[rand].transform.position;
         // Instantiate the Boss
-        Instantiate(Boss, lastRoomPos, Quaternion.identity);
+        //Instantiate(Boss, lastRoomPos, Quaternion.identity);
         // Instantiate level exit
         Instantiate(levelExit, lastRoomPos, Quaternion.identity);
         exitSpawned = true;
