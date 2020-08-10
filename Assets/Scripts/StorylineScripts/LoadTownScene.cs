@@ -6,6 +6,6 @@ public class LoadTownScene : MonoBehaviour
 {
     public void LoadNewScene()
      {
-         SceneManager.LoadScene("Town", LoadSceneMode.Single);      
+         SceneManager.LoadScene("Town");      
      }
 }
