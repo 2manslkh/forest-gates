@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LoadTownScene : MonoBehaviour
 {
     public void LoadNewScene()
-     {
-         SceneManager.LoadScene("Town");      
-     }
+    {
+        SceneManager.LoadScene("2_Town");      
+    }
 }

@@ -28,12 +28,16 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
         LEFT=4
     } 
 
-    private void Start() {
+    void Start() {
         cam = Camera.main;
         rb = gameObject.GetComponent<Rigidbody2D>();
         // anim = gameObject.GetComponent<Animator>();
         anim.enabled = false;
         anim.enabled = true;
+    }
+
+    void Awake(){
+        if (!cam) cam = Camera.main;
     }
 
     public int currentFacingDirection;
@@ -51,6 +55,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
     }
     void Update()
     {
+        if (!cam) cam = Camera.main;
         // Time.timeScale = 0.05f;
         // Get input of WASD keys
         if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
@@ -68,7 +73,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             anim.SetFloat("Magnitude", movement.magnitude);
             weapon_anim.SetFloat("Mouse X", lookDir.x);
             weapon_anim.SetFloat("Mouse Y", lookDir.y);
-            weapon_anim.SetFloat("Magnitude", movement.magnitude);
+             weapon_anim.SetFloat("Magnitude", movement.magnitude);
             transform.position = transform.position + movement * speed * Time.deltaTime;
             
             attackPosition.position = Vector3.Normalize(lookDir) + gameObject.transform.position;
