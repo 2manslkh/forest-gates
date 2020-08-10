@@ -6,12 +6,14 @@ public class SpawnRoom : MonoBehaviour
 {
     public LayerMask whatIsRoom;
     public LevelGeneration levelGen;
+    private FillUpRooms fillUpRooms;
     private bool spawned = false;
 
 
     private void Start()
     {
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
+        fillUpRooms = GameObject.Find("Level Generation").GetComponent<FillUpRooms>();
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class SpawnRoom : MonoBehaviour
             //Destroy(gameObject);
         }
 
-        if (levelGen.firstRandomRoom == true && Physics2D.OverlapCircle(transform.position, 1, whatIsRoom) == null)
+        if (fillUpRooms.FilledUp == true && levelGen.firstRandomRoom == true && Physics2D.OverlapCircle(transform.position, 1, whatIsRoom) == null)
         {
             SpawnRandomRoom();
         }
