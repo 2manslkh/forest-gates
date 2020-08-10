@@ -20,7 +20,9 @@ public class Enemy : Character
         int damage = gameObject.GetComponent<CharacterStats>().damage.GetValue();
 
         Vector3 playerPos = GameObject.FindWithTag("Player").transform.position;
-        attackPosition.position = Vector3.Normalize(playerPos) + gameObject.transform.position;
+        attackPosition.position = Vector3.Normalize(playerPos - gameObject.transform.position) +  gameObject.transform.position;
+
+        Debug.Log(playerPos);
 
         // Detect if player is within area of attack
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, playerLayer);
