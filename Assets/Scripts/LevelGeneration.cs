@@ -32,7 +32,7 @@ public class LevelGeneration : MonoBehaviour
     public float moveAmount;
 
     private float timeBtwRoom;
-    public float startTimeBtwRoom = 0.1f;
+    public float startTimeBtwRoom = 0.05f;
 
     public float minX;
     public float maxX;
@@ -52,7 +52,7 @@ public class LevelGeneration : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0.5f;
+        Time.timeScale = 1.0f;
         StartCoroutine("PretendToLoad");
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].transform.position;
@@ -87,9 +87,9 @@ public class LevelGeneration : MonoBehaviour
 
     private void Update()
     {
-        
 
-        
+
+
         //firstRandomRoom = true;
 
         //if (timeBtwRoom <= 0.0)
@@ -118,6 +118,36 @@ public class LevelGeneration : MonoBehaviour
         //}
 
 
+        //if (maxRoomNumber == currentRoomNumber)
+        //{
+        //    stopGeneration = true;
+        //    fillUpRooms.FilledUp = true;
+        //    if (exitSpawned == false)
+        //    {
+        //        SpawnSceneTransition();
+        //    }
+        //}
+        //else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
+        //{
+        //    //fillUpRooms.FillUp();
+
+        //    fillUpRooms.FilledUp = true;
+        //    if (exitSpawned == false)
+        //    {
+        //        SpawnSceneTransition();
+        //    }
+
+        //    //FillUpRooms.Instance.FillUp();
+        //}
+        //if (timeBtwRoom <= 0 && stopGeneration == false)
+        //{
+        //    Move();
+        //    timeBtwRoom = startTimeBtwRoom;
+        //}
+        //else
+        //{
+        //    timeBtwRoom -= Time.deltaTime;
+        //}
 
         if (maxRoomNumber == currentRoomNumber)
         {
@@ -165,8 +195,10 @@ public class LevelGeneration : MonoBehaviour
                     if (prevDir == "Right")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randLeftRoom = Random.Range(0, LeftOpeningRoomTypes.Count);
-                        Instantiate(rooms[LeftOpeningRoomTypes[randLeftRoom]], transform.position, Quaternion.identity);
+                        List<int> availRooms = LeftOpeningRoomTypes.Intersect(RightOpeningRoomTypes).ToList();
+                        int randLeftRoom = Random.Range(0, availRooms.Count);
+                        //int randLeftRoom = Random.Range(0, LeftOpeningRoomTypes.Count);
+                        Instantiate(rooms[availRooms[randLeftRoom]], transform.position, Quaternion.identity);
 
                     }
                     else
@@ -202,11 +234,13 @@ public class LevelGeneration : MonoBehaviour
                 int detectedRoomType = roomDetection.GetComponent<RoomType>().type;
                 if (LeftOpeningRoomTypes.Contains(detectedRoomType) == false)
                 {
-                    if (prevDir == "Right")//(downCounter >= 2)
+                    if (prevDir == "Left")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randRightRoom = Random.Range(0, RightOpeningRoomTypes.Count);
-                        Instantiate(rooms[RightOpeningRoomTypes[randRightRoom]], transform.position, Quaternion.identity);
+                        List<int> availRooms = LeftOpeningRoomTypes.Intersect(RightOpeningRoomTypes).ToList();
+                        int randRightRoom = Random.Range(0, availRooms.Count);
+                        //int randRightRoom = Random.Range(0, RightOpeningRoomTypes.Count);
+                        Instantiate(rooms[availRooms[randRightRoom]], transform.position, Quaternion.identity);
 
                     }
                     else
@@ -246,8 +280,10 @@ public class LevelGeneration : MonoBehaviour
                     if (prevDir == "Down")//(downCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randTopRoom = Random.Range(0, TopOpeningRoomTypes.Count);                            
-                        Instantiate(rooms[TopOpeningRoomTypes[randTopRoom]], transform.position, Quaternion.identity);
+                        List<int> availRooms = TopOpeningRoomTypes.Intersect(BotOpeningRoomTypes).ToList();
+                        //int randBottomRoom = Random.Range(0, availRooms.Count);
+                        int randTopRoom = Random.Range(0, availRooms.Count);                            
+                        Instantiate(rooms[availRooms[randTopRoom]], transform.position, Quaternion.identity);
                         
                     }
                     else
@@ -283,8 +319,10 @@ public class LevelGeneration : MonoBehaviour
                     if (prevDir == "UP")//upCounter >= 2)
                     {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
-                        int randBottomRoom = Random.Range(0, BotOpeningRoomTypes.Count);
-                        Instantiate(rooms[BotOpeningRoomTypes[randBottomRoom]], transform.position, Quaternion.identity);
+                        List<int> availRooms = TopOpeningRoomTypes.Intersect(BotOpeningRoomTypes).ToList();
+                        int randBottomRoom = Random.Range(0, availRooms.Count);
+                        //int randBottomRoom = Random.Range(0, BotOpeningRoomTypes.Count);
+                        Instantiate(rooms[availRooms[randBottomRoom]], transform.position, Quaternion.identity);
                         
                     }
                     else
