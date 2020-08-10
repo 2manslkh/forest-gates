@@ -48,6 +48,7 @@ public class Shop : MonoBehaviour
         if (checkGold(Player.instance.gold, healthPrice)){
             Player.instance.gold -= healthPrice;
             Player.instance.characterStats.maxHealth.baseValue += 10;
+            Player.instance.characterStats.currentHealth += 10;
             healthPrice++;
         } else {
             warningText.text = "Insufficient Gold!";
