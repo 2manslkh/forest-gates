@@ -20,15 +20,25 @@ public class KnightBehaviour : MonoBehaviour
     private bool dashing;
     private Vector3 currentPatrolSpot;
     public float timeToDash;
-    private bool readyDash;
+    private bool readyDash, stopDash;
+    private float dashSpeed;
+    private bool isTeleporting;
+    private float opacity;
+    private bool hitOnce;
+    private int currentPatrolIndex;
     // Start is called before the first frame update
     private void Awake() {
         state = State.Follow;
         animator = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        speed = 0.7f;
-        timeToDash = 2;
+        speed = 3f;
+        timeToDash = 5;
+        dashSpeed = 20f;
+        attackDistance = 3f;
+        opacity = 255f;
+        hitOnce = false;
+        currentPatrolIndex = 0;
     }
 
     // Update is called once per frame
@@ -43,10 +53,10 @@ public class KnightBehaviour : MonoBehaviour
             default:
             case State.Follow:
                 timeToDash -= Time.deltaTime;
-                if (timeToDash < 0)
+                if (timeToDash < 0 && !isTeleporting)
                 {
                     state = State.Dash;
-                    timeToDash = 5;
+                    timeToDash = 8;
                 }
 
                 animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
@@ -62,67 +72,112 @@ public class KnightBehaviour : MonoBehaviour
                 }
                 break;
             case State.Attack:
-                animator.SetBool("isAttacking", true);
-
-                if(characterStats.currentHealth < (characterStats.maxHealth.GetValue() / 2))
-                {
-                    Bankai();
+                print(isTeleporting);
+                if(!isTeleporting){
+                    animator.SetBool("isAttacking", true);
+                    opacity = 255f;
+                } else {
+                    animator.speed = 0;
+                    animator.SetBool("isAttacking", false);
+                    opacity -= Time.deltaTime*300;
                 }
+                spriteRenderer.color = new Color(255, 255, 255, opacity/255f);
 
-                if(animator.GetCurrentAnimatorStateInfo(0).length < animator.GetCurrentAnimatorStateInfo(0).normalizedTime && animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+                if(animator.GetCurrentAnimatorStateInfo(0).length < animator.GetCurrentAnimatorStateInfo(0).normalizedTime && animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && !isTeleporting)
                 {
                     animator.SetFloat("Horizontal", difference.x);
                     animator.SetFloat("Vertical", difference.y);
-                }
 
-                if (difference.magnitude > attackDistance) {
-                    state = State.Follow;
-                    animator.SetBool("isAttacking", false);
+                    if (difference.magnitude > attackDistance) {
+                        state = State.Follow;
+                        animator.SetBool("isAttacking", false);
+                    }
                 }
                 break;
 
             case State.Dash:
                 if(!dashing)
                 {
-                    currentPatrolSpot = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+                    currentPatrolIndex = 0;
+                    // currentPatrolSpot = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+                    RandomizeArray(patrolSpots);
+                    stopDash = false;
                     dashing = true;
                     readyDash = false;
                 }
                 animator.SetBool("isDashing", true);
-                var dashTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, 3.0f * Time.deltaTime);
-                animator.SetFloat("Horizontal", dashTowards.x);
-                animator.SetFloat("Vertical", dashTowards.y);
                 StartCoroutine("Timer");
-                if(readyDash)
+                if(readyDash && dashing)
                 {
+                    currentPatrolSpot = patrolSpots[currentPatrolIndex].transform.position;
+                    Vector2 dashTowards = Vector2.MoveTowards(animator.transform.position, currentPatrolSpot, dashSpeed * Time.deltaTime);
+                    animator.SetFloat("Horizontal", dashTowards.x);
+                    animator.SetFloat("Vertical", dashTowards.y);
                     animator.transform.position = dashTowards;
+                    if(animator.transform.position == currentPatrolSpot)
+                    {
+                        currentPatrolIndex += 1;
+                    }
+                    if(currentPatrolIndex == patrolSpots.Length)
+                    {
+                        stopDash = true;
+                    }
                 }
-                if(animator.transform.position == currentPatrolSpot)
+                if(stopDash)
                 {
                     dashing = false;
                     readyDash = false;
                     animator.SetBool("isDashing", false);
+                    hitOnce = false;
                     state = State.Follow;
+                    stopDash = false;
                 }
                 break;
         }
     }
 
-    private void Bankai()
-    {
-        speed = 1.2f;
-        animator.speed = 2.0f;
-        spriteRenderer.color = new Color(119f/255f, 190f/255f, 49f/255f, 255f);
-    }
-
     public void Teleport()
     {
-        gameObject.transform.position = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+        if(!isTeleporting){
+            isTeleporting = true;
+            StartCoroutine("TeleportTimer");
+        }
     }
 
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(0.5f);
         readyDash = true;
+    }
+
+    IEnumerator TeleportTimer()
+    {
+        yield return new WaitForSeconds(0.8f);
+        animator.speed = 1;
+        gameObject.transform.position = patrolSpots[Random.Range(0, patrolSpots.Length)].transform.position;
+        isTeleporting = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Player" && !hitOnce && state==State.Dash)
+        {
+            DamagePopup.Create(other.transform.position, characterStats.damage.GetValue());
+            if (!other.gameObject.GetComponent<Animator>().GetBool("isHit")){
+                    other.gameObject.GetComponent<CharacterStats>().TakeDamage(characterStats.damage.GetValue());
+                    other.gameObject.GetComponent<Player>().setHit();
+                }
+            hitOnce = true;
+        }
+    }
+
+
+    private void RandomizeArray(GameObject[] arr)
+    {
+        for (var i = arr.Length - 1; i > 0; i--) {
+            var r = Random.Range(0,i);
+            var tmp = arr[i];
+            arr[i] = arr[r];
+            arr[r] = tmp;
+        }
     }
 }
