@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58fb2d70b0742740b0a5226d57f6a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnScene: Forest
+  respawnScene: 1_Bedroom
 --- !u!1 &5448371992034810117
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ TagManager:
   - Top
   - Camera Holder
   - Level Generation
+  - ForestGate
+  - Shop UI
   layers:
   - Default
   - TransparentFX
