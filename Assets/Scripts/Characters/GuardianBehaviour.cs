@@ -5,6 +5,7 @@ using UnityEngine;
 public class GuardianBehaviour : MonoBehaviour
 {
     private Transform playerPos;
+    private GameObject player;
     private enum State {
         Patrol,
         Attack,
@@ -44,12 +45,13 @@ public class GuardianBehaviour : MonoBehaviour
     }
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        playerPos = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerPos = player.transform;
         Vector2 difference = playerPos.position - animator.transform.position;
         switch (state) {
             default:

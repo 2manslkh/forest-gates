@@ -5,6 +5,7 @@ using UnityEngine;
 public class GolemBehaviour : MonoBehaviour
 {
     private Transform playerPos;
+    private GameObject player;
     public GameObject rockSpawnPrefab;
     public GameObject rockWallPrefab;
 
@@ -45,12 +46,13 @@ public class GolemBehaviour : MonoBehaviour
     }
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerPos = player.transform;
         Vector2 difference = playerPos.position - animator.transform.position;
         print(difference.normalized);
 
