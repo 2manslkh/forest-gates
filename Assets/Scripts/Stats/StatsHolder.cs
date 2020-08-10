@@ -12,7 +12,9 @@ public static class StatsHolder
 
     public static int gold {get;set;}
 
-    public static void SaveStats(Stat damage, Stat maxHealth, int currenthealth, int gold);
-    
+    public static void SaveStats(Stat damage, Stat maxHealth, int currenthealth, int gold){
+        return;
+    }
+
 
 }
