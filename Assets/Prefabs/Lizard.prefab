@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1071472175
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 4583930189806690113, guid: 336075f445393bf4bbba65012081baaa,
     type: 3}
@@ -184,7 +184,7 @@ MonoBehaviour:
     baseValue: 200
   currentHealth: 0
   damage:
-    baseValue: 30
+    baseValue: 20
   armor:
     baseValue: 0
   currentMana:
