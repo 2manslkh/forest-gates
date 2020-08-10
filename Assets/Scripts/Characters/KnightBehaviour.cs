@@ -26,12 +26,14 @@ public class KnightBehaviour : MonoBehaviour
     private float opacity;
     private bool hitOnce;
     private int currentPatrolIndex;
+    private AudioSource[] audioClips;
     // Start is called before the first frame update
     private void Awake() {
         state = State.Follow;
         animator = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioClips = GetComponents<AudioSource>();
         speed = 3f;
         timeToDash = 5;
         dashSpeed = 20f;
@@ -116,6 +118,7 @@ public class KnightBehaviour : MonoBehaviour
                     animator.transform.position = dashTowards;
                     if(animator.transform.position == currentPatrolSpot)
                     {
+                        audioClips[1].Play();
                         currentPatrolIndex += 1;
                     }
                     if(currentPatrolIndex == patrolSpots.Length)
