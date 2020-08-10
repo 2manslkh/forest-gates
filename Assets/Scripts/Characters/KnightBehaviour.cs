@@ -143,6 +143,7 @@ public class KnightBehaviour : MonoBehaviour
     {
         if(!isTeleporting){
             isTeleporting = true;
+            audioClips[2].Play();
             StartCoroutine("TeleportTimer");
         }
     }
