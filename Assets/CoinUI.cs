@@ -23,7 +23,7 @@ public class CoinUI : MonoBehaviour
     void Update()
     {
         if (!player) player = GameObject.FindGameObjectWithTag("Player");
-        gold = player.GetComponent<Player>().gold;
+        gold = Player.instance.gold;
         goldText.text = gold.ToString();
     }
 }

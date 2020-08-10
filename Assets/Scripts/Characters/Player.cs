@@ -42,22 +42,34 @@ public class Player : Character
             Debug.Log("DEAD");
 
 			// gameObject.GetComponent<Animator>().SetBool("isDead", true);
-			Animator[] weapon = gameObject.GetComponentsInChildren<Animator>();
-			Debug.Log(weapon.Length);
-			for (int i = 0; i < weapon.Length; i++){
-				weapon[i].GetComponent<Animator>().SetBool("isDead", true);
-			}
-			Instantiate(GameAssets.i.gameOverUI, Vector3.zero, Quaternion.identity);
-			Time.timeScale = 0;
+			// Animator[] weapon = gameObject.GetComponentsInChildren<Animator>();
+			// Debug.Log(weapon.Length);
+			// for (int i = 0; i < weapon.Length; i++){
+			// 	weapon[i].GetComponent<Animator>().SetBool("isDead", true);
+			// }
+			// Instantiate(GameAssets.i.gameOverUI, Vector3.zero, Quaternion.identity);
+			// Time.timeScale = 0;
 			// weapon.SetBool("isDead", true);
 
             // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);
             // Play death Animation
             // characterAudioSource.PlayOneShot(deathAudio, 1f);
-            // StartCoroutine (DeathCoroutine());
+            StartCoroutine (PlayerDeathCoroutine());
             // gameObject.SetActive(false);
         }
     }
 
+	public IEnumerator PlayerDeathCoroutine(){
+        gameObject.GetComponent<Animator>().SetBool("isDead", true);
+		Animator[] weapon = gameObject.GetComponentsInChildren<Animator>();
+		Debug.Log(weapon.Length);
+		for (int i = 0; i < weapon.Length; i++){
+			weapon[i].GetComponent<Animator>().SetBool("isDead", true);
+		}
+        yield return new WaitForSeconds(1.5f);
+        //do something
+		Time.timeScale = 0;
+        Instantiate(GameAssets.i.gameOverUI, Vector3.zero, Quaternion.identity);
+    }
 
 }
