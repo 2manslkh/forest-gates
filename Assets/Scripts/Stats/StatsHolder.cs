@@ -41,8 +41,13 @@ public class StatsHolder : MonoBehaviour
     }
 
     public static void LoadStatsFromDisk(){
-        StatsHolder.damage = new Stat(PlayerPrefs.GetInt("damage"));
-        StatsHolder.maxHealth = new Stat(PlayerPrefs.GetInt("maxHealth"));
+        Stat damage = new Stat();
+        damage.baseValue = PlayerPrefs.GetInt("damage");
+        Stat maxHealth = new Stat();
+        maxHealth.baseValue = PlayerPrefs.GetInt("maxHealth");
+
+        StatsHolder.damage = damage;
+        StatsHolder.maxHealth = maxHealth;
         StatsHolder.gold = PlayerPrefs.GetInt("gold");
     }
 }

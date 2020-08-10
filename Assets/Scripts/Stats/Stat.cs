@@ -8,9 +8,6 @@ using UnityEngine;
 [System.Serializable]
 public class Stat {
 
-	public Stat(int baseValue){
-		this.baseValue = baseValue;
-	}
 	public int baseValue;	// Starting value
 
 	// Keep a list of all the modifiers on this stat

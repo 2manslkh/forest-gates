@@ -25,7 +25,7 @@ public class RoomType : MonoBehaviour
     }
 
     public void RoomDestruction() {
-        levelGen.generatedRooms.Remove(gameObject);
+        // levelGen.generatedRooms.Remove(gameObject);
         Destroy(gameObject);
         // Debug.Log("Destroyed : " + gameObject);
     }
@@ -36,6 +36,10 @@ public class RoomType : MonoBehaviour
         {
             GameCamera.instance.CurrentRoom = gameObject;
         }
+    }
+
+    void Update(){
+        if (!levelGen) levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
     }
 
     //public Vector3 GetRoomCener()

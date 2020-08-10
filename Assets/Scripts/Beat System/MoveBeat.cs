@@ -14,15 +14,15 @@ public class MoveBeat : MonoBehaviour
 
     void Start()
     {
-        targetLocation = Conductor.instance.targetLocation.position;
-        spawnLocation = Conductor.instance.spawnLocation.position;
-        endLocation = Conductor.instance.endLocation.position;
+        // targetLocation = Conductor.instance.targetLocation.position;
+        // spawnLocation = Conductor.instance.spawnLocation.position;
+        // endLocation = Conductor.instance.endLocation.position;
 
-        distance = Vector3.Distance(targetLocation, spawnLocation);
-        speed = distance/timeBetweenBeats;
+        // distance = Vector3.Distance(targetLocation, spawnLocation);
+        // speed = distance/timeBetweenBeats;
     }
     void FixedUpdate()
     {
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, endLocation, speed * Time.deltaTime);
+        // gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, endLocation, speed * Time.deltaTime);
     }
 }
