@@ -25,6 +25,7 @@ public class Enemy : Character
         // Detect if player is within area of attack
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, playerLayer);
 
+
         Debug.Log(enemiesToDamage.Length);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {

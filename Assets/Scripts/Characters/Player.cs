@@ -21,7 +21,7 @@ public class Player : Character
 	#endregion
 
 	void Start() {
-		playerStats.OnHealthReachedZero += Die;
+		playerStats.OnHealthReachedZero += checkIfDead;
 	}
 
 	void Die() {
@@ -30,9 +30,18 @@ public class Player : Character
 
 	override public void checkIfDead(){
         Debug.Log("CAST CHECK IF DEAD");
-        if (characterStats.currentHealth <= 0){
+        if (playerStats.currentHealth <= 0){
 
             Debug.Log("DEAD");
+
+			// gameObject.GetComponent<Animator>().SetBool("isDead", true);
+			Animator[] weapon = gameObject.GetComponentsInChildren<Animator>();
+			Debug.Log(weapon.Length);
+			for (int i = 0; i < weapon.Length; i++){
+				weapon[i].GetComponent<Animator>().SetBool("isDead", true);
+			}
+			// weapon.SetBool("isDead", true);
+
             // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);
             // Play death Animation
             // characterAudioSource.PlayOneShot(deathAudio, 1f);

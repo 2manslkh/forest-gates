@@ -33,8 +33,8 @@ TagManager:
   - NPC
   - Room
   - Player
-  - 
-  - 
+  - PostProcessing
+  - pp
   - 
   - 
   - 
