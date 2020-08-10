@@ -47,6 +47,7 @@ public class GameCamera : MonoBehaviour
             targetPosition.x = GameObject.FindWithTag("Player").transform.position.x;
             targetPosition.y = GameObject.FindWithTag("Player").transform.position.y;
         }
+        // allow the camera to follow the player around in boss rooms
         else
         {
             targetPosition.x = CurrentRoom.transform.position.x;
