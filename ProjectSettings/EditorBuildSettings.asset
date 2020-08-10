@@ -7,32 +7,35 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/0_StartScreen.unity
-    guid: 14269950838d7594496a15c8ef9de819
+    guid: 07b33612918c0b24cb4629e1cd5b55e4
   - enabled: 1
     path: Assets/Scenes/1_Bedroom.unity
-    guid: 92478fb5675a8f544900a651b0590b69
+    guid: 0e84ac1e6448c42e2b88d2c6490fe3cf
   - enabled: 1
     path: Assets/Scenes/1_Bedroom_NonCutscene.unity
-    guid: d038cae6ee9a3b74fa69ac8885cf1692
+    guid: 30c11e9974a60874d96a23baf677e5e0
   - enabled: 1
     path: Assets/Scenes/2_Town.unity
-    guid: ca78082e6eb0726449f620ad9fc97d27
+    guid: 65941d156bca7fd499cb7a83c89e58c1
   - enabled: 1
     path: Assets/Scenes/3_Forest.unity
-    guid: 31e0394bec3032d4c8661ab5e7e11ed0
+    guid: e1984f4f955bb4466ae4058dee01a32f
   - enabled: 1
     path: Assets/Scenes/4_Forest Boss.unity
-    guid: 3dcff394ab1e8254983dad90941752ae
+    guid: 41b5ae9e02f9e844e911bbcb1849cfa7
   - enabled: 1
     path: Assets/Scenes/5_Lake.unity
-    guid: b248a8f3f7456a64c96677a028e9d298
+    guid: 1e17a04c991fb492d8facbe7316f9c39
   - enabled: 1
     path: Assets/Scenes/6_Lake Boss.unity
-    guid: a9088fd3e7075554cb663efc563bea6a
+    guid: ee86b9b1726108842b387c907ff6d5ba
   - enabled: 1
     path: Assets/Scenes/7_Castle.unity
-    guid: 772db12bfb839994ca072a33d7abdddc
+    guid: 909b4bfb52f0044cca57108e87963404
   - enabled: 1
     path: Assets/Scenes/8_Castle Boss.unity
-    guid: 82ee2bc012b9fa440941d45bf2440059
+    guid: be1a3f5b87c5fa348900be64dbdd98dd
+  - enabled: 1
+    path: Assets/Scenes/9_FinaleEnding.unity
+    guid: 67102419ef800114b90e60e17db4bd62
   m_configObjects: {}

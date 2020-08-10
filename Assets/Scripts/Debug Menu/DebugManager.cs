@@ -13,7 +13,10 @@ public class DebugManager : MonoBehaviour
     public string scene_3;
     public string scene_4;
     public string scene_5;
-
+    public string scene_6;
+    public string scene_7;
+    public string scene_8;
+    public string scene_9;
     void Start(){
         player = Player.instance;
     }
@@ -34,13 +37,29 @@ public class DebugManager : MonoBehaviour
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(scene_3);
     }
-    public void GotoLake(){
+    public void GotoForestBoss(){
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(scene_4);
     }
-    public void GotoCastle(){
+    public void GotoLake(){
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         SceneManager.LoadScene(scene_5);
+    }
+    public void GotoLakeBoss(){
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene(scene_6);
+    }
+    public void GotoCastle(){
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene(scene_7);
+    }
+    public void GotoCastleBoss(){
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene(scene_8);
+    }
+    public void GotoEnd(){
+        // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        SceneManager.LoadScene(scene_9);
     }
 
     public void damagePlayer(){

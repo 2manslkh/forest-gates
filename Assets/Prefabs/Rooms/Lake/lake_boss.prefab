@@ -1855,7 +1855,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8112862070132891681}
   - component: {fileID: 8112862070132891694}
-  - component: {fileID: 8823634432854770956}
   - component: {fileID: 2825111804625681559}
   - component: {fileID: 503968990544563678}
   - component: {fileID: 9530287444126213}
@@ -1905,24 +1904,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &8823634432854770956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8112862070132891695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd32172b2f110436f8fa2923d92e1b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  X: 0
-  Y: 0
-  Width: 0
-  Height: 0
-  firstRoom: 0
 --- !u!61 &2825111804625681559
 BoxCollider2D:
   m_ObjectHideFlags: 0

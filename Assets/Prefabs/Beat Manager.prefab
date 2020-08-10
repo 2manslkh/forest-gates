@@ -145,7 +145,7 @@ MonoBehaviour:
   spawnLocation: {fileID: 0}
   endLocation: {fileID: 0}
   targetLocation: {fileID: 0}
-  songBpm: 71
+  songBpm: 70
   secPerBeat: 0
   songPosition: 0
   songPositionInBeats: 0

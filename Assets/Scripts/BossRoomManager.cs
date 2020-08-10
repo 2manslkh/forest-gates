@@ -59,7 +59,7 @@ public class BossRoomManager : MonoBehaviour
         }
         else if (currentSceneName == "8_Castle Boss")
         {
-            sceneTransition.sceneToLoad = "EndScene";
+            sceneTransition.sceneToLoad = "9_FinaleEnding";
         }
     }
 }

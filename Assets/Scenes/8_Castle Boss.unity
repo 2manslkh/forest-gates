@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -391,7 +391,7 @@ PrefabInstance:
     - target: {fileID: 2130089753223520680, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
       propertyPath: songBpm
-      value: 60
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2130089753223520681, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
@@ -675,7 +675,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle_boss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7657523544539288297, guid: f0d9bcba371f7f1449e89a04942212bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0d9bcba371f7f1449e89a04942212bb, type: 3}
 --- !u!1 &1825673887 stripped
 GameObject:
