@@ -16,10 +16,11 @@ public class RoomChecker : MonoBehaviour
     Vector2 leftPos;
 
     float timeBtwFunctions;
-    float startTimeBtwFunctions = 0.08f;
+    float startTimeBtwFunctions = 0.05f;
 
     public int RoomIndex;
     private bool cornerChecked = false;
+    private bool secondCheck = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,14 @@ public class RoomChecker : MonoBehaviour
         levelGen = GameObject.Find("Level Generation").GetComponent<LevelGeneration>();
         updateAvailRooms = GetComponent<UpdateAvailRooms>();
         // Initialise Room Checker position
-        transform.position = new Vector3(levelGen.minX, levelGen.maxY, 0);
+        if (gameObject.name == "Room Checker")
+        {
+            transform.position = new Vector3(levelGen.minX, levelGen.maxY, 0);
+        }
+        else
+        {
+            transform.position = new Vector3(levelGen.maxX, levelGen.minY, 0);
+        }
         upPos = new Vector2(transform.position.x, transform.position.y + levelGen.moveAmount);
         downPos = new Vector2(transform.position.x, transform.position.y - levelGen.moveAmount);
         rightPos = new Vector2(transform.position.x + levelGen.moveAmount, transform.position.y);
@@ -90,16 +98,25 @@ public class RoomChecker : MonoBehaviour
 
     private IEnumerator Seq()
     {
-        if (cornerChecked == false)
+        if (gameObject.name == "Room Checker" && cornerChecked == false)
         {
             yield return StartCoroutine(CheckCorners());
         }
         yield return StartCoroutine(CheckCenterRooms());
         yield return StartCoroutine(RoomCheck());
-        yield return StartCoroutine(Move());
+        if (gameObject.name == "Room Checker")//secondCheck == false)
+        {
+            yield return StartCoroutine(MoveTopToBottom());
+        }
+        else //if (secondCheck == true)
+        {
+            yield return StartCoroutine(MoveBottomToTop());
+
+        }
+        
     }
 
-    IEnumerator Move()
+    IEnumerator MoveTopToBottom()
     {
         // Move from top left corner to the right bottom corner
         Vector3 currentPos = transform.position;
@@ -109,6 +126,7 @@ public class RoomChecker : MonoBehaviour
             // Run Room Checker one more round if any of the spawn points fail to spawn a room
             if (levelGen.currentRoomNumber < levelGen.maxRoomNumber)
             {
+                //secondCheck = true;
                 Start();
                 levelGen.RoomBeingChecked = 0;
             }
@@ -131,14 +149,46 @@ public class RoomChecker : MonoBehaviour
         levelGen.RoomBeingChecked += 1;
     }
 
+    IEnumerator MoveBottomToTop()
+    {
+        // Move from top left corner to the right bottom corner
+        Vector3 currentPos = transform.position;
+        // Debug.Log("Room Checker's Current Posistion : " + transform.position);
+        if (currentPos.x == levelGen.minX && currentPos.y == levelGen.maxY)
+        {
+            // Run Room Checker one more round if any of the spawn points fail to spawn a room
+            if (levelGen.currentRoomNumber < levelGen.maxRoomNumber)
+            {
+                //secondCheck = true;
+                Start();
+                //levelGen.RoomBeingChecked = 0;
+            }
+            else
+            {
+                yield return null;
+            }
+
+            //return;
+        }
+        else if(currentPos.x > levelGen.minX)
+        {
+            transform.position = new Vector3(transform.position.x - levelGen.moveAmount, transform.position.y, 0);
+        }
+        else if (currentPos.y < levelGen.maxY)
+        {
+            transform.position = new Vector3(levelGen.maxX, transform.position.y + levelGen.moveAmount, 0);
+        }
+        // Debug.Log("Room Checker's Moved Posistion : " + transform.position);
+        //levelGen.RoomBeingChecked += 1;
+        yield return null;
+    }
+
     IEnumerator CheckCorners()
     {
         Collider2D TopLeftCorner = Physics2D.OverlapCircle(new Vector3(5, 35, 0), 1, levelGen.room);
         Collider2D TopRightCorner = Physics2D.OverlapCircle(new Vector3(35, 35, 0), 1, levelGen.room);
         Collider2D BotLeftCorner = Physics2D.OverlapCircle(new Vector3(5, 5, 0), 1, levelGen.room);
         Collider2D BotRightCorner = Physics2D.OverlapCircle(new Vector3(35, 5, 0), 1, levelGen.room);
-        //Debug.Log("checkcorners " + RoomIndex);
-        //Debug.Log("where are you" + levelGen.RoomBeingChecked);
 
         //if ((RoomIndex == 0 || RoomIndex == 3 || RoomIndex == 12 || RoomIndex == 15) && levelGen.RoomBeingChecked == 0)
         //{
@@ -231,23 +281,81 @@ public class RoomChecker : MonoBehaviour
         //    Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
         //    //}
         //}
+        //if (transform.position.x == 5 && transform.position.y == 35)
+        //{
+        //    if (currentSpot != null)
+        //    {
+        //        currentSpot.GetComponent<RoomType>().RoomDestruction();
+        //    }
+        //    updateAvailRooms.updateAvailRooms();
+        //    int rand;
+        //    if (updateAvailRooms.availRooms.Count == 1)
+        //    {
+        //        rand = 0;
+        //    }
+        //    else
+        //    {
+        //        rand = Random.Range(0, updateAvailRooms.availRooms.Count);
+        //    }
+        //    Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
+        //    //yield return null;
+        //}
         //else if (transform.position.x == 5 && transform.position.y == 5)
         //{
-        //    yield return null;
+        //    if (currentSpot != null)
+        //    {
+        //        currentSpot.GetComponent<RoomType>().RoomDestruction();
+        //    }
+        //    updateAvailRooms.updateAvailRooms();
+        //    int rand;
+        //    if (updateAvailRooms.availRooms.Count == 1)
+        //    {
+        //        rand = 0;
+        //    }
+        //    else
+        //    {
+        //        rand = Random.Range(0, updateAvailRooms.availRooms.Count);
+        //    }
+        //    Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
+        //    //yield return null;
         //}
         //else if (transform.position.y == 5 && transform.position.x == 35)
         //{
-
-        //    yield return null;
-        //}
-        //else if (transform.position.x == 5 && transform.position.y == 35)
-        //{
-
-        //    yield return null;
+        //    if (currentSpot != null)
+        //    {
+        //        currentSpot.GetComponent<RoomType>().RoomDestruction();
+        //    }
+        //    updateAvailRooms.updateAvailRooms();
+        //    int rand;
+        //    if (updateAvailRooms.availRooms.Count == 1)
+        //    {
+        //        rand = 0;
+        //    }
+        //    else
+        //    {
+        //        rand = Random.Range(0, updateAvailRooms.availRooms.Count);
+        //    }
+        //    Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
+        //    //yield return null;
         //}
         //else if (transform.position.x == 35 && transform.position.y == 35)
         //{
-        //    yield return null;
+        //    if (currentSpot != null)
+        //    {
+        //        currentSpot.GetComponent<RoomType>().RoomDestruction();
+        //    }
+        //    updateAvailRooms.updateAvailRooms();
+        //    int rand;
+        //    if (updateAvailRooms.availRooms.Count == 1)
+        //    {
+        //        rand = 0;
+        //    }
+        //    else
+        //    {
+        //        rand = Random.Range(0, updateAvailRooms.availRooms.Count);
+        //    }
+        //    Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
+        //    //yield return null;
         //}
 
         if (transform.position.x == 5)
@@ -582,23 +690,24 @@ public class RoomChecker : MonoBehaviour
             Instantiate(levelGen.rooms[updateAvailRooms.availRooms[rand]], transform.position, Quaternion.identity);
             //}
         }
-        else if (transform.position.x == 5 && transform.position.y == 5)
-        {
-            yield return null;
-        }
-        else if (transform.position.y == 5 && transform.position.x == 35)
-        {
+        //else if (transform.position.x == 5 && transform.position.y == 5)
+        //{
+        //    yield return null;
+        //}
+        //else if (transform.position.y == 5 && transform.position.x == 35)
+        //{
 
-            yield return null;
-        }
-        else if (transform.position.x == 5 && transform.position.y == 35)
-        {
+        //    yield return null;
+        //}
+        //else if (transform.position.x == 5 && transform.position.y == 35)
+        //{
 
-            yield return null;
-        }
-        else if (transform.position.x == 35 && transform.position.y == 35)
-        {
-            yield return null;
-        }
+        //    yield return null;
+        //}
+        //else if (transform.position.x == 35 && transform.position.y == 35)
+        //{
+        //    yield return null;
+        //}
+        yield return null;
     }
 }
