@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class BossRoomManager : MonoBehaviour
 {
     public GameObject Boss;
+    GameObject boss;
     public GameObject levelExit;
     private SceneTransition sceneTransition;
     public GameObject player;
@@ -22,12 +23,16 @@ public class BossRoomManager : MonoBehaviour
         int x = Random.Range(-8, 9);
         int y = Random.Range(-8, 9);
         // Instantiate the Boss
-        // Instantiate(Boss, new Vector3(x, y, 0), Quaternion.identity);
+        //boss = Instantiate(Boss, new Vector3(x, y, 0), Quaternion.identity);
 
     }
 
     private void Update()
     {
+        if (boss.activeSelf == false)
+        {
+            bossKilled = true;
+        }
 
         if (exitSpawned == false && bossKilled == true)
         {
