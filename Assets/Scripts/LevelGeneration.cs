@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelGeneration : MonoBehaviour
 {
+    public GameObject loadingScreen;
     public Transform[] startingPositions;
     // index 0 --> LR, index 1 --> LRD, index 2 --> LRU, index 3 --> LRUD, index 4 --> UD
     // index 5 --> LU, index 6 --> LD, index 7 --> LUD, index 8 --> RU, index 9 --> RD, index 10 --> RUD
@@ -51,6 +52,8 @@ public class LevelGeneration : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0f;
+        StartCoroutine("PretendToLoad");
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].transform.position;
         int firstRoomType = Random.Range(0, 11);
@@ -565,5 +568,12 @@ public class LevelGeneration : MonoBehaviour
         {
             sceneTransition.sceneToLoad = "EndScene";
         }
+    }
+
+    IEnumerator PretendToLoad()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        Time.timeScale = 1f;
+        loadingScreen.SetActive(false);
     }
 }

@@ -10,17 +10,20 @@ public class CoinUI : MonoBehaviour
     // public TextMesh goldText;
     public TextMeshProUGUI goldText;
     // Start is called before the first frame update
+    private GameObject player;
 
 
     void Start()
     {
         goldText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        gold = Player.instance.gold;
+        if (!player) player = GameObject.FindGameObjectWithTag("Player");
+        gold = player.GetComponent<Player>().gold;
         goldText.text = gold.ToString();
     }
 }

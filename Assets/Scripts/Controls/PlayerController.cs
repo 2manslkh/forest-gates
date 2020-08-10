@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
     public LayerMask enemyLayer;
     public float attackRadius;
     private int damage;
+    private AudioSource[] audioClips;
 
 
     public enum facingDirection{ //WIP
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
     void Start() {
         cam = Camera.main;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        audioClips = GetComponents<AudioSource>();
         // anim = gameObject.GetComponent<Animator>();
         anim.enabled = false;
         anim.enabled = true;
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour, BasicAttackInterface
             StartCoroutine(animateBasicAttack(anim));
 
             anim.SetBool("BasicAttack", true);
+            audioClips[1].Play();
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRadius, enemyLayer);
             Debug.Log(enemiesToDamage.Length);
             for (int i = 0; i < enemiesToDamage.Length; i++)

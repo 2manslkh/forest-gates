@@ -217,7 +217,7 @@ MonoBehaviour:
   characterStats: {fileID: 3093596555990514371}
   characterAudioSource: {fileID: 0}
   deathAudio: {fileID: 0}
-  characterAnimator: {fileID: 0}
+  characterAnimator: {fileID: 5583371784813143457}
   rb: {fileID: 5583371784813143463}
   isHit: 0
   attackPosition: {fileID: 3487594860511508111}

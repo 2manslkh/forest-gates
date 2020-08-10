@@ -103,7 +103,7 @@ public class RoomChecker : MonoBehaviour
     {
         // Move from top left corner to the right bottom corner
         Vector3 currentPos = transform.position;
-        Debug.Log("Room Checker's Current Posistion : " + transform.position);
+        // Debug.Log("Room Checker's Current Posistion : " + transform.position);
         if (currentPos.x == levelGen.maxX && currentPos.y == levelGen.minY)
         {
             // Run Room Checker one more round if any of the spawn points fail to spawn a room
@@ -127,7 +127,7 @@ public class RoomChecker : MonoBehaviour
         {
             transform.position = new Vector3(levelGen.minX, transform.position.y - levelGen.moveAmount, 0);
         }
-        Debug.Log("Room Checker's Moved Posistion : " + transform.position);
+        // Debug.Log("Room Checker's Moved Posistion : " + transform.position);
         levelGen.RoomBeingChecked += 1;
     }
 
