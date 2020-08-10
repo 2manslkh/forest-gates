@@ -171,7 +171,7 @@ public class UpdateAvailRooms : MonoBehaviour
             }
         }
 
-        Debug.Log("Check Right");
+        // Debug.Log("Check Right");
         if (rightDetection != null && availRooms.Count > 0 && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type) == false)
         {
             //for (int i = 0; i < availRooms.Count; i++)
@@ -218,7 +218,7 @@ public class UpdateAvailRooms : MonoBehaviour
             }
         }
         
-        Debug.Log("Check Left");
+        // Debug.Log("Check Left");
         if (leftDetection != null && availRooms.Count > 0 && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type) == false)
         {
             //for (int i = 0; i < availRooms.Count; i++)

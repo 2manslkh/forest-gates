@@ -17,7 +17,15 @@ public class Player : Character
 
 
 	#endregion
-
+	void Awake(){
+		if (!StatsHolder.isNew){
+			gold = StatsHolder.gold;
+			playerStats.currentHealth = StatsHolder.currenthealth;
+			playerStats.maxHealth = StatsHolder.maxHealth;
+			playerStats.damage = StatsHolder.damage;
+		}
+		instance = this;
+	}
 	void Start() {
 		if (debug) Instantiate(GameAssets.i.debugUI, Vector3.zero, Quaternion.identity);
 		playerStats.OnHealthReachedZero += checkIfDead;

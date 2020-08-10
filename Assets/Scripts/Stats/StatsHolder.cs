@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class StatsHolder
+public class StatsHolder : MonoBehaviour
 {
     public static Stat damage {get;set;}
 
@@ -12,9 +12,14 @@ public static class StatsHolder
 
     public static int gold {get;set;}
 
-    public static void SaveStats(Stat damage, Stat maxHealth, int currenthealth, int gold){
-        return;
-    }
+    public static bool isNew = true;
 
+    public static void SaveStats(Stat damage, Stat maxHealth, int currenthealth, int gold){
+        StatsHolder.damage = damage;
+        StatsHolder.maxHealth = maxHealth;
+        StatsHolder.currenthealth = currenthealth;
+        StatsHolder.gold = gold;
+        isNew = false;
+    }
 
 }
