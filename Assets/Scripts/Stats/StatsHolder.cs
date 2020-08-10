@@ -22,4 +22,27 @@ public class StatsHolder : MonoBehaviour
         isNew = false;
     }
 
+    void Awake(){
+        int isNew = PlayerPrefs.GetInt("isNew", 0);
+        if (isNew == 1){
+            StatsHolder.isNew = true;
+        } else {
+            StatsHolder.isNew = false;
+            StatsHolder.LoadStatsFromDisk();
+        }
+
+    }
+
+    public static void SaveStatsToDisk(){
+        PlayerPrefs.SetInt("damage", StatsHolder.damage.GetValue());
+        PlayerPrefs.SetInt("maxHealth", StatsHolder.maxHealth.GetValue());
+        PlayerPrefs.SetInt("gold", StatsHolder.gold);
+        PlayerPrefs.SetInt("isNew", 1);
+    }
+
+    public static void LoadStatsFromDisk(){
+        StatsHolder.damage = new Stat(PlayerPrefs.GetInt("damage"));
+        StatsHolder.maxHealth = new Stat(PlayerPrefs.GetInt("maxHealth"));
+        StatsHolder.gold = PlayerPrefs.GetInt("gold");
+    }
 }
