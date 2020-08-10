@@ -295,7 +295,7 @@ MonoBehaviour:
     baseValue: 100
   currentHealth: 100
   damage:
-    baseValue: 10
+    baseValue: 1000
   armor:
     baseValue: 0
   currentMana:
