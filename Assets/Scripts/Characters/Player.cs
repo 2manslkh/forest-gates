@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : Character
 {
+
+	public bool debug;
 	// public CharacterCombat playerCombatManager;
 	public PlayerStats playerStats;
 	
@@ -21,6 +23,7 @@ public class Player : Character
 	#endregion
 
 	void Start() {
+		if (debug) Instantiate(GameAssets.i.debugUI, Vector3.zero, Quaternion.identity);
 		playerStats.OnHealthReachedZero += checkIfDead;
 	}
 

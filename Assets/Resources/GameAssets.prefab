@@ -49,3 +49,4 @@ MonoBehaviour:
     type: 3}
   gameOverUI: {fileID: 5027925886882980677, guid: e972d3f301d03e1418f1fe23e84b4e79,
     type: 3}
+  debugUI: {fileID: 1946824014338969514, guid: 395f987e4c242454eba342448f9215be, type: 3}
