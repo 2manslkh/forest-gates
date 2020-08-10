@@ -156,7 +156,6 @@ MonoBehaviour:
   CurrentRoom: {fileID: 0}
   targetAspect: 0
   fov: 90
-  cam: {fileID: 0}
 --- !u!114 &29213115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +357,6 @@ MonoBehaviour:
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
   player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
-  startTimeBtwRoom: 1
   exitSpawned: 0
   bossKilled: 0
 --- !u!4 &249941802
@@ -385,13 +383,18 @@ PrefabInstance:
     - target: {fileID: 2130089753223520680, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
       propertyPath: songBpm
-      value: 60
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 2130089753223520681, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 74d89925e8635014c8e117bf6a55da29, type: 3}
+      objectReference: {fileID: 8300000, guid: b41bcc51540c44749b12ea6e521beade, type: 3}
+    - target: {fileID: 2130089753223520681, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2130089753223520683, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
       propertyPath: m_Name
