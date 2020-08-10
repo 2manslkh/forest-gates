@@ -23,7 +23,7 @@ public class BossRoomManager : MonoBehaviour
         int x = Random.Range(-8, 9);
         int y = Random.Range(-8, 9);
         // Instantiate the Boss
-        boss = Instantiate(Boss, new Vector3(x, y, 0), Quaternion.identity);
+        //boss = Instantiate(Boss, new Vector3(x, y, 0), Quaternion.identity);
 
     }
 
