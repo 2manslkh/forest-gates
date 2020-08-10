@@ -45,12 +45,18 @@ public class CharacterStats : MonoBehaviour {
 		currentHealth -= damage;
 		Debug.Log(transform.name + " takes " + damage + " damage.");
 
+		// Set Animation flag isHit to True
+		if (damage > 0){
+			GetComponent<Animator>().SetBool("isHit", true);
+		}
+
 		// If we hit 0. Die.
 		if (currentHealth <= 0) 
         {   
             // Cast all subscribed methods when character health = 0
 			if (OnHealthReachedZero != null) 
             {
+				Debug.Log("Cast OnHealthReachedZero");
 				OnHealthReachedZero (); // CAST
 			}
 		}

@@ -237,6 +237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e4156f91058404aa536f496e601ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rockSpawnPrefab: {fileID: 7598392293174185612, guid: 7a809527e4e65ad4090700990132b269,
+    type: 3}
+  rockWallPrefab: {fileID: 4371336855497823478, guid: 85cc9be3adc62794e9acb83bcbbed7dc,
+    type: 3}
   attackDistance: 0
-  patrolSpots: []
-  timeToDash: 0
+  timeToSlam: 0
+  timeToAttack: 0
+  awayDistance: 0

@@ -44,12 +44,12 @@ public class DebugManager : MonoBehaviour
     }
 
     public void damagePlayer(){
-        player.GetComponent<PlayerStats>().currentHealth -= 10;
+        player.GetComponent<PlayerStats>().TakeDamage(10);
         Debug.Log(player.GetComponent<PlayerStats>().currentHealth);
     }
 
     public void healPlayer(){
-        player.GetComponent<PlayerStats>().currentHealth += 10;
+        player.GetComponent<PlayerStats>().Heal(10);
         Debug.Log(player.GetComponent<PlayerStats>().currentHealth);
     }
 }

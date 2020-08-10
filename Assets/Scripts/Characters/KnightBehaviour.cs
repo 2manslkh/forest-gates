@@ -30,14 +30,14 @@ public class KnightBehaviour : MonoBehaviour
         speed = 0.7f;
         timeToDash = 2;
     }
-    void Start()
-    {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
     // Update is called once per frame
     void Update()
     {
+        if(!playerPos)
+        {
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         Vector2 difference = playerPos.position - animator.transform.position;
         switch (state) {
             default:
