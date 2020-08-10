@@ -29,12 +29,14 @@ public class GolemBehaviour : MonoBehaviour
     private bool doneSlamming;
     private bool doneWalling;
     public float awayDistance;
+    public AudioSource[] audioClips;
     // Start is called before the first frame update
     private void Awake() {
         state = State.Follow;
         animator = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioClips = GetComponents<AudioSource>();
         speed = 2f;
         timeToSlam = 5;
         timeToSlam = 6;
@@ -129,6 +131,7 @@ public class GolemBehaviour : MonoBehaviour
             Vector2 randomPosition = new Vector2(Random.Range(minWidth, maxWidth), Random.Range(minHeight, maxHeight));
             var rock = Instantiate(rockSpawnPrefab, randomPosition, Quaternion.identity);
         }
+        StartCoroutine("RockFallingSound");
         doneSlamming = true;
     }
 
@@ -157,8 +160,14 @@ public class GolemBehaviour : MonoBehaviour
         }
         Vector3 spawnPosition = new Vector3(animator.transform.position.x + normalized.x, animator.transform.position.y + normalized.y, animator.transform.position.z);
         var rockWall = Instantiate(rockWallPrefab, spawnPosition + offset, Quaternion.identity);
+        audioClips[2].Play();
         rockWall.GetComponent<RockWallBehaviour>().UpdateAnimator(difference.x, difference.y);
         doneWalling = true;
     }
 
+    IEnumerator RockFallingSound()
+    {
+        yield return new WaitForSeconds(1.0f);
+        audioClips[1].Play();
+    }
 }
