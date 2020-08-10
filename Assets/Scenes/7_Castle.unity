@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -240,6 +240,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &319663319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319663322}
+  - component: {fileID: 319663321}
+  - component: {fileID: 319663320}
+  m_Layer: 0
+  m_Name: Room Checker2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &319663320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319663319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36a8a7d3e3e24779a22cdbbf36acef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availRooms: 
+--- !u!114 &319663321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319663319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018e4fa7065304516abbfca171df0e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomsChecked: 0
+  RoomIndex: 0
+--- !u!4 &319663322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319663319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.391008, y: 21.946491, z: -348.9795}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &328930268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,7 +344,7 @@ PrefabInstance:
     - target: {fileID: 3959264480238403722, guid: ce68cfc554be95a41bed60a93cc57dd1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3959264480238403722, guid: ce68cfc554be95a41bed60a93cc57dd1,
         type: 3}
@@ -1229,7 +1288,7 @@ PrefabInstance:
     - target: {fileID: 5470923443192674495, guid: c4ec51d6bd299cd44b17e6df89a43876,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5470923443192674495, guid: c4ec51d6bd299cd44b17e6df89a43876,
         type: 3}
@@ -1999,7 +2058,7 @@ PrefabInstance:
     - target: {fileID: 3375734449437405333, guid: 256112cd94acf8d42a8ade7989aa974e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 3375734449437405333, guid: 256112cd94acf8d42a8ade7989aa974e,
         type: 3}

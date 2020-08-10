@@ -71,31 +71,6 @@ public class UpdateAvailRooms : MonoBehaviour
             }
         }
 
-        Debug.Log("Check Up");
-        if (upDetection != null && availRooms.Count > 0 && levelGen.BotOpeningRoomTypes.Contains(upDetection.GetComponent<RoomType>().type) == false)
-        {
-            //for (int i = 0; i < availRooms.Count; i++)
-            //{
-            //    if (levelGen.TopOpeningRoomTypes.Contains(availRooms[i]))
-            //    {
-            //        availRooms.Remove(i);
-            //    }
-            //}
-            availRooms.RemoveAll(r => levelGen.TopOpeningRoomTypes.Contains(r) == true);
-        }
-        else if (upDetection == null)
-        {
-            //for (int i = 0; i < availRooms.Count; i++)
-            //{
-            //    if (levelGen.TopOpeningRoomTypes.Contains(availRooms[i]))
-            //    {
-            //        availRooms.Remove(i);
-            //    }
-            //}
-            availRooms.RemoveAll(r => levelGen.TopOpeningRoomTypes.Contains(r) == true);
-
-        }
-
         for (int i = 0; i < availRooms.Count; i++)
         {
             // Debug.Log("availRooms Item " + availRooms[i]);
@@ -123,6 +98,73 @@ public class UpdateAvailRooms : MonoBehaviour
         {
             // Debug.Log("availRooms Item " + availRooms[i]);
         }
+        if (rightDetection != null && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type) == true)
+        {
+            if (availRooms.Count == 0)
+            {
+                availRooms = levelGen.RightOpeningRoomTypes;
+            }
+            else
+            {
+                availRooms = availRooms.Intersect(levelGen.RightOpeningRoomTypes).ToList();
+                //for (int i = 0; i < levelGen.RightOpeningRoomTypes.Count; i++)
+                //{
+                //    if (availRooms.Contains(levelGen.RightOpeningRoomTypes[i]) == false)
+                //    {
+                //        availRooms.Add(levelGen.RightOpeningRoomTypes[i]);
+                //    }
+                //}
+            }
+        }
+
+        for (int i = 0; i < availRooms.Count; i++)
+        {
+            // Debug.Log("availRooms Item " + availRooms[i]);
+        }
+        if (leftDetection != null && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type) == true)
+        {
+            if (availRooms.Count == 0)
+            {
+                availRooms = levelGen.LeftOpeningRoomTypes;
+            }
+            else
+            {
+                availRooms = availRooms.Intersect(levelGen.LeftOpeningRoomTypes).ToList();
+                //for (int i = 0; i < levelGen.LeftOpeningRoomTypes.Count; i++)
+                //{
+                //    if (availRooms.Contains(levelGen.LeftOpeningRoomTypes[i]) == false)
+                //    {
+                //        availRooms.Add(levelGen.LeftOpeningRoomTypes[i]);
+                //    }
+                //}
+            }
+        }
+
+        Debug.Log("Check Up");
+        if (upDetection != null && availRooms.Count > 0 && levelGen.BotOpeningRoomTypes.Contains(upDetection.GetComponent<RoomType>().type) == false)
+        {
+            //for (int i = 0; i < availRooms.Count; i++)
+            //{
+            //    if (levelGen.TopOpeningRoomTypes.Contains(availRooms[i]))
+            //    {
+            //        availRooms.Remove(i);
+            //    }
+            //}
+            availRooms.RemoveAll(r => levelGen.TopOpeningRoomTypes.Contains(r) == true);
+        }
+        else if (upDetection == null)
+        {
+            //for (int i = 0; i < availRooms.Count; i++)
+            //{
+            //    if (levelGen.TopOpeningRoomTypes.Contains(availRooms[i]))
+            //    {
+            //        availRooms.Remove(i);
+            //    }
+            //}
+            availRooms.RemoveAll(r => levelGen.TopOpeningRoomTypes.Contains(r) == true);
+
+        }
+
         Debug.Log("Check Down");
         if (downDetection != null && availRooms.Count > 0 && levelGen.TopOpeningRoomTypes.Contains(downDetection.GetComponent<RoomType>().type) == false)
         {
@@ -148,30 +190,7 @@ public class UpdateAvailRooms : MonoBehaviour
             availRooms.RemoveAll(r => levelGen.BotOpeningRoomTypes.Contains(r) == true);
         }
 
-        for (int i = 0; i < availRooms.Count; i++)
-        {
-            // Debug.Log("availRooms Item " + availRooms[i]);
-        }
-        if (rightDetection != null && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type) == true)
-        {
-            if (availRooms.Count == 0)
-            {
-                availRooms = levelGen.RightOpeningRoomTypes;
-            }
-            else
-            {
-                availRooms = availRooms.Intersect(levelGen.RightOpeningRoomTypes).ToList();
-                //for (int i = 0; i < levelGen.RightOpeningRoomTypes.Count; i++)
-                //{
-                //    if (availRooms.Contains(levelGen.RightOpeningRoomTypes[i]) == false)
-                //    {
-                //        availRooms.Add(levelGen.RightOpeningRoomTypes[i]);
-                //    }
-                //}
-            }
-        }
-
-        // Debug.Log("Check Right");
+        Debug.Log("Check Right");
         if (rightDetection != null && availRooms.Count > 0 && levelGen.LeftOpeningRoomTypes.Contains(rightDetection.GetComponent<RoomType>().type) == false)
         {
             //for (int i = 0; i < availRooms.Count; i++)
@@ -195,30 +214,7 @@ public class UpdateAvailRooms : MonoBehaviour
             availRooms.RemoveAll(r => levelGen.RightOpeningRoomTypes.Contains(r) == true);
         }
 
-        for (int i = 0; i < availRooms.Count; i++)
-        {
-            // Debug.Log("availRooms Item " + availRooms[i]);
-        }
-        if (leftDetection != null && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type) == true)
-        {
-            if (availRooms.Count == 0)
-            {
-                availRooms = levelGen.LeftOpeningRoomTypes;
-            }
-            else
-            {
-                availRooms = availRooms.Intersect(levelGen.LeftOpeningRoomTypes).ToList();
-                //for (int i = 0; i < levelGen.LeftOpeningRoomTypes.Count; i++)
-                //{
-                //    if (availRooms.Contains(levelGen.LeftOpeningRoomTypes[i]) == false)
-                //    {
-                //        availRooms.Add(levelGen.LeftOpeningRoomTypes[i]);
-                //    }
-                //}
-            }
-        }
-        
-        // Debug.Log("Check Left");
+        Debug.Log("Check Left");
         if (leftDetection != null && availRooms.Count > 0 && levelGen.RightOpeningRoomTypes.Contains(leftDetection.GetComponent<RoomType>().type) == false)
         {
             //for (int i = 0; i < availRooms.Count; i++)
@@ -241,10 +237,10 @@ public class UpdateAvailRooms : MonoBehaviour
             //}
             availRooms.RemoveAll(r => levelGen.LeftOpeningRoomTypes.Contains(r) == true);
         }
-        for (int i = 0; i < availRooms.Count; i++)
-        {
+        //for (int i = 0; i < availRooms.Count; i++)
+        //{
             // Debug.Log("availRooms Item " + availRooms[i]);
-        }
+        //}
         //Debug.Log("Available Rooms : " + availRooms.Count);
     }
 
