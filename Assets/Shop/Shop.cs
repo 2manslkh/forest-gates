@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class Shop : MonoBehaviour
-{
+{   
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,8 @@ public class Shop : MonoBehaviour
 
     public int healthPrice;
 
-    public GameObject goldWarning;
+
+    public TextMeshProUGUI warningText;
 
     private bool checkGold(int playerGold, int price){
         if (playerGold < price) {
@@ -37,6 +38,9 @@ public class Shop : MonoBehaviour
             Player.instance.gold -= attackPrice;
             Player.instance.characterStats.damage.baseValue++;
             attackPrice++;
+        } else {
+            warningText.text = "Insufficient Gold!";
+            warningText.GetComponent<Animation>().Play();
         }
     }
 
@@ -45,6 +49,9 @@ public class Shop : MonoBehaviour
             Player.instance.gold -= healthPrice;
             Player.instance.characterStats.maxHealth.baseValue += 10;
             healthPrice++;
+        } else {
+            warningText.text = "Insufficient Gold!";
+            warningText.GetComponent<Animation>().Play();
         }
     }
 }

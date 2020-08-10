@@ -15,10 +15,6 @@ public class Player : Character
 
 	public static Player instance;
 
-	void Awake ()
-	{
-		instance = this;
-	}
 
 	#endregion
 
