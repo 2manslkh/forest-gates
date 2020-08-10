@@ -12,7 +12,7 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
         if (hit) {
             if (hit.collider.CompareTag("DialogueContinueButton")) 
             {

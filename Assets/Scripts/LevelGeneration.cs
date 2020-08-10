@@ -32,7 +32,7 @@ public class LevelGeneration : MonoBehaviour
     public float moveAmount;
 
     private float timeBtwRoom;
-    public float startTimeBtwRoom = 1.0f;
+    public float startTimeBtwRoom = 0.1f;
 
     public float minX;
     public float maxX;
@@ -90,54 +90,61 @@ public class LevelGeneration : MonoBehaviour
         
 
         
-        firstRandomRoom = true;
+        //firstRandomRoom = true;
 
-        if (timeBtwRoom <= 0.0)
-        {
-            if (firstRandomRoom == true && fillUpRooms.FilledUp == false)
-            {
-            fillUpRooms.FilledUp = true;
-
-            timeBtwRoom = startTimeBtwRoom;
-            }
-
-            
-        }
-
-        else
-        {
-            timeBtwRoom -= Time.deltaTime;
-        }
-
-        if (generatedRooms.Count == maxRoomNumber)
-        {
-            if (exitSpawned == false)
-            {
-                SpawnSceneTransition();
-            }
-        }
-        
-        
-
-        //if (maxRoomNumber == currentRoomNumber)
+        //if (timeBtwRoom <= 0.0)
         //{
-        //    stopGeneration = true;
-        //    //fillUpRooms.FilledUp = true;
+        //    if (firstRandomRoom == true && fillUpRooms.FilledUp == false)
+        //    {
+        //    fillUpRooms.FilledUp = true;
+
+        //    timeBtwRoom = startTimeBtwRoom;
+        //    }
+
+
+        //}
+
+        //else
+        //{
+        //    timeBtwRoom -= Time.deltaTime;
+        //}
+
+        //if (generatedRooms.Count == maxRoomNumber)
+        //{
         //    if (exitSpawned == false)
         //    {
         //        SpawnSceneTransition();
         //    }
         //}
-        //else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
-        //{
-        //    fillUpRooms.FillUp();
-        //    //FillUpRooms.Instance.FillUp();
-        //}
-        //else if (timeBtwRoom <= 0 && stopGeneration == false)
-        //{
-        //    Move();
-        //    timeBtwRoom = startTimneBtwRoom;
-        //}
+
+
+
+        if (maxRoomNumber == currentRoomNumber)
+        {
+            stopGeneration = true;
+            fillUpRooms.FilledUp = true;
+            if (exitSpawned == false)
+            {
+                SpawnSceneTransition();
+            }
+        }
+        else if (maxRoomNumber > currentRoomNumber && stopGeneration == true)
+        {
+            //fillUpRooms.FillUp();
+
+            fillUpRooms.FilledUp = true;
+            if (exitSpawned == false)
+            {
+                SpawnSceneTransition();
+            }
+
+            //FillUpRooms.Instance.FillUp();
+        }
+        else if (stopGeneration == false) //timeBtwRoom <= 0 && stopGeneration == false)
+        {
+            Move();
+            //timeBtwRoom = startTimeBtwRoom;
+        }
         //else
         //{
         //    timeBtwRoom -= Time.deltaTime;
@@ -532,8 +539,17 @@ public class LevelGeneration : MonoBehaviour
 
         // Instantiate the Boss
         //Instantiate(Boss, lastRoomPos, Quaternion.identity);
-        // Instantiate level exit
-        Instantiate(levelExit, cornerPos, Quaternion.identity);
+
+        // Instantiate level exit in one of the corners
+        //Instantiate(levelExit, cornerPos, Quaternion.identity);
+
+        // Instantiate level exit in one of the lastly generated room by LevelGeneration.cs
+        //Vector3 lastPos = generatedRooms[generatedRooms.Count - 1].transform.position;
+        //Instantiate(levelExit, lastPos, Quaternion.identity);
+
+        // Instantiate level exit at the last position of level generator
+        Instantiate(levelExit, transform.position, Quaternion.identity);
+
         exitSpawned = true;
 
         string currentSceneName = SceneManager.GetActiveScene().name;

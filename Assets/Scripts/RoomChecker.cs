@@ -594,7 +594,10 @@ public class RoomChecker : MonoBehaviour
                 //    int roomType = currentSpot.GetComponent<RoomType>().type;
                 //    if (levelGen.RightOpeningRoomTypes.Contains(roomType) == false || levelGen.TopOpeningRoomTypes.Contains(roomType) == true)
                 //    {
-                currentSpot.GetComponent<RoomType>().RoomDestruction();
+                if (currentSpot != null)
+                {
+                    currentSpot.GetComponent<RoomType>().RoomDestruction();
+                }
                 //    }
                 //}
 

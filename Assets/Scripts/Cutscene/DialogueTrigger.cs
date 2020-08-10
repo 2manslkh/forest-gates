@@ -37,10 +37,10 @@ public class DialogueTrigger : MonoBehaviour
             StartCoroutine(LateCall());
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) && finishedTalking){
+        if (Input.GetKeyDown(KeyCode.E) && finishedTalking){
             dialogueBox.SetActive(false);
             toContinueCanvas.SetActive(false);
-            Debug.Log("Enter was pressed after talking");
+            Debug.Log("Key E was pressed after talking");
         }
         
     }
