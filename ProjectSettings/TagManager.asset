@@ -58,10 +58,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: NPC
     uniqueID: 3922044873
     locked: 0
-  - name: NPC
+  - name: FinalBoss
+    uniqueID: 4180735407
+    locked: 0
+  - name: Player
     uniqueID: 2918600017
     locked: 0
   - name: Enemy
