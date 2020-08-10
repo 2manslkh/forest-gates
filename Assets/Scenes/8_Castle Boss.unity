@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83e335a62c604421ba0bd1cda43c616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 1982106722535710630, guid: bf67e5ab88973594e9cf39df85c08b12, type: 3}
+  boss: {fileID: 1825673887}
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
   player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
@@ -464,3 +464,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0d9bcba371f7f1449e89a04942212bb, type: 3}
+--- !u!1 &1825673887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1033483359652331456, guid: f0d9bcba371f7f1449e89a04942212bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1825673886}
+  m_PrefabAsset: {fileID: 0}

@@ -13441,7 +13441,7 @@ MonoBehaviour:
   - {fileID: 6672490490015933223}
   - {fileID: 8725881705167290162}
   - {fileID: 5152355505077790588}
-  triggerBarrierScript: {fileID: 0}
+  triggerBarrierScript: {fileID: 8895098629191830294}
   moveOnce: 0
 --- !u!1 &8987722258172544982
 GameObject:
