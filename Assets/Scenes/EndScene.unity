@@ -587,11 +587,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d1ba2a2d5974100bc8da27f71e080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
   startingPositions:
   - {fileID: 1841824741}
   - {fileID: 94548191}
   - {fileID: 1725343030}
   - {fileID: 2071849708}
+  LeftOpeningRoomTypes: 000000000100000002000000030000000500000006000000070000000b000000
+  RightOpeningRoomTypes: 0000000001000000020000000300000008000000090000000a0000000c000000
+  TopOpeningRoomTypes: 0200000003000000040000000500000007000000080000000a0000000d000000
+  BotOpeningRoomTypes: 0100000003000000040000000600000007000000090000000a0000000e000000
+  Boss: {fileID: 0}
   rooms:
   - {fileID: 2645544741996953426, guid: 6977cdb2b5fae452f8481d283a6dce11, type: 3}
   - {fileID: 1343886117431746819, guid: 79e9c2a31017d4d7cbb6f55dda070519, type: 3}
@@ -602,8 +608,9 @@ MonoBehaviour:
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
   player: {fileID: 2613128792421471275, guid: 46fd5b2cdbd8a4bcba768336bae76182, type: 3}
+  firstRandomRoom: 0
   moveAmount: 10
-  startTimneBtwRoom: 0.25
+  startTimeBtwRoom: 0.1
   minX: 5
   maxX: 35
   minY: 5
@@ -615,6 +622,7 @@ MonoBehaviour:
   room:
     serializedVersion: 2
     m_Bits: 512
+  RoomBeingChecked: 0
 --- !u!4 &703922342
 Transform:
   m_ObjectHideFlags: 0

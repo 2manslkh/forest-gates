@@ -31,6 +31,9 @@ public class StatsHolder : MonoBehaviour
         if (isNew == 1){
             Debug.Log("New Game");
             StatsHolder.isNew = true;
+            ResetStats();
+            SaveStatsToDisk();
+            PlayerPrefs.SetInt("isNew", 1);
         } else {
             Debug.Log("Loading save game...");
             StatsHolder.isNew = false;
