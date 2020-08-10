@@ -5,7 +5,6 @@ using UnityEngine;
 public class KnightBehaviour : MonoBehaviour
 {
     private Transform playerPos;
-    private GameObject player;
     private enum State {
         Follow,
         Attack,
@@ -31,15 +30,14 @@ public class KnightBehaviour : MonoBehaviour
         speed = 0.7f;
         timeToDash = 2;
     }
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
 
     // Update is called once per frame
     void Update()
     {
-        playerPos = player.transform;
+        if(!playerPos)
+        {
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         Vector2 difference = playerPos.position - animator.transform.position;
         switch (state) {
             default:

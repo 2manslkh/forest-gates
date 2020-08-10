@@ -5,7 +5,6 @@ using UnityEngine;
 public class GolemBehaviour : MonoBehaviour
 {
     private Transform playerPos;
-    private GameObject player;
     public GameObject rockSpawnPrefab;
     public GameObject rockWallPrefab;
 
@@ -41,20 +40,19 @@ public class GolemBehaviour : MonoBehaviour
         timeToSlam = 6;
         rockSize = 3f;
         cam = Camera.main;
+        // cam = GameObject.FindGameObjectWithTag("Camera Holder").transform.GetChild(0).Camera;
         awayDistance = 8f;
         attackDistance = 3f;
-    }
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerPos = player.transform;
+        if(!playerPos)
+        {
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         Vector2 difference = playerPos.position - animator.transform.position;
-        print(difference.normalized);
 
         switch (state) {
             default:
@@ -122,10 +120,10 @@ public class GolemBehaviour : MonoBehaviour
 
     public void SlamRocks()
     {
-        float minWidth = cam.ScreenToWorldPoint(new Vector3(0,0,0)).x;
-        float maxWidth = cam.ScreenToWorldPoint(new Vector3(Screen.width,0,0)).x;
-        float minHeight = cam.ScreenToWorldPoint(new Vector3(0,0,0)).y;
-        float maxHeight = cam.ScreenToWorldPoint(new Vector3(0,Screen.height,0)).y;
+        float minWidth = cam.ScreenToWorldPoint(new Vector3(0,0,-10)).x;
+        float maxWidth = cam.ScreenToWorldPoint(new Vector3(Screen.width,0,-10)).x;
+        float minHeight = cam.ScreenToWorldPoint(new Vector3(0,0,-10)).y;
+        float maxHeight = cam.ScreenToWorldPoint(new Vector3(0,Screen.height,-10)).y;
         for(int i=0; i < 8; i++)
         {
             Vector2 randomPosition = new Vector2(Random.Range(minWidth, maxWidth), Random.Range(minHeight, maxHeight));
@@ -157,10 +155,8 @@ public class GolemBehaviour : MonoBehaviour
             //down
             offset = -animator.transform.up*4;
         }
-        print(offset);
         Vector3 spawnPosition = new Vector3(animator.transform.position.x + normalized.x, animator.transform.position.y + normalized.y, animator.transform.position.z);
         var rockWall = Instantiate(rockWallPrefab, spawnPosition + offset, Quaternion.identity);
-        print(animator.transform.right * 10);
         rockWall.GetComponent<RockWallBehaviour>().UpdateAnimator(difference.x, difference.y);
         doneWalling = true;
     }
