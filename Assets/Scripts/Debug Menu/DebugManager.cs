@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DebugManager : MonoBehaviour
 {
-
+    
     public Player player;
     public string scene_0;
     public string scene_1;

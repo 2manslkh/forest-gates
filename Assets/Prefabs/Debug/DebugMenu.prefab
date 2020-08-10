@@ -1579,9 +1579,9 @@ MonoBehaviour:
   scene_0: 0_StartScreen
   scene_1: 1_Bedroom
   scene_2: 2_Town
-  scene_3: Forest
-  scene_4: Lake
-  scene_5: Castle
+  scene_3: 3_Forest
+  scene_4: 5_Lake
+  scene_5: 7_Castle
 --- !u!1 &1946824014366947805
 GameObject:
   m_ObjectHideFlags: 0
