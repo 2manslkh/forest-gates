@@ -42,14 +42,14 @@ public class GuardianBehaviour : MonoBehaviour
         radius = 5.0f;
         slashingTimes = 0;
     }
-    void Start()
-    {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
     // Update is called once per frame
     void Update()
     {
+        if(!playerPos)
+        {
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         Vector2 difference = playerPos.position - animator.transform.position;
         switch (state) {
             default:
