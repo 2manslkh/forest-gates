@@ -1062,7 +1062,7 @@ PrefabInstance:
     - target: {fileID: 2130089753223520680, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
       propertyPath: songBpm
-      value: 56
+      value: 56.5
       objectReference: {fileID: 0}
     - target: {fileID: 2130089753223520681, guid: a92b7c8afc9061f4484a7c8936b6c6a5,
         type: 3}
