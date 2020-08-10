@@ -29,12 +29,14 @@ public class GuardianBehaviour : MonoBehaviour
     private float projectileSpeed;
     private float numberOfProjectiles;
     private float radius;
+    private AudioSource[] audioClips;
 
     private void Awake() {
         state = State.Patrol;
         animator = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioClips = GetComponents<AudioSource>();
         speed = 3f;
         moving = false;
         projectileSpeed = 3.0f;
@@ -126,6 +128,7 @@ public class GuardianBehaviour : MonoBehaviour
         {
             float projectileXPosition = gameObject.transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
             float projectileYPosition = gameObject.transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
+            audioClips[2].Play();
 
             Vector2 projectileVector = new Vector2 (projectileXPosition, projectileYPosition);
             Vector2 guardianPosition = new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y);
@@ -152,6 +155,7 @@ public class GuardianBehaviour : MonoBehaviour
         // Vector2 tornadoMoveDirection = (tornadoVector - guardianPosition).normalized * projectileSpeed;
         Vector2 difference = playerPos.position - animator.transform.position;
         Vector2 tornadoMoveDirection = difference.normalized * projectileSpeed;
+        audioClips[1].Play();
         for(int i=0; i < 8; i++)
         {
             float randomnessX = Random.Range(-2f, 2f);

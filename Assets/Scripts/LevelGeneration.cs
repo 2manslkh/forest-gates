@@ -537,31 +537,31 @@ public class LevelGeneration : MonoBehaviour
 
         sceneTransition = GameObject.FindWithTag("Level Exit").GetComponent<SceneTransition>();
 
-        if (currentSceneName == "Village")
+        if (currentSceneName == "2_Town")
         {
-            sceneTransition.sceneToLoad = "Forest";
+            sceneTransition.sceneToLoad = "3_Forest";
         }
-        else if (currentSceneName == "Forest")
+        else if (currentSceneName == "3_Forest")
         {
-            sceneTransition.sceneToLoad = "Forest Boss";
+            sceneTransition.sceneToLoad = "4_Forest Boss";
         }
-        else if (currentSceneName == "Forest Boss")
+        else if (currentSceneName == "4_Forest Boss")
         {
-            sceneTransition.sceneToLoad = "Lake";
+            sceneTransition.sceneToLoad = "5_Lake";
         }
-        else if (currentSceneName == "Lake")
+        else if (currentSceneName == "5_Lake")
         {
-            sceneTransition.sceneToLoad = "Lake Boss";
+            sceneTransition.sceneToLoad = "6_Lake Boss";
         }
-        else if (currentSceneName == "Lake Boss")
+        else if (currentSceneName == "6_Lake Boss")
         {
-            sceneTransition.sceneToLoad = "Castle";
+            sceneTransition.sceneToLoad = "7_Castle";
         }
-        else if (currentSceneName == "Castle")
+        else if (currentSceneName == "7_Castle")
         {
-            sceneTransition.sceneToLoad = "Castle Boss";
+            sceneTransition.sceneToLoad = "8_Castle Boss";
         }
-        else if (currentSceneName == "Castle Boss")
+        else if (currentSceneName == "8_Castle Boss")
         {
             sceneTransition.sceneToLoad = "EndScene";
         }

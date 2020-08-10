@@ -11,21 +11,23 @@ public class CharacterStats : MonoBehaviour {
 	public Stat damage;
 	public Stat armor;
 
-    public Stat currentMana; // used to cast spells
-    public Stat maxMana; // Maximum Mana of the player
-    public Stat manaRegen; // Mana regeneration per second
-    public Stat dodgeChance; // Chance for player to dodge an attack  
-    public Stat movementSpeed; // Movement speed of the player
-    public Stat attackSpeed; // Attacks per second
+	public Stat currentMana; // used to cast spells
+	public Stat maxMana; // Maximum Mana of the player
+	public Stat manaRegen; // Mana regeneration per second
+	public Stat dodgeChance; // Chance for player to dodge an attack  
+	public Stat movementSpeed; // Movement speed of the player
+	public Stat attackSpeed; // Attacks per second
 
-    public int agility; // Affects dodge chance, movement speed, attack speed
-    public int intelligence; // Affects spell damage, max mana, mana regen
-    public int strength; // Affects melee damage
+	public int agility; // Affects dodge chance, movement speed, attack speed
+	public int intelligence; // Affects spell damage, max mana, mana regen
+	public int strength; // Affects melee damage
+	private AudioSource[] audioClips;
 
 	public event System.Action OnHealthReachedZero;
 
 	public virtual void Awake() {
 		currentHealth = maxHealth.GetValue();
+		audioClips = GetComponents<AudioSource>();
 	}
 
 	// Start with max HP.
@@ -48,6 +50,7 @@ public class CharacterStats : MonoBehaviour {
 		// Set Animation flag isHit to True
 		if (damage > 0){
 			GetComponent<Animator>().SetBool("isHit", true);
+			audioClips[0].Play();
 		}
 
 		// If we hit 0. Die.
