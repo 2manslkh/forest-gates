@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &162430817104165083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6677967771611885187}
+  - component: {fileID: 1921519511488462718}
+  m_Layer: 9
+  m_Name: AttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6677967771611885187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162430817104165083}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.87, y: -1.08, z: -0.87890625}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 5052493110257788442}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921519511488462718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162430817104165083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ea9d54123b8384a98b9de48b916d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5052493110257788422}
 --- !u!1 &5052493110257788422
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +77,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.87, y: -1.08, z: -0.87890625}
   m_LocalScale: {x: 3, y: 3, z: 3}
-  m_Children: []
+  m_Children:
+  - {fileID: 6677967771611885187}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,12 +217,12 @@ MonoBehaviour:
   characterAnimator: {fileID: 5052493110257788440}
   rb: {fileID: 5052493110257788420}
   isHit: 0
-  attackPosition: {fileID: 0}
+  attackPosition: {fileID: 6677967771611885187}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  attackRadius: 0
-  goldDrop: 0
+    m_Bits: 4096
+  attackRadius: 0.5
+  goldDrop: 10
 --- !u!114 &1757680374810959299
 MonoBehaviour:
   m_ObjectHideFlags: 0
