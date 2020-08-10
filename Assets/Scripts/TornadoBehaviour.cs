@@ -10,6 +10,7 @@ public class TornadoBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hitOnce = false;
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, 4);
     }
