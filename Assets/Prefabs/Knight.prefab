@@ -122,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0034411028, y: 0.0051616877}
+  m_Offset: {x: 0.08215833, y: -0.043085217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17526548, y: 0.28967664}
+  m_Size: {x: 0.37136555, y: 0.48577666}
   m_EdgeRadius: 0
 --- !u!95 &1982106722535710631
 Animator:
@@ -187,7 +187,7 @@ MonoBehaviour:
     baseValue: 500
   currentHealth: 0
   damage:
-    baseValue: 20
+    baseValue: 30
   armor:
     baseValue: 0
   currentMana:
@@ -227,5 +227,5 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 4096
-  attackRadius: 0
-  goldDrop: 0
+  attackRadius: 2
+  goldDrop: 50
