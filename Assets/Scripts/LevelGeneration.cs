@@ -52,7 +52,7 @@ public class LevelGeneration : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 0.5f;
         StartCoroutine("PretendToLoad");
         int randStartingPos = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[randStartingPos].transform.position;
