@@ -388,5 +388,6 @@ MonoBehaviour:
   characterAudioSource: {fileID: 0}
   deathAudio: {fileID: 0}
   characterAnimator: {fileID: 6230804717354743626}
+  debug: 0
   playerStats: {fileID: 4631448621363361982}
   gold: 0
