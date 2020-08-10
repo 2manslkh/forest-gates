@@ -154,9 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentRoom: {fileID: 0}
-  targetAspect: 0
-  fov: 90
-  cam: {fileID: 0}
+  targetAspect: 1
+  fov: 53
 --- !u!114 &29213115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +357,6 @@ MonoBehaviour:
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
   player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
-  startTimeBtwRoom: 1
   exitSpawned: 0
   bossKilled: 0
 --- !u!4 &249941802
