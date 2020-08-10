@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83e335a62c604421ba0bd1cda43c616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 1434517138269282494, guid: 9176212497a367742bbaf283c24cb9b0, type: 3}
+  boss: {fileID: 1604599111}
   levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
     type: 3}
   player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
@@ -291,6 +291,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9ba285061ac3d4e972d9dfb308d458, type: 3}
+--- !u!1 &1604599111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979755097017657781, guid: ab9ba285061ac3d4e972d9dfb308d458,
+    type: 3}
+  m_PrefabInstance: {fileID: 1604599110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681100674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4793434539221893011, guid: ab9ba285061ac3d4e972d9dfb308d458,

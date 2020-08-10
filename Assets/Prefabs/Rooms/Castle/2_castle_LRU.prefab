@@ -682,7 +682,7 @@ MonoBehaviour:
   - {fileID: 4890070574367818342}
   - {fileID: 4240998163533505875}
   - {fileID: 3767607364096429389}
-  triggerBarrierScript: {fileID: 0}
+  triggerBarrierScript: {fileID: 7330601554317963473}
   moveOnce: 0
 --- !u!1 &4715299243469017741
 GameObject:
@@ -17273,15 +17273,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5aeb9402ab2d85345bf2bebfa0d3aa68, type: 3}
---- !u!1 &4240998163533505875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5052493110257788422, guid: 5aeb9402ab2d85345bf2bebfa0d3aa68,
-    type: 3}
-  m_PrefabInstance: {fileID: 8990595438607958869}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4240998163533505871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5052493110257788442, guid: 5aeb9402ab2d85345bf2bebfa0d3aa68,
+    type: 3}
+  m_PrefabInstance: {fileID: 8990595438607958869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4240998163533505875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5052493110257788422, guid: 5aeb9402ab2d85345bf2bebfa0d3aa68,
     type: 3}
   m_PrefabInstance: {fileID: 8990595438607958869}
   m_PrefabAsset: {fileID: 0}

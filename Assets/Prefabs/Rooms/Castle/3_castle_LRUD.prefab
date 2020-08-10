@@ -118,7 +118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3394809947129555407
 Transform:
   m_ObjectHideFlags: 0
@@ -12979,7 +12979,7 @@ MonoBehaviour:
   - {fileID: 4052257254133862169}
   - {fileID: 6840441062839379795}
   - {fileID: 7589424038124292441}
-  triggerBarrierScript: {fileID: 0}
+  triggerBarrierScript: {fileID: 3306597182443122748}
   moveOnce: 0
 --- !u!1 &8737964571415532716
 GameObject:
