@@ -743,6 +743,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4296011712436332238, guid: e972d3f301d03e1418f1fe23e84b4e79,
+        type: 3}
+      propertyPath: respawnScene
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 5027925885272547237, guid: e972d3f301d03e1418f1fe23e84b4e79,
         type: 3}
       propertyPath: m_SortingLayerID

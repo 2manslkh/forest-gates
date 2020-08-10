@@ -40,6 +40,8 @@ public class Player : Character
 			for (int i = 0; i < weapon.Length; i++){
 				weapon[i].GetComponent<Animator>().SetBool("isDead", true);
 			}
+			Instantiate(GameAssets.i.gameOverUI, Vector3.zero, Quaternion.identity);
+			Time.timeScale = 0;
 			// weapon.SetBool("isDead", true);
 
             // Transform deathCoin = Instantiate(GameAssets.i.pfDeathCoin,gameObject.transform.position,Quaternion.identity,gameObject.transform);

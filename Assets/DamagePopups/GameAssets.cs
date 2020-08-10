@@ -18,5 +18,6 @@ public class GameAssets : MonoBehaviour {
 
     public Transform pfDamagePopup;
     public Transform pfDeathCoin;
+    public Transform gameOverUI;
 }
 

@@ -47,3 +47,5 @@ MonoBehaviour:
     type: 3}
   pfDeathCoin: {fileID: 2821115981857557705, guid: 3acd7207490864f4b9cae66c8f570562,
     type: 3}
+  gameOverUI: {fileID: 5027925886882980677, guid: e972d3f301d03e1418f1fe23e84b4e79,
+    type: 3}
