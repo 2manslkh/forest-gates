@@ -40,7 +40,7 @@ public class BossRoomManager : MonoBehaviour
         // Debug.Log("Current Scene Name : " + currentSceneName);
 
         sceneTransition = GameObject.FindWithTag("Level Exit").GetComponent<SceneTransition>();
-
+        StatsHolder.SaveStats(Player.instance.playerStats.damage, Player.instance.playerStats.maxHealth, Player.instance.playerStats.maxHealth.GetValue(), Player.instance.gold);
         if (currentSceneName == "2_Town")
         {
             sceneTransition.sceneToLoad = "3_Forest";

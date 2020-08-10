@@ -20,7 +20,8 @@ public class SceneTransition : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
-        {
+        {   
+            StatsHolder.SaveStats(Player.instance.playerStats.damage, Player.instance.playerStats.maxHealth, Player.instance.playerStats.maxHealth.GetValue(), Player.instance.gold);
             SceneManager.LoadSceneAsync(sceneToLoad);
         }
     }

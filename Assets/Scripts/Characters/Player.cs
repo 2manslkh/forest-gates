@@ -20,7 +20,7 @@ public class Player : Character
 	void Awake(){
 		if (!StatsHolder.isNew){
 			gold = StatsHolder.gold;
-			playerStats.currentHealth = StatsHolder.currenthealth;
+			playerStats.currentHealth = StatsHolder.maxHealth.GetValue();
 			playerStats.maxHealth = StatsHolder.maxHealth;
 			playerStats.damage = StatsHolder.damage;
 		}

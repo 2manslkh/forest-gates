@@ -9,8 +9,9 @@ public class RespawnButton : MonoBehaviour
 
     public void Respawn(){
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
+        Time.timeScale = 1f;
         StatsHolder.SaveStats(Player.instance.playerStats.damage, Player.instance.playerStats.maxHealth, Player.instance.playerStats.maxHealth.GetValue(), Player.instance.gold);
         SceneManager.LoadScene(respawnScene);
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
     }
 }
