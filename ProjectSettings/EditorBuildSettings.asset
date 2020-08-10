@@ -11,24 +11,24 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Forest.unity
-    guid: efee6c2ac04604ddf8ccbe35b300cdc7
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Forest Boss.unity
-    guid: f88cf07ab735c4443b1382bed1ee7d2c
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Lake.unity
-    guid: 32f057dea6aea444d9e6bc841d006c92
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Lake Boss.unity
-    guid: 5784e15e270564b1a96e9225cbf512a4
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Castle.unity
-    guid: eb20c6d8bbb444297b2dccd3a2d634ec
-  - enabled: 1
-    path: Assets/Scenes/Map Generation/Castle Boss.unity
-    guid: 43a0859e85f2c4de19eb0754fb2405f4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
