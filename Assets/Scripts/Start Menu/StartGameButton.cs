@@ -11,6 +11,11 @@ public class StartGameButton : MonoBehaviour
 
     }
     public void StartGame(){
+        StatsHolder.ResetStats();
+        StartGameCanvas.SetActive(false);
+    }
+
+    public void LoadGame(){
         StartGameCanvas.SetActive(false);
     }
 

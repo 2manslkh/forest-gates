@@ -14,6 +14,9 @@ public class StatsHolder : MonoBehaviour
 
     public static bool isNew = true;
 
+    public GameObject loadGameButton;
+
+    public static StatsHolder i;
     public static void SaveStats(Stat damage, Stat maxHealth, int currenthealth, int gold){
         StatsHolder.damage = damage;
         StatsHolder.maxHealth = maxHealth;
@@ -23,24 +26,39 @@ public class StatsHolder : MonoBehaviour
     }
 
     void Awake(){
-        int isNew = PlayerPrefs.GetInt("isNew", 0);
+        Debug.Log("FORRRRRRRRRREST");
+        int isNew = PlayerPrefs.GetInt("isNew", 1);
         if (isNew == 1){
+            Debug.Log("New Game");
             StatsHolder.isNew = true;
         } else {
+            Debug.Log("Loading save game...");
             StatsHolder.isNew = false;
-            StatsHolder.LoadStatsFromDisk();
+            LoadStatsFromDisk();
+            loadGameButton.SetActive(true);
         }
+        i = this;
+    }
 
+    void OnApplicationQuit(){
+        StatsHolder.SaveStatsToDisk();
+    }
+
+    public static void ResetStats(){
+        StatsHolder.damage.baseValue = 10;
+        StatsHolder.maxHealth.baseValue = 100;
+        StatsHolder.currenthealth = StatsHolder.maxHealth.baseValue;
+        StatsHolder.gold = 0;
     }
 
     public static void SaveStatsToDisk(){
-        PlayerPrefs.SetInt("damage", StatsHolder.damage.GetValue());
+        PlayerPrefs.SetInt("damage", damage.GetValue());
         PlayerPrefs.SetInt("maxHealth", StatsHolder.maxHealth.GetValue());
-        PlayerPrefs.SetInt("gold", StatsHolder.gold);
-        PlayerPrefs.SetInt("isNew", 1);
+        PlayerPrefs.SetInt("gold", gold);
+        PlayerPrefs.SetInt("isNew", 0);
     }
 
-    public static void LoadStatsFromDisk(){
+    public void LoadStatsFromDisk(){
         Stat damage = new Stat();
         damage.baseValue = PlayerPrefs.GetInt("damage");
         Stat maxHealth = new Stat();

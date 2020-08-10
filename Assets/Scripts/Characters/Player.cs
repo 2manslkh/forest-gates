@@ -35,6 +35,11 @@ public class Player : Character
 		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
+	void OnApplicationQuit(){
+		Debug.Log("Save");
+        StatsHolder.SaveStatsToDisk();
+    }
+
 	override public void checkIfDead(){
         Debug.Log("CAST CHECK IF DEAD");
         if (playerStats.currentHealth <= 0){
