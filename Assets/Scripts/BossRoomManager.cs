@@ -59,6 +59,7 @@ public class BossRoomManager : MonoBehaviour
         }
         else if (currentSceneName == "8_Castle Boss")
         {
+            Player.completedGame = true;
             sceneTransition.sceneToLoad = "1_Bedroom";
         }
     }

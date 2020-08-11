@@ -15,6 +15,7 @@ public class Player : Character
 
 	public static Player instance;
 
+	public static bool completedGame = false;
 
 	#endregion
 	void Awake(){
