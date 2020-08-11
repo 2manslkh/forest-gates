@@ -34,7 +34,7 @@ public class BossRoomManager : MonoBehaviour
         exitSpawned = true;
         // Instantiate level exit
         Instantiate(levelExit, new Vector3(0, 0, 0), Quaternion.identity);
-
+        
         
         string currentSceneName = SceneManager.GetActiveScene().name;
         // Debug.Log("Current Scene Name : " + currentSceneName);
@@ -59,7 +59,7 @@ public class BossRoomManager : MonoBehaviour
         }
         else if (currentSceneName == "8_Castle Boss")
         {
-            sceneTransition.sceneToLoad = "9_FinaleEnding";
+            sceneTransition.sceneToLoad = "1_Bedroom";
         }
     }
 }
