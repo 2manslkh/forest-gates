@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 1825673887}
-  levelExit: {fileID: 4112505431475585065, guid: 364ff7cfefe954a16bbb2c43ff989ed8,
+  levelExit: {fileID: 4112505431475585065, guid: 159c2e0571011394d88d5b5d7f0df1cd,
     type: 3}
   player: {fileID: 6230804717354743671, guid: 3202f4cea1d09c140af4cd3b817fcecc, type: 3}
   exitSpawned: 0
